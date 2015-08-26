@@ -4,7 +4,7 @@ Plugin Name: Facebook Button by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.42
+Version: 2.43
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -37,7 +37,7 @@ if ( ! function_exists( 'fcbkbttn_add_pages' ) ) {
 /* Initialization */
 if ( ! function_exists( 'fcbkbttn_init' ) ) {
 	function fcbkbttn_init() {
-		global $fcbkbttn_plugin_info, $fcbkbttn_lang_codes;
+		global $fcbkbttn_plugin_info, $fcbkbttn_lang_codes, $fcbkbttn_options;
 		/* Internationalization, first(!) */
 		load_plugin_textdomain( 'facebook', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
@@ -60,6 +60,9 @@ if ( ! function_exists( 'fcbkbttn_init' ) ) {
 			$fcbkbttn_lang_codes = array(
 				"af_ZA" => 'Afrikaans', "ar_AR" => 'العربية', "az_AZ" => 'Azərbaycan dili', "be_BY" => 'Беларуская', "bg_BG" => 'Български', "bn_IN" => 'বাংলা', "bs_BA" => 'Bosanski', "ca_ES" => 'Català', "cs_CZ" => 'Čeština', "cy_GB" => 'Cymraeg', "da_DK" => 'Dansk', "de_DE" => 'Deutsch', "el_GR" => 'Ελληνικά', "en_US" => 'English', "en_PI" => 'English (Pirate)', "eo_EO" => 'Esperanto', "es_CO" => 'Español (Colombia)', "es_ES" => 'Español (España)', "es_LA" => 'Español', "et_EE" => 'Eesti', "eu_ES" => 'Euskara', "fa_IR" => 'فارسی', "fb_LT" => 'Leet Speak', "fi_FI" => 'Suomi', "fo_FO" => 'Føroyskt', "fr_CA" => 'Français (Canada)', "fr_FR" => 'Français (France)', "fy_NL" => 'Frysk', "ga_IE" => 'Gaeilge', "gl_ES" => 'Galego', "gn_PY" => "Avañe'ẽ", "gu_IN" => 'ગુજરાતી', "he_IL" => 'עברית', "hi_IN" => 'हिन्दी', "hr_HR" => 'Hrvatski', "hu_HU" => 'Magyar', "hy_AM" => 'Հայերեն', "id_ID" => 'Bahasa Indonesia', "is_IS" => 'Íslenska', "it_IT" => 'Italiano', "ja_JP" => '日本語', "jv_ID" => 'Basa Jawa', "ka_GE" => 'ქართული', "kk_KZ" => 'Қазақша', "km_KH" => 'ភាសាខ្មែរ', "kn_IN" => 'ಕನ್ನಡ', "ko_KR" => '한국어', "ku_TR" => 'Kurdî', "la_VA" => 'lingua latina', "lt_LT" => 'Lietuvių', "lv_LV" => 'Latviešu', "mk_MK" => 'Македонски', "ml_IN" => 'മലയാളം', "mn_MN" => 'Монгол', "mr_IN" => 'मराठी', "ms_MY" => 'Bahasa Melayu', "nb_NO" => 'Norsk (bokmål)', "ne_NP" => 'नेपाली', "nl_BE" => 'Nederlands (België)', "nl_NL" => 'Nederlands', "nn_NO" => 'Norsk (nynorsk)', "pa_IN" => 'ਪੰਜਾਬੀ', "pl_PL" => 'Polski', "ps_AF" => 'پښتو', "pt_BR" => 'Português (Brasil)', "pt_PT" => 'Português (Portugal)', "ro_RO" => 'Română', "ru_RU" => 'Русский', "sk_SK" => 'Slovenčina', "sl_SI" => 'Slovenščina', "sq_AL" => 'Shqip', "sr_RS" => 'Српски', "sv_SE" => 'Svenska', "sw_KE" => 'Kiswahili', "ta_IN" => 'தமிழ்', "te_IN" => 'తెలుగు', "tg_TJ" => 'тоҷикӣ', "th_TH" => 'ภาษาไทย', "tl_PH" => 'Filipino', "tr_TR" => 'Türkçe', "uk_UA" => 'Українська', "ur_PK" => 'اردو', "uz_UZ" => "O'zbek", "vi_VN" => 'Tiếng Việt', "zh_CN" => '中文(简体)', "zh_HK" => '中文(香港)', "zh_TW" => '中文(台灣)' 											
 			);
+			
+			if ( ! is_admin() && isset( $fcbkbttn_options['display_for_excerpt'] ) && 1 == $fcbkbttn_options['display_for_excerpt'] )
+				add_filter( 'the_excerpt', 'fcbkbttn_display_button' );
 		}
 	}
 }
@@ -95,7 +98,8 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 			'fb_img_link'				=>	plugins_url( "images/standard-facebook-ico.png", __FILE__ ),
 			'locale' 					=>	'en_US',
 			'html5'						=>	0,
-			'use_multilanguage_locale'	=> 0
+			'use_multilanguage_locale'	=> 0,
+			'display_for_excerpt'		=> 0
 		);
 		/* Install the option defaults */
 		if ( ! get_option( 'fcbk_bttn_plgn_options' ) ) {
@@ -170,6 +174,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 				$fcbkbttn_options['count_icon']	=	1;
 
 			$fcbkbttn_options['use_multilanguage_locale'] =	isset( $_REQUEST['fcbkbttn_use_multilanguage_locale'] ) ? 1 : 0;
+			$fcbkbttn_options['display_for_excerpt'] =	isset( $_REQUEST['fcbkbttn_display_for_excerpt'] ) ? 1 : 0;
 
 			update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options );
 			$message = __( "Settings saved", 'facebook' );
@@ -365,6 +370,12 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 										<label><input name='fcbkbttn_html5' type='radio' value='1' <?php if ( 1 == $fcbkbttn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;div&gt;</code>"; ?></label>
 										<span class="bws_info">(<?php _e( "Use this tag to improve validation of your site", 'facebook' ); ?>)</span>
 									</fieldset>
+								</td>
+							</tr>
+							<tr>
+								<th><?php _e( 'Display buttons in excerpt', 'facebook' ); ?></th>
+								<td>
+									<input name='fcbkbttn_display_for_excerpt' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['display_for_excerpt'] ) echo 'checked="checked "'; ?>/>	
 								</td>
 							</tr>
 						</table>
@@ -738,7 +749,6 @@ add_action( 'wp_footer', 'fcbkbttn_footer_script' );
 /* Add shortcode and plugin buttons */
 add_shortcode( 'fb_button', 'fcbkbttn_shortcode' );
 add_filter( 'the_content', 'fcbkbttn_display_button' );
-add_filter( 'the_excerpt', 'fcbkbttn_display_button' );
 /*## Additional links on the plugin page */
 add_filter( 'plugin_action_links', 'fcbkbttn_action_links', 10, 2 );
 add_filter( 'plugin_row_meta', 'fcbkbttn_links', 10, 2 );
