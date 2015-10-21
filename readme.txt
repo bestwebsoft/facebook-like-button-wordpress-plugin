@@ -1,10 +1,10 @@
-﻿=== Facebook Like Button by BestWebSoft ===
+﻿=== Facebook Button by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add button, add social button, add fb button, add facebook social button, add social buttons, add facebook button, add share button, add fb share button, add facebook share button, batton, best facebook plugin, best fb like button, best facebook like button, buton, button, button image, Button like, button position, FB, fb button, fb like, fb like button, fb share, Facebook, Facebook account button, facebook button, facebook button icon, facebook button language, Facebook button like, Facebook button share, Facebook ID, facebook like, facebook like button, Facebook Page, facebook share, facebook share button, follow, folow, follow button, icon, Like, like, likes, like button, My Page button, nice fb like button, nice facebook button, nice fb button, simple fb plugin, simple facebook plugin, social plugin, social plugins, Share, share button, social, social account, social button, wp plugin, wp social plugin, wordpress social plugin
-Requires at least: 3.1
-Tested up to: 4.3
-Stable tag: 2.43
+Requires at least: 3.8
+Tested up to: 4.3.1
+Stable tag: 2.44
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,29 +12,32 @@ Add Facebook buttons to your WordPress website.
 
 == Description ==
 
-Facebook Like Button plugin allows you to add a Follow button the easiest way. If your life is tightly connected with your Facebook account, our plugin is the best solution for you. It contains minimum settings. Just a few clicks and voila - Facebook Button is on your site.
+Facebook Button plugin allows you to add a Follow button the easiest way. If your life is tightly connected with your Facebook account, our plugin is the best solution for you. It contains minimum settings. Just a few clicks and voila - Facebook Button is on your site.
 
 http://www.youtube.com/watch?v=QGv04uHVl5c
 
-<a href="http://www.youtube.com/watch?v=pAKsQPz3RZc" target="_blank">Facebook Like Button by BestWebSoft Video instruction on Installation</a>
+<a href="http://www.youtube.com/watch?v=pAKsQPz3RZc" target="_blank">Facebook Button by BestWebSoft Video instruction on Installation</a>
 
-<a href="http://wordpress.org/plugins/facebook-button-plugin/faq/" target="_blank">Facebook Like Button by BestWebSoft FAQ</a>
+<a href="http://wordpress.org/plugins/facebook-button-plugin/faq/" target="_blank">Facebook Button by BestWebSoft FAQ</a>
 
-<a href="http://support.bestwebsoft.com" target="_blank">Facebook Like Button by BestWebSoft Support</a>
+<a href="http://support.bestwebsoft.com" target="_blank">Facebook Button by BestWebSoft Support</a>
 
-<a href="http://bestwebsoft.com/products/facebook-like-button/?k=4caab51af6593e97ad1e329fe0f53072" target="_blank">Upgrade to Facebook Like Button Pro by BestWebSoft</a>
+<a href="http://bestwebsoft.com/products/facebook-like-button/?k=4caab51af6593e97ad1e329fe0f53072" target="_blank">Upgrade to Facebook Button Pro by BestWebSoft</a>
 
 = Features =
 
-* Add Follow button the easiest way.
-* Add Facebook Like button and Facebook Share button.
-* Select the button position: before the content, after, before and after or using a shortcode.
+* Add Facebook buttons in the easiest way (Follow button, Like button and Share button).
+* Show or hide faces.
+* Choose button layout for "Like" and "Share".
+* Choose color scheme for around text.
+* Choose "Like" button action - "Like" or "Recommend".
+* Select the button position: before the content, after, before and after, or using a shortcode.
 * Use a standard image or replace it with some other image.
 * Use the current site language for Facebook Buttons (Using <a href="http://bestwebsoft.com/products/multilanguage/" target="_blank">Multilanguage by BestWebSoft</a>)
 
 = Recommended Plugins =
 
-The author of Facebook Like Button also recommends the following plugins:
+The author of Facebook Button also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
 There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=5019f1216fc048f1419fe4645da69381">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
@@ -64,7 +67,7 @@ We can fix some things for free for the users who provide translation of our plu
 2. Activate the plugin via the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust the necessary settings in your WordPress admin panel - "Settings" > "Facebook Button".
 
-<a href="https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/edit" target="_blank">View a Step-by-step Instruction on Facebook Like Button by BestWebSoft Installation</a>.
+<a href="https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/edit" target="_blank">View a Step-by-step Instruction on Facebook Button by BestWebSoft Installation</a>.
 
 http://www.youtube.com/watch?v=pAKsQPz3RZc
 
@@ -72,7 +75,7 @@ http://www.youtube.com/watch?v=pAKsQPz3RZc
 
 = I cannot see Facebook Button icon in the post after the plugin installation =
 
-In WordPress admin panel, please go to "Plugins", find "Facebook Like Button by BestWebSoft" and click "Activate".
+In WordPress admin panel, please go to "Plugins", find "Facebook Button by BestWebSoft" and click "Activate".
 
 =  After clicking Facebook Button icon I see the Facebook Home page instead of the necessary account page =
 
@@ -104,14 +107,23 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Screenshots ==
 
-1. Plugin admin page.
-2. Displaying Facebook Button after your post.
+1. Plugin settings page.
+2. Displaying Facebook Button before your post.
 3. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
 
+= V2.44 - 21.10.2015 =
+* NEW : We added 'Show Faces' option.
+* NEW : We added 'Button layout' option.
+* NEW : We added 'Layout width' option.
+* NEW : We added 'Like button action' option.
+* NEW : We added 'Color scheme' option.
+* Update : Textdomain was changed.
+* Update : We updated all functionality for wordpress 4.3.1.
+
 = V2.43 - 26.08.2015 =
-* New : Option to display the button in excerpt.
+* NEW : Option to display the button in excerpt.
 
 = V2.42 - 24.08.2015 =
 * Update : We added buttons displaying for the excerpt.
@@ -122,7 +134,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Bugfix : We fixed the 'share' button displaying bug (when the shortcode is used).
 
 = V2.40 - 15.06.2015 =
-* New : Ability to restore settings to defaults.
+* NEW : Ability to restore settings to defaults.
 
 = V2.39 - 18.05.2015 =
 * Update : We updated option titles on the Settings page for the convenience of users.
@@ -131,7 +143,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 = V2.38 - 23.04.2015 =
 * Update : Button styles are updated.
-* New : The Finnish language file is added to the plugin.
+* NEW : The Finnish language file is added to the plugin.
 
 = V2.37 - 31.03.2015 =
 * Update : We updated all functionality for wordpress 4.1.1.
@@ -155,7 +167,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Bugfix : Problem with showing Like button was fixed.
 
 = V2.31 - 11.06.2014 =
-* New : Share button was added.
+* NEW : Share button was added.
 * Update : We updated all functionality for wordpress 3.9.1.
 * Bugfix : Problem with switching user was fixed.
 
@@ -167,7 +179,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : Plugin tabs is added.
 
 = V2.28 - 13.02.2014 =
-* New : Html5 version of Like button is added.
+* NEW : Html5 version of Like button is added.
 * Update : Screenshots are updated.
 * Update : BWS plugins section is updated.
 * Update : We updated all functionality for wordpress 3.8.1.
@@ -284,6 +296,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.44 =
+We added 'Show Faces' option. We added 'Button layout' option. We added 'Layout width' option. We added 'Like button action' option. We added 'Color scheme' option. Textdomain was changed. We updated all functionality for wordpress 4.3.1.
 
 = V2.43 =
 Option to display the button in excerpt.
