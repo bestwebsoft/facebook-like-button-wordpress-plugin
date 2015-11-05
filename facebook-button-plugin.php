@@ -6,7 +6,7 @@ Description: Put Facebook Button in to your post.
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.44
+Version: 2.45
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -77,7 +77,7 @@ if ( ! function_exists( 'fcbkbttn_init' ) ) {
 }
 /* End function init */
 
-/*## Function for admin_init */
+/* Function for admin_init */
 if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
 	function fcbkbttn_admin_init() {
 		/* Add variable for bws_menu */
@@ -170,8 +170,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		if ( ! function_exists( 'get_plugins' ) || ! function_exists( 'is_plugin_active' ) )
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
-		if ( ! isset( $_GET['action'] ) )
-			$all_plugins = get_plugins();
+		$all_plugins = get_plugins();
 
 		if ( isset( $_REQUEST['fcbkbttn_form_submit'] ) && check_admin_referer( $plugin_basename, 'fcbkbttn_nonce_name' ) ) {
 			if ( isset( $_POST['bws_hide_premium_options'] ) ) {
@@ -244,7 +243,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							$error	=	__( "Error: Invalid file type", 'facebook-button-plugin' );
 						} else {
 							$size	=	GetImageSize( $filename );
-							if ( ( $size ) && ( $size[0] <= $max_image_width ) && ( $size[1] <= $max_image_height ) ) {
+							if ( $size && $size[0] <= $max_image_width && $size[1] <= $max_image_height ) {
 								/* If file satisfies requirements, we will move them from temp to your plugin folder and rename to 'facebook_ico.jpg' */
 								if ( move_uploaded_file( $_FILES['uploadfile']['tmp_name'], $uploadfile ) ) {
 									$message .= '. ' . __( "Upload successful.", 'facebook-button-plugin' );
@@ -310,15 +309,16 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 					bws_form_restore_default_confirm( $plugin_basename );
 				} else { /* check action ##*/ ?>
 					<br>
-					<div><?php printf( 
+					<div><?php $icon_shortcode = ( "facebook-button-plugin.php" == $_GET['page'] ) ? plugins_url( 'bws_menu/images/shortcode-icon.png', __FILE__ ) : plugins_url( 'social-buttons-pack/bws_menu/images/shortcode-icon.png' );
+					printf( 
 						__( "If you would like to add Facebook buttons to your page or post, please use %s button", 'facebook-button-plugin' ), 
-						'<span class="bws_code"><img style="vertical-align: sub;" src="' . plugins_url( 'bws_menu/images/shortcode-icon.png', __FILE__ ) . '" alt=""/></span>' ); ?> 
-						<div class="bws_help_box bws_help_box_right<?php if ( $wp_version >= '3.9' ) echo ' dashicons dashicons-editor-help'; ?>">
+						'<span class="bws_code"><img style="vertical-align: sub;" src="' . $icon_shortcode . '" alt=""/></span>' ); ?> 
+						<div class="bws_help_box bws_help_box_right dashicons dashicons-editor-help">
 							<div class="bws_hidden_help_text" style="min-width: 180px;">
 								<?php printf( 
 									__( "You can add Facebook buttons to your page or post by clicking on %s button in the content edit block using the Visual mode. If the button isn't displayed, please use the shortcode %s", 'facebook-button-plugin' ), 
-									'<code><img style="vertical-align: sub;" src="' . plugins_url( 'bws_menu/images/shortcode-icon.png', __FILE__ ) . '" alt="" /></code>',
-									'<span class="bws_code">[fb_button]</span>'
+									'<code><img style="vertical-align: sub;" src="' . $icon_shortcode . '" alt="" /></code>',
+									'<code>[fb_button]</code>'
 								); ?>
 							</div>
 						</div>
@@ -535,6 +535,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 						<?php } ?>
 						<!-- end general -->
 					</form>
+					<!-- general -->
 					<?php bws_form_restore_default_settings( $plugin_basename );
 				}
 			} elseif ( 'extra' == $_GET['action'] ) { ?>
@@ -738,7 +739,7 @@ if ( ! function_exists( 'fcbkbttn_footer_script' ) ) {
 if ( ! function_exists( 'fcbkbttn_admin_head' ) ) {
 	function fcbkbttn_admin_head() {
 		global $fcbkbttn_options, $fcbkbttn_locale, $fcbkbttn_lang_codes;
-		if ( isset( $_GET['page'] ) && "facebook-button-plugin.php" == $_GET['page'] ) {
+		if ( isset( $_GET['page'] ) && ( "facebook-button-plugin.php" == $_GET['page'] || "social-buttons.php" == $_GET['page'] ) ) {
 			wp_enqueue_script( 'fcbk_script', plugins_url( 'js/script.js', __FILE__ ), array( 'jquery' ) );
 			wp_enqueue_style( 'fcbk_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 		} elseif ( ! is_admin() ) {
@@ -829,7 +830,8 @@ if ( ! function_exists ( 'fcbkbttn_plugin_banner' ) ) {
 			if ( isset( $fcbkbttn_options['first_install'] ) && strtotime( '-1 week' ) > $fcbkbttn_options['first_install'] )
 				bws_plugin_banner( $fcbkbttn_plugin_info, 'fcbkbttn', 'facebook-like-button', '45862a4b3cd7a03768666310fbdb19db', '78', '//ps.w.org/facebook-button-plugin/assets/icon-128x128.png' );   		  
 			
-			bws_plugin_banner_to_settings( $fcbkbttn_plugin_info, 'fcbk_bttn_plgn_options', 'facebook-button-plugin', 'admin.php?page=facebook-button-plugin.php' );
+			if ( ! is_network_admin() )
+				bws_plugin_banner_to_settings( $fcbkbttn_plugin_info, 'fcbk_bttn_plgn_options', 'facebook-button-plugin', 'admin.php?page=facebook-button-plugin.php' );
 		}
 	}
 }

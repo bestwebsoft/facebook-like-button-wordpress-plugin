@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: add button, add social button, add fb button, add facebook social button, add social buttons, add facebook button, add share button, add fb share button, add facebook share button, batton, best facebook plugin, best fb like button, best facebook like button, buton, button, button image, Button like, button position, FB, fb button, fb like, fb like button, fb share, Facebook, Facebook account button, facebook button, facebook button icon, facebook button language, Facebook button like, Facebook button share, Facebook ID, facebook like, facebook like button, Facebook Page, facebook share, facebook share button, follow, folow, follow button, icon, Like, like, likes, like button, My Page button, nice fb like button, nice facebook button, nice fb button, simple fb plugin, simple facebook plugin, social plugin, social plugins, Share, share button, social, social account, social button, wp plugin, wp social plugin, wordpress social plugin
 Requires at least: 3.8
 Tested up to: 4.3.1
-Stable tag: 2.44
+Stable tag: 2.45
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Add Facebook buttons to your WordPress website.
 
 Facebook Button plugin allows you to add a Follow button the easiest way. If your life is tightly connected with your Facebook account, our plugin is the best solution for you. It contains minimum settings. Just a few clicks and voila - Facebook Button is on your site.
 
-http://www.youtube.com/watch?v=QGv04uHVl5c
+http://www.youtube.com/watch?v=hGNQs-rF8b8
 
 <a href="http://www.youtube.com/watch?v=pAKsQPz3RZc" target="_blank">Facebook Button by BestWebSoft Video instruction on Installation</a>
 
@@ -47,6 +47,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 * Finnish (fi_FI) (thanks to <a href="mailto:juhani.honkanen@dnainternet.net">Juhani Honkanen</a>)
 * French (fr_FR) (thanks to <a href="mailto:wpthemefr@gmail.com">Murat</a>)
 * Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
+* Hungarian (hu_HU) (thanks to <a href="mailto:solarside09@gmail.com">Peter Aprily</a> www.aprily.com)
 * Russian (ru_RU)
 * Turkish (tr_TR) (thanks to <a href="mailto:webmaster@canatasever.com">Can Atasever</a>)
 * Ukrainian (uk)
@@ -112,6 +113,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 3. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
+
+= V2.45 - 05.11.2015 =
+* NEW : Hungarian language file is added to the plugin.
 
 = V2.44 - 21.10.2015 =
 * NEW : We added 'Show Faces' option.
@@ -296,6 +300,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.45 =
+Hungarian language file is added to the plugin.
 
 = V2.44 =
 We added 'Show Faces' option. We added 'Button layout' option. We added 'Layout width' option. We added 'Like button action' option. We added 'Color scheme' option. Textdomain was changed. We updated all functionality for wordpress 4.3.1.
