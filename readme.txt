@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add button, add social button, add fb button, add facebook social button, add social buttons, add facebook button, add share button, add fb share button, add facebook share button, batton, best facebook plugin, best fb like button, best facebook like button, buton, button, button image, Button like, button position, FB, fb button, fb like, fb like button, fb share, Facebook, Facebook account button, facebook button, facebook button icon, facebook button language, Facebook button like, Facebook button share, Facebook ID, facebook like, facebook like button, Facebook Page, facebook share, facebook share button, follow, folow, follow button, icon, Like, like, likes, like button, My Page button, nice fb like button, nice facebook button, nice fb button, simple fb plugin, simple facebook plugin, social plugin, social plugins, Share, share button, social, social account, social button, wp plugin, wp social plugin, wordpress social plugin
 Requires at least: 3.8
-Tested up to: 4.3.1
-Stable tag: 2.45
+Tested up to: 4.4-RC1
+Stable tag: 2.46
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -114,8 +114,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V2.46 - 30.11.2015 =
+* Bugfix : The bug with plugin menu duplicating was fixed.
+
 = V2.45 - 05.11.2015 =
-* NEW : Hungarian language file is added to the plugin.
+* NEW : Hungarian language file is added.
 
 = V2.44 - 21.10.2015 =
 * NEW : We added 'Show Faces' option.
@@ -301,8 +304,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Upgrade Notice ==
 
+= V2.46 =
+The bug with plugin menu duplicating was fixed.
+
 = V2.45 =
-Hungarian language file is added to the plugin.
+Hungarian language file is added.
 
 = V2.44 =
 We added 'Show Faces' option. We added 'Button layout' option. We added 'Layout width' option. We added 'Like button action' option. We added 'Color scheme' option. Textdomain was changed. We updated all functionality for wordpress 4.3.1.

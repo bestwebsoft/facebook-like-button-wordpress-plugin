@@ -6,7 +6,7 @@ Description: Put Facebook Button in to your post.
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.45
+Version: 2.46
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -30,7 +30,7 @@ License: GPLv2 or later
 /* Add BWS menu */
 if ( ! function_exists( 'fcbkbttn_add_pages' ) ) {
 	function fcbkbttn_add_pages() {
-		bws_add_general_menu( plugin_basename( __FILE__ ) );
+		bws_general_menu();
 		$settings = add_submenu_page( 'bws_plugins', __( 'Facebook Button Settings', 'facebook-button-plugin' ), 'Facebook Button', 'manage_options', 'facebook-button-plugin.php', 'fcbkbttn_settings_page' );
 		add_action( 'load-' . $settings, 'fcbkbttn_add_tabs' );
 	}
@@ -289,7 +289,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		}/* end GO PRO ##*/ ?>
 		<!-- general -->
 		<div class="wrap">
-			<h2><?php _e( 'Facebook Button Settings', 'facebook-button-plugin' ); ?></h2>
+			<h1><?php _e( 'Facebook Button Settings', 'facebook-button-plugin' ); ?></h1>
 			<h2 class="nav-tab-wrapper">
 				<a class="nav-tab<?php if ( ! isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php"><?php _e( 'Settings', 'facebook-button-plugin' ); ?></a>
 				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'extra' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=extra"><?php _e( 'Extra settings', 'facebook-button-plugin' ); ?></a>
