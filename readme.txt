@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add button, add social button, add fb button, add facebook social button, add social buttons, add facebook button, add share button, add fb share button, add facebook share button, batton, best facebook plugin, best fb like button, best facebook like button, buton, button, button image, Button like, button position, FB, fb button, fb like, fb like button, fb share, Facebook, Facebook account button, facebook button, facebook button icon, facebook button language, Facebook button like, Facebook button share, Facebook ID, facebook like, facebook like button, Facebook Page, facebook share, facebook share button, follow, folow, follow button, icon, Like, like, likes, like button, My Page button, nice fb like button, nice facebook button, nice fb button, simple fb plugin, simple facebook plugin, social plugin, social plugins, Share, share button, social, social account, social button, wp plugin, wp social plugin, wordpress social plugin
 Requires at least: 3.8
-Tested up to: 4.4-RC1
-Stable tag: 2.46
+Tested up to: 4.4.2
+Stable tag: 2.47
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,15 +104,19 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instruction on System Status</a>
 
 == Screenshots ==
 
 1. Plugin settings page.
-2. Displaying Facebook Button before your post.
-3. Displaying Facebook Button in your post via the shortcode.
+2. Displaying Facebook Buttons before your post.
+3. Displaying Facebook Buttons in your post via the shortcode.
 
 == Changelog ==
+
+= V2.47 - 04.02.2016 =
+* Bugfix : The conflict in the RSS feed was fixed.
+* Update : All functionality for wordpress 4.4.2 was updated.
 
 = V2.46 - 30.11.2015 =
 * Bugfix : The bug with plugin menu duplicating was fixed.
@@ -303,6 +307,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.47 =
+The conflict in the RSS feed was fixed. All functionality for wordpress 4.4.2 was updated.
 
 = V2.46 =
 The bug with plugin menu duplicating was fixed.

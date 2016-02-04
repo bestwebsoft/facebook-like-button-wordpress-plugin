@@ -704,7 +704,7 @@ if ( ! function_exists( 'bws_plugin_banner_to_settings' ) ) {
 
 if ( ! function_exists( 'bws_show_settings_notice' ) ) {
 	function bws_show_settings_notice() { ?>
-		<div id="bws_save_settings_notice" class="updated fade" style="display:none">
+		<div id="bws_save_settings_notice" class="updated fade below-h2" style="display:none;">
 			<p>
 				<strong><?php _e( 'Notice', 'bestwebsoft' ); ?></strong>: <?php _e( "The plugin's settings have been changed.", 'bestwebsoft' ); ?> 
 				<a class="bws_save_anchor" href="#bws-submit-button"><?php _e( 'Save Changes', 'bestwebsoft' ); ?></a>
@@ -718,7 +718,9 @@ if ( ! function_exists( 'bws_hide_premium_options' ) ) {
 		global $current_user;
 		if ( ! $current_user )
 			get_currentuserinfo();
-
+		if ( ! isset( $options['hide_premium_options'] ) || ! is_array( $options['hide_premium_options'] ) )
+			$options['hide_premium_options'] = array();
+		
 		$options['hide_premium_options'][] = $current_user->ID;
 
 		return array( 
@@ -733,7 +735,7 @@ if ( ! function_exists( 'bws_hide_premium_options_check' ) ) {
 		if ( ! $current_user )
 			get_currentuserinfo();
 
-		if ( isset( $options['hide_premium_options'] ) && in_array( $current_user->ID, $options['hide_premium_options'] ) )
+		if ( ! empty( $options['hide_premium_options'] ) && in_array( $current_user->ID, $options['hide_premium_options'] ) )
 			return true;
 		else
 			return false;
