@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add button, add social button, add fb button, add facebook social button, add social buttons, add facebook button, add share button, add fb share button, add facebook share button, batton, best facebook plugin, best fb like button, best facebook like button, buton, button, button image, Button like, button position, FB, fb button, fb like, fb like button, fb share, Facebook, Facebook account button, facebook button, facebook button icon, facebook button language, Facebook button like, Facebook button share, Facebook ID, facebook like, facebook like button, Facebook Page, facebook share, facebook share button, follow, folow, follow button, icon, Like, like, likes, like button, My Page button, nice fb like button, nice facebook button, nice fb button, simple fb plugin, simple facebook plugin, social plugin, social plugins, Share, share button, social, social account, social button, wp plugin, wp social plugin, wordpress social plugin
 Requires at least: 3.8
-Tested up to: 4.4.2
-Stable tag: 2.47
+Tested up to: 4.5.1
+Stable tag: 2.48
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,8 @@ http://www.youtube.com/watch?v=hGNQs-rF8b8
 * Use a standard image or replace it with some other image.
 * Use the current site language for Facebook Buttons (Using <a href="http://bestwebsoft.com/products/multilanguage/" target="_blank">Multilanguage by BestWebSoft</a>)
 
+If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
+
 = Recommended Plugins =
 
 The author of Facebook Button also recommends the following plugins:
@@ -56,7 +58,7 @@ If you create your own language pack or update the existing one, you can send <a
 
 = Technical support =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
+Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
 
 If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
 Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
@@ -66,7 +68,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the folder `facebook-button-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust the necessary settings in your WordPress admin panel - "Settings" > "Facebook Button".
+3. You can adjust the necessary settings in your WordPress admin panel - "BWS Plugins" > "Facebook Button".
 
 <a href="https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/edit" target="_blank">View a Step-by-step Instruction on Facebook Button by BestWebSoft Installation</a>.
 
@@ -108,11 +110,15 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Screenshots ==
 
-1. Plugin settings page.
-2. Displaying Facebook Buttons before your post.
-3. Displaying Facebook Buttons in your post via the shortcode.
+1. Displaying Facebook Buttons before your post.
+2. Displaying Facebook Buttons in your post via the shortcode.
+3. Plugin settings page.
 
 == Changelog ==
+
+= V2.48 - 06.05.2016 =
+* NEW : Ability to add custom styles.
+* Update : All functionality for wordpress 4.5.1 was updated.
 
 = V2.47 - 04.02.2016 =
 * Bugfix : The conflict in the RSS feed was fixed.
@@ -307,6 +313,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.48 =
+Ability to add custom styles. All functionality for wordpress 4.5.1 was updated.
 
 = V2.47 =
 The conflict in the RSS feed was fixed. All functionality for wordpress 4.4.2 was updated.

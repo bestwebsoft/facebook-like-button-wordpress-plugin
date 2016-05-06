@@ -1,4 +1,4 @@
-<a href="http://bestwebsoft.com/products/facebook-like-button/" target=_blank>Facebook Like Button WordPress Plugin</a>
+<a href="http://bestwebsoft.com/products/facebook-like-button/" target=_blank>Facebook Button WordPress Plugin</a>
 ========================
 
 Facebook Button plugin allows you to add a Follow button the easiest way. If your life is tightly connected with your Facebook account, our plugin is the best solution for you. It contains minimum settings. Just a few clicks and voila - Facebook Button is on your site.
