@@ -1,10 +1,10 @@
 ﻿=== Facebook Button by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: add button, add social button, add fb button, add facebook social button, add social buttons, add facebook button, add share button, add fb share button, add facebook share button, batton, best facebook plugin, best fb like button, best facebook like button, buton, button, button image, Button like, button position, FB, fb button, fb like, fb like button, fb share, Facebook, Facebook account button, facebook button, facebook button icon, facebook button language, Facebook button like, Facebook button share, Facebook ID, facebook like, facebook like button, Facebook Page, facebook share, facebook share button, follow, folow, follow button, icon, Like, like, likes, like button, My Page button, nice fb like button, nice facebook button, nice fb button, simple fb plugin, simple facebook plugin, social plugin, social plugins, Share, share button, social, social account, social button, wp plugin, wp social plugin, wordpress social plugin
+Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.8
-Tested up to: 4.5.1
-Stable tag: 2.48
+Tested up to: 4.5.3
+Stable tag: 2.49
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,7 +54,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 * Turkish (tr_TR) (thanks to <a href="mailto:webmaster@canatasever.com">Can Atasever</a>)
 * Ukrainian (uk)
 
-If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
@@ -68,7 +68,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the folder `facebook-button-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust the necessary settings in your WordPress admin panel - "BWS Plugins" > "Facebook Button".
+3. You can adjust the necessary settings in your WordPress admin panel - "BWS Panel" > "Facebook Button".
 
 <a href="https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/edit" target="_blank">View a Step-by-step Instruction on Facebook Button by BestWebSoft Installation</a>.
 
@@ -82,16 +82,16 @@ In WordPress admin panel, please go to "Plugins", find "Facebook Button by BestW
 
 =  After clicking Facebook Button icon I see the Facebook Home page instead of the necessary account page =
 
-1. In WordPress admin panel, please go to "BWS Plugins", find Facebook Button settings page and enter your Facebook ID or username. Then click "Save Changes".
+1. In WordPress admin panel, please go to "BWS Panel", find Facebook Button settings page and enter your Facebook ID or username. Then click "Save Changes".
 2. If you do not have Facebook account yet, you should create it using this link: http://www.facebook.com. After the account is created please follow the instructions above.
 
 = How to adjust Facebook Button position on the page =
 
-In WordPress admin panel, please go to "BWS Plugins", find Facebook Button settings page and choose one of the listed positions: Before, After, Before and After or Shortcode. Then click "Save Changes".
+In WordPress admin panel, please go to "BWS Panel", find Facebook Button settings page and choose one of the listed positions: Before, After, Before and After or Shortcode. Then click "Save Changes".
 
 = How to change Facebook Button icon ("My page") =
 
-1. In WordPress admin panel, please go to "BWS Plugins", find Facebook Button settings page and choose one of the listed positions: Standard Facebook image or Custom Facebook image. Then click "Save Changes".
+1. In WordPress admin panel, please go to "BWS Panel", find Facebook Button settings page and choose one of the listed positions: Standard Facebook image or Custom Facebook image. Then click "Save Changes".
 2. If you choose Custom Facebook image, you can upload your own picture. You should click "Choose file" and choose an image in your folder. Then click "Save Changes".
 
 = After the plugin installation and settings adjustment on the settings page it is still not working =
@@ -115,6 +115,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.49 - 06.07.2016 =
+* Update : Images size for meta property 'og:image' has been changed.
 
 = V2.48 - 06.05.2016 =
 * NEW : Ability to add custom styles.
@@ -314,6 +317,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Upgrade Notice ==
 
+= V2.49 =
+Images size for meta property 'og:image' has been changed.
+
 = V2.48 =
 Ability to add custom styles. All functionality for wordpress 4.5.1 was updated.
 
@@ -447,10 +453,10 @@ Language files are added to the plugin. Style for facebook button block was adde
 Redirect to profile page bug is fixed.
 
 = V2.04 =
-BWS Plugins sections was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. The bug of positioning in admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API. 
+BWS Panel sections was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. The bug of positioning in admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API. 
 
 = V2.03 =
-BWS Plugins sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins. Icons displaying is fixed.
+BWS Panel sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins. Icons displaying is fixed.
 
 = V2.02 =
 The bug of adjustment the link to the page is fixed in this version. Please upgrade the plugin immediately. Thank you

@@ -2,11 +2,11 @@
 /*##
 Plugin Name: Facebook Button by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
-Description: Put Facebook Button in to your post.
+Description: Add Facebook buttons to your WordPress website..
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.48
+Version: 2.49
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -31,7 +31,7 @@ License: GPLv2 or later
 if ( ! function_exists( 'fcbkbttn_add_pages' ) ) {
 	function fcbkbttn_add_pages() {
 		bws_general_menu();
-		$settings = add_submenu_page( 'bws_plugins', __( 'Facebook Button Settings', 'facebook-button-plugin' ), 'Facebook Button', 'manage_options', 'facebook-button-plugin.php', 'fcbkbttn_settings_page' );
+		$settings = add_submenu_page( 'bws_panel', __( 'Facebook Button Settings', 'facebook-button-plugin' ), 'Facebook Button', 'manage_options', 'facebook-button-plugin.php', 'fcbkbttn_settings_page' );
 		add_action( 'load-' . $settings, 'fcbkbttn_add_tabs' );
 	}
 }
@@ -84,7 +84,7 @@ if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
 		global $bws_plugin_info, $fcbkbttn_plugin_info, $bws_shortcode_list;
 		
 		/*## Function for bws menu */
-		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )	{
+		if ( empty( $bws_plugin_info ) )	{
 			$bws_plugin_info = array( 'id' => '78', 'version' => $fcbkbttn_plugin_info["Version"] );
 		}
 
@@ -100,6 +100,9 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 
 		$fcbkbttn_options_default = array(
 			'plugin_option_version'		=> $fcbkbttn_plugin_info["Version"],
+			'display_settings_notice'	=>	1,
+			'first_install'				=>	strtotime( "now" ),
+			'suggest_feature_banner'	=> 1,
 			'link'						=>	'',
 			'my_page'					=>	1,
 			'like'						=>	1,
@@ -117,45 +120,35 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 			'locale' 					=>	'en_US',
 			'html5'						=>	0,
 			'use_multilanguage_locale'	=>  0,
-			'display_for_excerpt'		=>  0,
-			'display_settings_notice'	=>	1,
-			'first_install'				=>	strtotime( "now" ),
-			'suggest_feature_banner'	=> 1
+			'display_for_excerpt'		=>  0			
 		);
-		/* Install the option defaults */
-		if ( ! get_option( 'fcbk_bttn_plgn_options' ) ) {
-			if ( false !== get_option( 'fcbk_bttn_plgn_options_array' ) ) {
-				$old_options = get_option( 'fcbk_bttn_plgn_options_array' );
-				foreach ( $fcbkbttn_options_default as $key => $value ) {
-					if ( isset( $old_options['fcbk_bttn_plgn_' . $key ] ) )
-					$fcbkbttn_options_default[ $key ] = $old_options['fcbk_bttn_plgn_' . $key ];
-				}
-				update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options_default );
-				delete_option( 'fcbk_bttn_plgn_options_array' );
-			}
-			add_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options_default );
+		/**
+		* @since 2.49
+		* @todo remove after 08.02.2017
+		*/
+		if ( $old_options = get_option( 'fcbk_bttn_plgn_options' ) ) {
+			if ( ! get_option( 'fcbkbttn_options' ) )
+				add_option( 'fcbkbttn_options', $old_options );
+			else
+				update_option( 'fcbkbttn_options', $old_options );
+			delete_option( 'fcbk_bttn_plgn_options' );
 		}
+		/* end @todo */
+
+		/* Install the option defaults */
+		if ( ! get_option( 'fcbkbttn_options' ) )
+			add_option( 'fcbkbttn_options', $fcbkbttn_options_default );
+
 		/* Get options from the database */
-		$fcbkbttn_options = get_option( 'fcbk_bttn_plgn_options' );
+		$fcbkbttn_options = get_option( 'fcbkbttn_options' );
 
 		if ( ! isset( $fcbkbttn_options['plugin_option_version'] ) || $fcbkbttn_options['plugin_option_version'] != $fcbkbttn_plugin_info["Version"] ) {
-			if ( stristr( $fcbkbttn_options['fb_img_link'], 'standart-facebook-ico.jpg' ) || stristr( $fcbkbttn_options['fb_img_link'], 'standart-facebook-ico.png' ) )
-				$fcbkbttn_options['fb_img_link'] = plugins_url( "images/standard-facebook-ico.png", __FILE__ );	
-
-			if ( 'standart' == $fcbkbttn_options['display_option'] )
-				$fcbkbttn_options['display_option'] = 'standard';
-
-			if ( stristr( $fcbkbttn_options['fb_img_link'], 'img/' ) )
-				$fcbkbttn_options['fb_img_link'] = plugins_url( str_replace( 'img/', 'images/', $fcbkbttn_options['fb_img_link'] ), __FILE__ );	
-
-			$fcbkbttn_options_default['display_settings_notice'] = 0;
-
 			/* show pro features */
 			$fcbkbttn_options['hide_premium_options'] = array();
 
 			$fcbkbttn_options = array_merge( $fcbkbttn_options_default, $fcbkbttn_options );
 			$fcbkbttn_options['plugin_option_version'] = $fcbkbttn_plugin_info["Version"];
-			update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options );
+			update_option( 'fcbkbttn_options', $fcbkbttn_options );
 		}
 	}
 }
@@ -179,7 +172,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 				$fcbkbttn_options = $hide_result['options'];
 			}
 
-			/* Takes all the changed settings on the plugin's admin page and saves them in array 'fcbk_bttn_plgn_options'. */
+			/* Takes all the changed settings on the plugin's admin page and saves them in array 'fcbkbttn_options'. */
 			$fcbkbttn_options['link']			 =	stripslashes( esc_html( $_REQUEST['fcbkbttn_link'] ) );
 			$fcbkbttn_options['link']			 = 	str_replace( 'https://www.facebook.com/profile.php?id=', '', $fcbkbttn_options['link'] );
 			$fcbkbttn_options['link']			 = 	str_replace( 'https://www.facebook.com/', '', $fcbkbttn_options['link'] );
@@ -211,7 +204,8 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 			$fcbkbttn_options['use_multilanguage_locale'] =	isset( $_REQUEST['fcbkbttn_use_multilanguage_locale'] ) ? 1 : 0;
 			$fcbkbttn_options['display_for_excerpt'] =	isset( $_REQUEST['fcbkbttn_display_for_excerpt'] ) ? 1 : 0;
 
-			update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options );
+			$lnkdn_options = apply_filters( 'fcbkbttn_before_save_options', $fcbkbttn_options );
+			update_option( 'fcbkbttn_options', $fcbkbttn_options );
 			$message = __( "Settings saved", 'facebook-button-plugin' );
 			
 			if ( isset( $_FILES['fcbkbttn_uploadfile']['tmp_name'] ) &&  "" != $_FILES['fcbkbttn_uploadfile']['tmp_name'] ) {
@@ -255,7 +249,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 										$fb_img_link = $upload_dir['baseurl'] . '/facebook-image/facebook-ico' . $fcbkbttn_options['count_icon'] . '.' . $fcbkbttn_options['extention'];
 									}
 									$fcbkbttn_options['fb_img_link'] = $fb_img_link ;
-									update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options );
+									update_option( 'fcbkbttn_options', $fcbkbttn_options );
 								} else {
 									$error = __( "Error: moving file failed", 'facebook-button-plugin' );
 								}
@@ -276,18 +270,18 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		/* add restore function */
 		if ( isset( $_REQUEST['bws_restore_confirm'] ) && check_admin_referer( $plugin_basename, 'bws_settings_nonce_name' ) ) {
 			$fcbkbttn_options = $fcbkbttn_options_default;
-			update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options );
+			update_option( 'fcbkbttn_options', $fcbkbttn_options );
 			$message = __( 'All plugin settings were restored.', 'facebook-button-plugin' );
 		}
 
-		/* GO PRO */
+		/*pls GO PRO */
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
-			$go_pro_result = bws_go_pro_tab_check( $plugin_basename, 'fcbk_bttn_plgn_options' );
+			$go_pro_result = bws_go_pro_tab_check( $plugin_basename, 'fcbkbttn_options' );
 			if ( ! empty( $go_pro_result['error'] ) )
 				$error = $go_pro_result['error'];
 			elseif ( ! empty( $go_pro_result['message'] ) )
 				$message = $go_pro_result['message'];
-		}/* end GO PRO ##*/ ?>
+		}/* end GO PRO pls*/##*/ ?>
 		<!-- general -->
 		<div class="wrap">
 			<h1><?php _e( 'Facebook Button Settings', 'facebook-button-plugin' ); ?></h1>
@@ -296,9 +290,13 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 			</ul>
 			<h2 class="nav-tab-wrapper">
 				<a class="nav-tab<?php if ( ! isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php"><?php _e( 'Settings', 'facebook-button-plugin' ); ?></a>
+				<!-- pls -->
 				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'extra' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=extra"><?php _e( 'Extra settings', 'facebook-button-plugin' ); ?></a>
+				<!-- end pls -->
 				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'custom_code' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=custom_code"><?php _e( 'Custom code', 'facebook-button-plugin' ); ?></a>
+				<!-- pls -->
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=go_pro"><?php _e( 'Go PRO', 'facebook-button-plugin' ); ?></a>
+				<!-- end pls -->
 			</h2>
 			<!-- end general -->
 			<noscript><div class="error below-h2"><p><strong><?php _e( "Please, enable JavaScript in Your browser.", 'facebook-button-plugin' ); ?></strong></p></div></noscript>
@@ -390,8 +388,9 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 										<input name='fcbkbttn_display_for_excerpt' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['display_for_excerpt'] ) echo 'checked="checked "'; ?>/>
 									</td>
 								</tr>
+								<?php do_action( 'fcbkbttn_settings_page_action', $fcbkbttn_options ); ?>
 							</table>
-							<!-- general -->
+							<!-- general --><!-- pls -->
 							<?php if ( ! $bws_hide_premium_options_check ) { ?>
 								<div class="bws_pro_version_bloc">
 									<div class="bws_pro_version_table_bloc">
@@ -448,7 +447,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 									</div>
 								</div>
 							<?php } ?>
-							<!-- end general -->
+							<!-- end general --><!-- end pls -->
 							<table class="form-table">
 								<tr id="fcbkbttn_id_option" class="fcbkbttn_my_page" <?php if ( 1 != $fcbkbttn_options['my_page'] ) echo 'style="display:none"'; ?>>
 									<th scope="row"><?php _e( 'Your Facebook ID or username', 'facebook-button-plugin' ); ?></th>
@@ -540,7 +539,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 									</td>
 								</tr>
 							</table>
-							<!-- general -->
+							<!-- general --><!-- pls -->
 							<?php if ( ! $bws_hide_premium_options_check ) { ?>
 								<div class="bws_pro_version_bloc fcbkbttn_like">
 									<div class="bws_pro_version_table_bloc">
@@ -569,14 +568,14 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 									</div>
 								</div>
 							<?php } ?>
-							<!-- end general -->
+							<!-- end general --><!-- end pls -->
 							<p class="submit">
 								<input type="hidden" name="fcbkbttn_form_submit" value="submit" />
 								<input id="bws-submit-button" type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'facebook-button-plugin' ); ?>" />
 								<?php wp_nonce_field( $plugin_basename, 'fcbkbttn_nonce_name' ); ?>
 							</p>
 						</div>
-						<!-- general -->
+						<!-- general --><!-- pls -->
 						<?php if ( ! $bws_hide_premium_options_check ) { ?>
 							<div id="fcbkbttn_preview">
 								<div class="bws_pro_version_bloc">
@@ -598,12 +597,14 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 								</div>
 							</div>
 						<?php } ?>
-						<!-- end general -->
+						<!-- end general --><!-- end pls -->
 					</form>
 					<!-- general -->
 					<?php bws_form_restore_default_settings( $plugin_basename );
 				}
-			} elseif ( 'extra' == $_GET['action'] ) { ?>
+			} elseif ( 'custom_code' == $_GET['action'] ) {
+				bws_custom_code_tab();
+			} /*pls extra banner */ elseif ( 'extra' == $_GET['action'] ) { ?>
 				<div class="bws_pro_version_bloc">
 					<div class="bws_pro_version_table_bloc">
 						<div class="bws_table_bg"></div>
@@ -646,12 +647,10 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 						<div class="clear"></div>
 					</div>
 				</div>
-			<?php } elseif ( 'custom_code' == $_GET['action'] ) {
-				bws_custom_code_tab();
-			} elseif ( 'go_pro' == $_GET['action'] ) { 
+			<?php } elseif ( 'go_pro' == $_GET['action'] ) { 
 				bws_go_pro_tab_show( $bws_hide_premium_options_check, $fcbkbttn_plugin_info, $plugin_basename, 'facebook-button-plugin.php', 'facebook-button-pro.php', 'facebook-button-pro/facebook-button-pro.php', 'facebook-like-button', '427287ceae749cbd015b4bba6041c4b8', '78', isset( $go_pro_result['pro_plugin_is_activated'] ) ); 
 			}
-			bws_plugin_reviews_block( $fcbkbttn_plugin_info['Name'], 'facebook-button-plugin' ); ?>
+			bws_plugin_reviews_block( $fcbkbttn_plugin_info['Name'], 'facebook-button-plugin' );  /* show reviews block pls*/ ?>
 		</div>
 		<!-- end general -->
 	<?php }
@@ -705,7 +704,7 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 	}
 }
 
-/* Function taking from array 'fcbk_bttn_plgn_options' necessary information to create Facebook Button and reacting to your choise in plugin menu - points where it appears. */
+/* Function taking from array 'fcbkbttn_options' necessary information to create Facebook Button and reacting to your choise in plugin menu - points where it appears. */
 if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 	function fcbkbttn_display_button( $content ) {
 
@@ -713,10 +712,10 @@ if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 			return $content;
 
 		global $fcbkbttn_options;
-		/* Query the database to receive array 'fcbk_bttn_plgn_options' and receiving necessary information to create button */
+		/* Query the database to receive array 'fcbkbttn_options' and receiving necessary information to create button */
 		$fcbkbttn_where	= $fcbkbttn_options['where'];
 		
-		$button = fcbkbttn_button();
+		$button = apply_filters( 'fcbkbttn_button_in_the_content', fcbkbttn_button() );
 		/* Indication where show Facebook Button depending on selected item in admin page. */
 		if ( 'before' == $fcbkbttn_where ) {
 			return $button . $content;
@@ -770,7 +769,7 @@ if ( ! function_exists( 'fcbkbttn_meta' ) ) {
 			if ( is_singular() ) {
 				$image = '';
 				if ( has_post_thumbnail( get_the_ID() ) ) {
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' );
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' );
 					$image = $image[0];
 				}
 				print "\n" . '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '"/>';
@@ -883,18 +882,20 @@ if ( ! function_exists ( 'fcbkbttn_plugin_banner' ) ) {
 	function fcbkbttn_plugin_banner() {
 		global $hook_suffix, $fcbkbttn_plugin_info;
 		if ( 'plugins.php' == $hook_suffix ) {
+			/*pls show banner go pro */
 			global $fcbkbttn_options;
 			if ( empty( $fcbkbttn_options ) )
-				$fcbkbttn_options = get_option( 'fcbk_bttn_plgn_options' );
+				$fcbkbttn_options = get_option( 'fcbkbttn_options' );
 
 			if ( isset( $fcbkbttn_options['first_install'] ) && strtotime( '-1 week' ) > $fcbkbttn_options['first_install'] )
-				bws_plugin_banner( $fcbkbttn_plugin_info, 'fcbkbttn', 'facebook-like-button', '45862a4b3cd7a03768666310fbdb19db', '78', '//ps.w.org/facebook-button-plugin/assets/icon-128x128.png' );   		  
+				bws_plugin_banner( $fcbkbttn_plugin_info, 'fcbkbttn', 'facebook-like-button', '45862a4b3cd7a03768666310fbdb19db', '78', 'facebook-button-plugin' );   		  
 			
+			/* show banner go settings pls*/
 			if ( ! is_network_admin() )
-				bws_plugin_banner_to_settings( $fcbkbttn_plugin_info, 'fcbk_bttn_plgn_options', 'facebook-button-plugin', 'admin.php?page=facebook-button-plugin.php' );
+				bws_plugin_banner_to_settings( $fcbkbttn_plugin_info, 'fcbkbttn_options', 'facebook-button-plugin', 'admin.php?page=facebook-button-plugin.php' );
 		}
 		if ( isset( $_REQUEST['page'] ) && 'facebook-button-plugin.php' == $_REQUEST['page'] ) {
-			bws_plugin_suggest_feature_banner( $fcbkbttn_plugin_info, 'fcbk_bttn_plgn_options', 'facebook-button-plugin' );
+			bws_plugin_suggest_feature_banner( $fcbkbttn_plugin_info, 'fcbkbttn_options', 'facebook-button-plugin' );
 		}
 	}
 }
@@ -906,19 +907,18 @@ if ( ! function_exists( 'fcbkbttn_delete_options' ) ) {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		$all_plugins = get_plugins();
 
-		if ( ! array_key_exists( 'bws-social-buttons/bws-social-buttons.php', $all_plugins ) ) {
-			if ( ! array_key_exists( 'facebook-button-pro/facebook-button-pro.php', $all_plugins ) ) {
-				/* delete custom images if no PRO version */
-				$upload_dir = wp_upload_dir();
-				$fcbkbttn_cstm_mg_folder = $upload_dir['basedir'] . '/facebook-image/';
-				if ( is_dir( $fcbkbttn_cstm_mg_folder ) ) {
-					$fcbkbttn_cstm_mg_files = scandir( $fcbkbttn_cstm_mg_folder );
-					foreach ( $fcbkbttn_cstm_mg_files as $value ) {
-						@unlink ( $fcbkbttn_cstm_mg_folder . $value );
-					}
-					@rmdir( $fcbkbttn_cstm_mg_folder );
+		if ( ! array_key_exists( 'bws-social-buttons/bws-social-buttons.php', $all_plugins ) && ! array_key_exists( 'facebook-button-pro/facebook-button-pro.php', $all_plugins ) && ! array_key_exists( 'facebook-button-plus/facebook-button-plus.php', $all_plugins ) ) {
+			/* delete custom images if no PRO version */
+			$upload_dir = wp_upload_dir();
+			$fcbkbttn_cstm_mg_folder = $upload_dir['basedir'] . '/facebook-image/';
+			if ( is_dir( $fcbkbttn_cstm_mg_folder ) ) {
+				$fcbkbttn_cstm_mg_files = scandir( $fcbkbttn_cstm_mg_folder );
+				foreach ( $fcbkbttn_cstm_mg_files as $value ) {
+					@unlink ( $fcbkbttn_cstm_mg_folder . $value );
 				}
+				@rmdir( $fcbkbttn_cstm_mg_folder );
 			}
+		
 
 			if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 				global $wpdb;
@@ -927,13 +927,14 @@ if ( ! function_exists( 'fcbkbttn_delete_options' ) ) {
 				$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
 				foreach ( $blogids as $blog_id ) {
 					switch_to_blog( $blog_id );
-					delete_option( 'fcbk_bttn_plgn_options' );
+					delete_option( 'fcbkbttn_options' );
 				}
 				switch_to_blog( $old_blog );
 			} else {
-				delete_option( 'fcbk_bttn_plgn_options' );
+				delete_option( 'fcbkbttn_options' );
 			}
 		}
+
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
 		bws_include_init( plugin_basename( __FILE__ ) );
 		bws_delete_plugin( plugin_basename( __FILE__ ) );
