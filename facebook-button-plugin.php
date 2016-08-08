@@ -1,12 +1,12 @@
 <?php
 /*##
 Plugin Name: Facebook Button by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/
-Description: Add Facebook buttons to your WordPress website..
+Plugin URI: http://bestwebsoft.com/products/facebook-like-button/
+Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pages and widgets.
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.49
+Version: 2.50
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */

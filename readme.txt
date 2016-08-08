@@ -3,12 +3,12 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.8
-Tested up to: 4.5.3
-Stable tag: 2.49
+Tested up to: 4.6
+Stable tag: 2.50
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add Facebook buttons to your WordPress website.
+Add Facebook Like, Share and Profile buttons to WordPress posts, pages and widgets.
 
 == Description ==
 
@@ -33,7 +33,7 @@ http://www.youtube.com/watch?v=hGNQs-rF8b8
 * Choose "Like" button action - "Like" or "Recommend".
 * Select the button position: before the content, after, before and after, or using a shortcode.
 * Use a standard image or replace it with some other image.
-* Use the current site language for Facebook Buttons (Using <a href="http://bestwebsoft.com/products/multilanguage/" target="_blank">Multilanguage by BestWebSoft</a>)
+* Use the current site language for Facebook Buttons (Using <a href="http://bestwebsoft.com/products/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3" target="_blank">Multilanguage by BestWebSoft</a>)
 
 If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
 
@@ -115,6 +115,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.50 - 08.08.2016 =
+* Update : All functionality for wordpress 4.6 was updated.
 
 = V2.49 - 06.07.2016 =
 * Update : Images size for meta property 'og:image' has been changed.
@@ -316,6 +319,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.50 =
+* The compatibility with new WordPress version updated.
 
 = V2.49 =
 Images size for meta property 'og:image' has been changed.
