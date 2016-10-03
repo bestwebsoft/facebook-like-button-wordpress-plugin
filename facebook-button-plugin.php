@@ -1,12 +1,12 @@
 <?php
 /*##
 Plugin Name: Facebook Button by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/facebook-like-button/
+Plugin URI: http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/
 Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pages and widgets.
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.50
+Version: 2.51
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -376,7 +376,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 												} else { ?>
 													<input disabled="disabled" type="checkbox" name="fcbkbttn_use_multilanguage_locale" value="1" />
 													<?php _e( 'Use the current site language', 'facebook-button-plugin' ); ?>
-													<span class="bws_info">(<?php _e( 'Using', 'facebook-button-plugin' ); ?> Multilanguage by BestWebSoft) <a href="http://bestwebsoft.com/products/multilanguage/?k=196fb3bb74b6e8b1e08f92cddfd54313&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Download', 'facebook-button-plugin' ); ?> Multilanguage</a></span>
+													<span class="bws_info">(<?php _e( 'Using', 'facebook-button-plugin' ); ?> Multilanguage by BestWebSoft) <a href="http://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=196fb3bb74b6e8b1e08f92cddfd54313&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Download', 'facebook-button-plugin' ); ?> Multilanguage</a></span>
 												<?php } ?>
 											</label>
 										</fieldset>
@@ -442,7 +442,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 										<div class="bws_info">
 											<?php _e( 'Unlock premium options by upgrading to Pro version', 'facebook-button-plugin' ); ?>
 										</div>
-										<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Button Pro"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a>
+										<a class="bws_button" href="http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Button Pro"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -563,7 +563,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 										<div class="bws_info">
 											<?php _e( 'Unlock premium options by upgrading to Pro version', 'facebook-button-plugin' ); ?>
 										</div>
-										<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Button Pro"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a>
+										<a class="bws_button" href="http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Button Pro"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -591,7 +591,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 										<div class="bws_info">
 											<?php _e( 'Unlock premium options by upgrading to Pro version', 'facebook-button-plugin' ); ?>
 										</div>
-										<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Button Pro"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a>
+										<a class="bws_button" href="http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Button Pro"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -643,7 +643,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 						<div class="bws_info">
 							<?php _e( 'Unlock premium options by upgrading to Pro version', 'facebook-button-plugin' ); ?>
 						</div>
-						<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Button Pro"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a>
+						<a class="bws_button" href="http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Button Pro"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a>
 						<div class="clear"></div>
 					</div>
 				</div>

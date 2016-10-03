@@ -1,47 +1,125 @@
 <a href="http://bestwebsoft.com/products/facebook-like-button/" target=_blank>Facebook Button WordPress Plugin</a>
 ========================
 
-Facebook Button plugin allows you to add a Follow button the easiest way. If your life is tightly connected with your Facebook account, our plugin is the best solution for you. It contains minimum settings. Just a few clicks and voila - Facebook Button is on your site.
+Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widgets.
 
 <img src="http://bestwebsoft.com/wp-content/uploads/2014/09/facebook-button-banner-website.jpg" />
 
-<a href="http://bestwebsoft.com/products/facebook-like-button/description/" target=_blank>Description</a> | 
-<a href="http://bestwebsoft.com/products/facebook-like-button/installation/" target=_blank>Installation</a> | 
-<a href="http://bestwebsoft.com/products/facebook-like-button/faq/" target=_blank>FAQ</a> | 
-<a href="http://bestwebsoft.com/products/facebook-like-button/screenshots/" target=_blank>Screenshots</a> | 
-<a href="http://bestwebsoft.com/products/facebook-like-button/changelog/" target=_blank>Changelog</a> | 
-<a href="http://bestwebsoft.com/products/facebook-like-button/download/" target=_blank>Download</a>
+<p>Facebook plugin is a best social media solution which adds Follow, Like, and Share buttons to your Wordpress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.</p>
+
+<p>Customize the appearance, configure settings, and enable other advanced options to get more social traffic to your website and keep your visitors involved!</p>
 
 
-Features
------------------------------
-* Add Facebook buttons in the easiest way (Follow button, Like button and Share button).
-* Show or hide faces.
-* Choose button layout for "Like" and "Share".
-* Choose color scheme for around text.
-* Choose "Like" button action - "Like" or "Recommend".
-* Select the button position: before the content, after, before and after, or using a shortcode.
-* Use a standard image or replace it with some other image.
-* Use the current site language for Facebook Buttons (Using Multilanguage by BestWebSoft)
+<div class='video'></div>
 
 
-Translation
------------------------------
-* Finnish (fi_FI) (thanks to Juhani Honkanen)
-* French (fr_FR) (thanks to Murat)
-* Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
-* Hungarian (hu_HU) (thanks to Peter Aprily www.aprily.com)
-* Russian (ru_RU)
-* Turkish (tr_TR) (thanks to Can Atasever)
-* Ukrainian (uk)
+<h4>Free Features</h4>
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+<ul>
+<li>Add Facebook buttons such as:
 
+<ul>
+<li>Like </li>
+<li>Share </li>
+<li>Follow </li>
+</ul></li>
+<li>Change color scheme for Share button</li>
+<li>Select layout for Like and Share buttons:
 
-Technical support
------------------------------
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
+<ul>
+<li>Standard</li>
+<li>Box count</li>
+<li>Button count</li>
+<li>Button</li>
+</ul></li>
+<li>Select the button position:
 
-If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
-We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+<ul>
+<li>Before the content</li>
+<li>After the content</li>
+<li>Before and after</li>
+<li>Custom position (using shortcode)</li>
+</ul></li>
+<li>Show/hide faces option</li>
+<li>Compatible with <a href="http://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3">Multilanguage</a> (current website language detection)</li>
+<li>Choose Like button action &#8211; like or recommend</li>
+<li>Use a standard Follow button image or replace it with custom one   </li>
+<li>Add custom code via plugin settings page</li>
+<li>Compatible with latest WordPress version</li>
+<li>Incredibly simple settings for fast setup without modifying code</li>
+<li>Detailed step-by-step documentation and videos</li>
+</ul>
+
+<blockquote>
+  <p><strong>Pro Features</strong></p>
+  
+  <p>All features from Free version included plus:</p>
+  
+  <ul>
+  <li>Display Facebook buttons for certain pages and/or post types     </li>
+  <li>Сhange meta tags:
+  
+  <ul>
+  <li>Image</li>
+  <li>Description</li>
+  </ul></li>
+  <li>Enable like option for:
+  
+  <ul>
+  <li>Entire website</li>
+  <li>Single pages</li>
+  </ul></li>
+  <li>Facebook button preview </li>
+  <li>Configure all subsites on the network</li>
+  <li>Get answer to your support question within one business day (<a href="http://bestwebsoft.com/support-policy/">Support Policy</a>)</li>
+  </ul>
+  
+  <p><a href="http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=4caab51af6593e97ad1e329fe0f53072">Upgrade to Pro Now</a></p>
+</blockquote>
+
+<p>If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
+
+<h4>Documentation &#38; Videos</h4>
+
+<ul>
+<li><a href="https://docs.google.com/document/d/1gy5uDVoebmYRUvlKRwBmc97jdJFz7GvUCtXy3L7r_Yg/">[Doc] How to Use</a></li>
+<li><a href="https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/">[Doc] Installation</a></li>
+<li><a href="https://docs.google.com/document/d/1iYerN1G4RrM7EelBlbmQdcYv_tzWWBYwBtYmIkcnOVo/">[Doc] Purchase, Installation &#38; Configuration</a></li>
+<li><a href="https://www.youtube.com/watch?v=pAKsQPz3RZc">[Video] Installation Instruction</a></li>
+</ul>
+
+<h4>Help &#38; Support</h4>
+
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8212; <a href="http://support.bestwebsoft.com/">http://support.bestwebsoft.com/</a></p>
+
+<h4>Translation</h4>
+
+<ul>
+<li>Finnish (fi_FI) (thanks to <a href="mailto:juhani.honkanen@dnainternet.net">Juhani Honkanen</a>)</li>
+<li>French (fr_FR) (thanks to <a href="mailto:wpthemefr@gmail.com">Murat</a>)</li>
+<li>Indonesian (id_ID) (thanks to Nasrulhaq, <a href="http://www.al-badar.net" rel="nofollow">http://www.al-badar.net</a>)</li>
+<li>Hungarian (hu_HU) (thanks to <a href="mailto:solarside09@gmail.com">Peter Aprily</a> <a href="http://www.aprily.com" rel="nofollow">http://www.aprily.com</a>)</li>
+<li>Russian (ru_RU)</li>
+<li>Spain (es_ES) (thanks to <a href="mailto:info@markekimika.es">Africa Boleko</a> <a href="http://www.markekimika.es" rel="nofollow">http://www.markekimika.es</a>)</li>
+<li>Turkish (tr_TR) (thanks to <a href="mailto:webmaster@canatasever.com">Can Atasever</a>)</li>
+<li>Ukrainian (uk)</li>
+</ul>
+
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php">files Poedit</a>.</p>
+
+<h4>Recommended Plugins</h4>
+
+<ul>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/updater/?k=5019f1216fc048f1419fe4645da69381">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/google-plus-one/?k=1f911e6a8a57be8dec36aa4c617773d2">Google +1</a> - Add Google +1 Share, Follow, Hangout buttons and profile badge to WordPress posts, pages and widgets.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/linkedin/?k=b51477f9bcefca82ad8a4a1901806171">LinkedIn</a> - Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. 5 plugins included &#8211; profile, insider, etc.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3">Multilanguage</a> - Translate WordPress website content to other languages manually. Create multilingual pages, posts, widgets, menus, etc.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92">Pinterest</a> - Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages and widgets.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d">Twitter</a> - Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages and widgets.</li>
+</ul>
+
+<h4>Donate</h4>
+
+<p>Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.</p>
+
+<p><a href="http://bestwebsoft.com/donate/">Donate Now</a></p>
