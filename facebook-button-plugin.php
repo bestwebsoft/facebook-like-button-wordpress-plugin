@@ -6,7 +6,7 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.51
+Version: 2.52
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -488,10 +488,10 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 									<th><?php _e( 'Button layout', 'facebook-button-plugin' ); ?></th>
 									<td>
 										<select name="fcbkbttn_layout_option">
-											<option class="fcbkbttn_like_layout" <?php if ( 1 != $fcbkbttn_options['like'] ) echo 'style="display: none"'; ?><?php if ( 'standard' == $fcbkbttn_options['layout_option'] || 1 == $fcbkbttn_options['like'] ) echo 'selected="selected"'; ?> value="standard">standard</option>
-											<option <?php if ( 'box_count' == $fcbkbttn_options['layout_option']  ) echo 'selected="selected"'; ?> value="box_count">box_count</option>
-											<option <?php if ( 'button_count' == $fcbkbttn_options['layout_option']  ) echo 'selected="selected"'; ?> value="button_count">button_count</option>
-											<option <?php if ( 'button' == $fcbkbttn_options['layout_option'] ) echo 'selected="selected"'; ?> value="button">button</option>
+											<option class="fcbkbttn_like_layout" <?php if ( 1 != $fcbkbttn_options['like'] ) echo 'style="display: none"'; ?><?php if ( 'standard' == $fcbkbttn_options['layout_option'] || 1 == $fcbkbttn_options['like'] ) echo 'selected="selected"'; ?> value="standard">Standard</option>
+											<option <?php if ( 'box_count' == $fcbkbttn_options['layout_option']  ) echo 'selected="selected"'; ?> value="box_count">Box count</option>
+											<option <?php if ( 'button_count' == $fcbkbttn_options['layout_option']  ) echo 'selected="selected"'; ?> value="button_count">Button count</option>
+											<option <?php if ( 'button' == $fcbkbttn_options['layout_option'] ) echo 'selected="selected"'; ?> value="button">Button</option>
 											<option class="fcbkbttn_share_layout" <?php if ( 1 == $fcbkbttn_options['like'] ) echo 'style="display: none"'; ?><?php if ( 'icon_link' == $fcbkbttn_options['layout_option'] && 0 == $fcbkbttn_options['like'] ) echo 'selected="selected"'; ?> value="icon_link">Icon link</option>
 											<option class="fcbkbttn_share_layout" <?php if ( 1 == $fcbkbttn_options['like'] ) echo 'style="display: none"'; ?><?php if ( 'icon' == $fcbkbttn_options['layout_option'] && 0 == $fcbkbttn_options['like'] ) echo 'selected="selected"'; ?> value="icon">Icon</option>
 											<option class="fcbkbttn_share_layout" <?php if ( 1 == $fcbkbttn_options['like'] ) echo 'style="display: none"'; ?><?php if ( 'link' == $fcbkbttn_options['layout_option'] && 0 == $fcbkbttn_options['like'] ) echo 'selected="selected"'; ?> value="link">Link</option>
@@ -791,10 +791,20 @@ if ( ! function_exists( 'fcbkbttn_get_locale' ) ) {
 				$fcbkbttn_locale = $_SESSION['language'];
 			} else {
 				$locale_from_multilanguage = explode( '_', $_SESSION['language'] );
-				if ( is_array( $locale_from_multilanguage ) && array_key_exists( $locale_from_multilanguage[0], $fcbkbttn_lang_codes ) )
+				if ( is_array( $locale_from_multilanguage ) && array_key_exists( $locale_from_multilanguage[0], $fcbkbttn_lang_codes ) ) {
 					$fcbkbttn_locale = $locale_from_multilanguage[0];
+				} else {
+					foreach ( $fcbkbttn_lang_codes as $language_key => $language ) {
+						$locale = explode( '_', $language_key );
+						if ( $locale_from_multilanguage[0] == $locale[0] ) {
+							$fcbkbttn_locale = $language_key;
+							break;
+						}
+					}
+				}
 			}
 		}
+		
 		if ( empty( $fcbkbttn_locale ) )
 			$fcbkbttn_locale = $fcbkbttn_options['locale'];
 
@@ -806,18 +816,25 @@ if ( ! function_exists( 'fcbkbttn_footer_script' ) ) {
 	function fcbkbttn_footer_script() {
 		global $fcbkbttn_options, $fcbkbttn_shortcode_add_script;
 		if ( isset( $fcbkbttn_shortcode_add_script ) || 
-			( ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] ) && 'shortcode' != $fcbkbttn_options['where'] ) ) { 
-			$fcbkbttn_locale = fcbkbttn_get_locale(); ?>
+			( ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] ) && 'shortcode' != $fcbkbttn_options['where'] )
+			|| defined( 'BWS_ENQUEUE_ALL_SCRIPTS' ) ) { ?>
 			<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) return;
 				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/<?php echo $fcbkbttn_locale; ?>/sdk.js#xfbml=1&appId=1443946719181573&version=v2.6";
+				js.src = "//connect.facebook.net/<?php echo fcbkbttn_get_locale(); ?>/sdk.js#xfbml=1&appId=1443946719181573&version=v2.6";
 				fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 			</script>
 		<?php }
+	}
+}
+
+if ( ! function_exists( 'fcbkbttn_pagination_callback' ) ) {
+	function fcbkbttn_pagination_callback( $content ) {
+		$content .= "if (typeof( FB ) != 'undefined' && FB != null ) { FB.XFBML.parse(); }";
+		return $content;
 	}
 }
 
@@ -907,7 +924,10 @@ if ( ! function_exists( 'fcbkbttn_delete_options' ) ) {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		$all_plugins = get_plugins();
 
-		if ( ! array_key_exists( 'bws-social-buttons/bws-social-buttons.php', $all_plugins ) && ! array_key_exists( 'facebook-button-pro/facebook-button-pro.php', $all_plugins ) && ! array_key_exists( 'facebook-button-plus/facebook-button-plus.php', $all_plugins ) ) {
+		if ( ! array_key_exists( 'bws-social-buttons/bws-social-buttons.php', $all_plugins ) &&
+			! array_key_exists( 'bws-social-buttons-pro/bws-social-buttons-pro.php', $all_plugins ) &&
+			! array_key_exists( 'facebook-button-pro/facebook-button-pro.php', $all_plugins ) &&
+			! array_key_exists( 'facebook-button-plus/facebook-button-plus.php', $all_plugins ) ) {
 			/* delete custom images if no PRO version */
 			$upload_dir = wp_upload_dir();
 			$fcbkbttn_cstm_mg_folder = $upload_dir['basedir'] . '/facebook-image/';
@@ -954,6 +974,7 @@ add_action( 'admin_enqueue_scripts', 'fcbkbttn_admin_head' );
 /* Adding front-end stylesheets */
 add_action( 'wp_head', 'fcbkbttn_meta' );
 add_action( 'wp_footer', 'fcbkbttn_footer_script' );
+add_filter( 'pgntn_callback', 'fcbkbttn_pagination_callback' );
 /* Add shortcode and plugin buttons */
 add_shortcode( 'fb_button', 'fcbkbttn_shortcode' );
 add_filter( 'the_content', 'fcbkbttn_display_button' );

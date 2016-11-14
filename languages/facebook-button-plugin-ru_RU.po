@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: facebook-button-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 17:23+0300\n"
-"PO-Revision-Date: 2016-05-05 17:25+0300\n"
+"PO-Revision-Date: 2016-11-14 11:18+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -285,11 +285,11 @@ msgstr "Тёмная"
 
 #: facebook-button-plugin.php:534
 msgid "Html tag for \"Like\" button"
-msgstr "Html тэг для кнопки \"Нравиться\""
+msgstr "Html тег для кнопки \"Нравиться\""
 
 #: facebook-button-plugin.php:539
 msgid "Use this tag to improve validation of your site"
-msgstr "Используйте этот тэг для лучшей валидации вашего сайта"
+msgstr "Используйте этот тег для лучшей валидации вашего сайта"
 
 #: facebook-button-plugin.php:552
 msgid "\"Like\" for an entire site on every page:"

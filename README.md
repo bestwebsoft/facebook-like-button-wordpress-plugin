@@ -1,4 +1,4 @@
-<a href="http://bestwebsoft.com/products/facebook-like-button/" target=_blank>Facebook Button WordPress Plugin</a>
+<a href="http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/" target=_blank>Facebook Button WordPress Plugin</a>
 ========================
 
 Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widgets.
@@ -100,7 +100,7 @@ Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widg
 <li>Indonesian (id_ID) (thanks to Nasrulhaq, <a href="http://www.al-badar.net" rel="nofollow">http://www.al-badar.net</a>)</li>
 <li>Hungarian (hu_HU) (thanks to <a href="mailto:solarside09@gmail.com">Peter Aprily</a> <a href="http://www.aprily.com" rel="nofollow">http://www.aprily.com</a>)</li>
 <li>Russian (ru_RU)</li>
-<li>Spain (es_ES) (thanks to <a href="mailto:info@markekimika.es">Africa Boleko</a> <a href="http://www.markekimika.es" rel="nofollow">http://www.markekimika.es</a>)</li>
+<li>Spanish (es_ES) (thanks to <a href="mailto:info@markekimika.es">Africa Boleko</a> <a href="http://www.markekimika.es" rel="nofollow">http://www.markekimika.es</a>)</li>
 <li>Turkish (tr_TR) (thanks to <a href="mailto:webmaster@canatasever.com">Can Atasever</a>)</li>
 <li>Ukrainian (uk)</li>
 </ul>

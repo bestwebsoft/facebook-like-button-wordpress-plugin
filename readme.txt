@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.8
 Tested up to: 4.6.1
-Stable tag: 2.51
+Stable tag: 2.52
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,7 +81,7 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 * Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
 * Hungarian (hu_HU) (thanks to [Peter Aprily](mailto:solarside09@gmail.com) www.aprily.com)
 * Russian (ru_RU)
-* Spain (es_ES) (thanks to [Africa Boleko](mailto:info@markekimika.es) www.markekimika.es)
+* Spanish (es_ES) (thanks to [Africa Boleko](mailto:info@markekimika.es) www.markekimika.es)
 * Turkish (tr_TR) (thanks to [Can Atasever](mailto:webmaster@canatasever.com))
 * Ukrainian (uk)
 
@@ -153,6 +153,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.52 - 14.11.2016 =
+* Update : Compatibility with Pagination plugin was added.
+* Pro : Tree of site pages was updated.
 
 = V2.51 - 03.10.2016 =
 * NEW : Spain language file is added.
@@ -360,6 +364,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.52 =
+* Functionality improved.
 
 = V2.51 =
 * New languages added
