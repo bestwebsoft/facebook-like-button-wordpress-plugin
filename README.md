@@ -3,8 +3,6 @@
 
 Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widgets.
 
-<img src="http://bestwebsoft.com/wp-content/uploads/2014/09/facebook-button-banner-website.jpg" />
-
 <p>Facebook plugin is a best social media solution which adds Follow, Like, and Share buttons to your Wordpress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.</p>
 
 <p>Customize the appearance, configure settings, and enable other advanced options to get more social traffic to your website and keep your visitors involved!</p>
