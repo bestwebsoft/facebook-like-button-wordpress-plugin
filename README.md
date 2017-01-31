@@ -33,8 +33,8 @@ Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widg
 <li>Select the button position:
 
 <ul>
-<li>Before the content</li>
-<li>After the content</li>
+<li>Before content</li>
+<li>After content</li>
 <li>Before and after</li>
 <li>Custom position (using shortcode)</li>
 </ul></li>
@@ -46,6 +46,7 @@ Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widg
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
 <li>Detailed step-by-step documentation and videos</li>
+<li>Multilingual and RTL ready</li>
 </ul>
 
 <blockquote>

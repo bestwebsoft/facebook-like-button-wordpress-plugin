@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.8
-Tested up to: 4.6.1
-Stable tag: 2.52
+Tested up to: 4.7.2
+Stable tag: 2.53
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,8 +31,8 @@ http://www.youtube.com/watch?v=hGNQs-rF8b8
 	* Button count
 	* Button
 * Select the button position:
-	* Before the content
-	* After the content
+	* Before content
+	* After content
 	* Before and after
 	* Custom position (using shortcode)
 * Show/hide faces option
@@ -43,6 +43,7 @@ http://www.youtube.com/watch?v=hGNQs-rF8b8
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentation and videos
+* Multilingual and RTL ready
 
 > **Pro Features**
 >
@@ -153,6 +154,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.53 - 31.01.2017 =
+* Update : The plugin settings page has been updated.
 
 = V2.52 - 14.11.2016 =
 * Update : Compatibility with Pagination plugin was added.
@@ -364,6 +368,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.53 =
+* Usability improved.
 
 = V2.52 =
 * Functionality improved.

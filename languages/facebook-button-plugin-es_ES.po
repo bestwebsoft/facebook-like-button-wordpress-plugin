@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook-button-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-03 13:14+0300\n"
-"PO-Revision-Date: 2016-10-03 13:14+0300\n"
+"POT-Creation-Date: 2017-01-26 11:24+0300\n"
+"PO-Revision-Date: 2017-01-26 11:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: Africa Boleko <info@markekimika.es>\n"
 "Language: es_ES\n"
@@ -18,308 +18,331 @@ msgstr ""
 "X-Poedit-Bookmarks: -1,102,-1,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: facebook-button-plugin.php:34 facebook-button-plugin.php:287
+#: facebook-button-plugin.php:35 facebook-button-plugin.php:36
+#: facebook-button-plugin.php:201
 msgid "Facebook Button Settings"
 msgstr "Ajustes de Facebook Button"
 
-#: facebook-button-plugin.php:209
-msgid "Settings saved"
-msgstr "Configuración guardada"
-
-#: facebook-button-plugin.php:235
-msgid "Error: File size > 32K"
-msgstr "Error: Tamaño archivo >32K"
-
-#: facebook-button-plugin.php:238
-msgid "Error: Invalid file type"
-msgstr "Error: Tipo de archivo no válido"
-
-#: facebook-button-plugin.php:244
-msgid "Upload successful."
-msgstr "Descarga correcta"
-
-#: facebook-button-plugin.php:254
-msgid "Error: moving file failed"
-msgstr "Error: error al mover archivo"
-
-#: facebook-button-plugin.php:257
-msgid "Error: check image width or height"
-msgstr "Error: Compruebe la altura o anchura de la imagen"
-
-#: facebook-button-plugin.php:261
-msgid "Uploading Error: check image properties"
-msgstr "Error de descarga: compruebe las propiedades de la imagen"
-
-#: facebook-button-plugin.php:274
-msgid "All plugin settings were restored."
-msgstr "Todos los ajustes del pluggin fueron restaurados"
-
-#: facebook-button-plugin.php:289
-msgid "How to Use Step-by-step Instruction"
-msgstr "Instrucciones Paso a Paso"
-
-#: facebook-button-plugin.php:292 facebook-button-plugin.php:846
-#: facebook-button-plugin.php:860
+#: facebook-button-plugin.php:36 facebook-button-plugin.php:405
+#: facebook-button-plugin.php:419 includes/class-fcbkbttn-settings.php:23
 msgid "Settings"
 msgstr "Ajustes"
 
-#: facebook-button-plugin.php:294
-msgid "Extra settings"
-msgstr "Ajustes extra"
+#: facebook-button-plugin.php:42
+msgid "Upgrade to Pro"
+msgstr ""
 
-#: facebook-button-plugin.php:296
-msgid "Custom code"
-msgstr "Custom código"
-
-#: facebook-button-plugin.php:298
-msgid "Go PRO"
-msgstr "Ir a PRO"
-
-#: facebook-button-plugin.php:302
+#: facebook-button-plugin.php:202
 msgid "Please, enable JavaScript in Your browser."
 msgstr "Por favor, habilite JavaScrip en su navegador"
 
-#: facebook-button-plugin.php:317
-#, php-format
-msgid ""
-"If you would like to add Facebook buttons to your page or post, please use "
-"%s button"
-msgstr ""
-"Si usted quiere añadir Facebook Buttons a su pàgina o post utilice por favor "
-"el botón %s"
+#: facebook-button-plugin.php:298
+msgid "Add Facebook buttons to your page or post"
+msgstr "Añada los botones de Facebook a su página o post"
 
-#: facebook-button-plugin.php:322
-#, php-format
-msgid ""
-"You can add Facebook buttons to your page or post by clicking on %s button "
-"in the content edit block using the Visual mode. If the button isn't "
-"displayed, please use the shortcode %s"
-msgstr ""
-"Usted puede añadir Facebook Buttons a su pàgina o post haciendo click en el "
-"botón %s en el edit block contenido usando el modo Visual. Si el botón no se "
-"despliega, por favor use el atajo %s"
+#: facebook-button-plugin.php:420
+msgid "FAQ"
+msgstr "Preguntas frecuentes"
 
-#: facebook-button-plugin.php:333
-msgid "Display button"
+#: facebook-button-plugin.php:421
+msgid "Support"
+msgstr "Soporte"
+
+#: includes/class-fcbkbttn-settings.php:25
+#, fuzzy
+msgid "Display"
 msgstr "Botón despliegue"
 
-#: facebook-button-plugin.php:336
-msgid "My Page"
-msgstr "Mi página"
+#: includes/class-fcbkbttn-settings.php:27
+msgid "Misc"
+msgstr ""
 
-#: facebook-button-plugin.php:337 facebook-button-plugin.php:505
+#: includes/class-fcbkbttn-settings.php:28
+#, fuzzy
+msgid "Custom Code"
+msgstr "Custom código"
+
+#: includes/class-fcbkbttn-settings.php:30
+#, fuzzy
+msgid "License Key"
+msgstr "Clave de licencia incorrecta"
+
+#: includes/class-fcbkbttn-settings.php:95
+msgid "Settings saved"
+msgstr "Configuración guardada"
+
+#: includes/class-fcbkbttn-settings.php:124
+msgid "Error: File size > 32K"
+msgstr "Error: Tamaño archivo >32K"
+
+#: includes/class-fcbkbttn-settings.php:127
+msgid "Error: Invalid file type"
+msgstr "Error: Tipo de archivo no válido"
+
+#: includes/class-fcbkbttn-settings.php:133
+msgid "Upload successful."
+msgstr "Descarga correcta"
+
+#: includes/class-fcbkbttn-settings.php:143
+#, fuzzy
+msgid "Error: failed to move file."
+msgstr "Error: error al mover archivo"
+
+#: includes/class-fcbkbttn-settings.php:146
+#, fuzzy
+msgid "Error: check image width or height."
+msgstr "Error: Compruebe la altura o anchura de la imagen"
+
+#: includes/class-fcbkbttn-settings.php:150
+msgid "Uploading Error: check image properties"
+msgstr "Error de descarga: compruebe las propiedades de la imagen"
+
+#: includes/class-fcbkbttn-settings.php:171
+#, fuzzy
+msgid "Facebook button Settings"
+msgstr "Ajustes de Facebook Button"
+
+#: includes/class-fcbkbttn-settings.php:174
+msgid "General"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:177
+#, fuzzy
+msgid "Buttons"
+msgstr "Diseño del botón"
+
+#: includes/class-fcbkbttn-settings.php:180
+msgid "Profile URL"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:181
+#: includes/class-fcbkbttn-settings.php:367
 msgid "Like"
 msgstr "Me gusta"
 
-#: facebook-button-plugin.php:338
+#: includes/class-fcbkbttn-settings.php:182
 msgid "Share"
 msgstr "Compartir"
 
-#: facebook-button-plugin.php:343
-msgid "Facebook buttons position"
+#: includes/class-fcbkbttn-settings.php:187
+#, fuzzy
+msgid "Buttons Position"
 msgstr "Posición Facebook Buttons"
 
-#: facebook-button-plugin.php:346
-msgid "Before"
-msgstr "Antes"
-
-#: facebook-button-plugin.php:347
-msgid "After"
-msgstr "Después"
-
-#: facebook-button-plugin.php:348
-msgid "Before and After"
+#: includes/class-fcbkbttn-settings.php:192
+#, fuzzy
+msgid "Before content"
 msgstr "Antes y Después"
 
-#: facebook-button-plugin.php:349
-msgid "Shortcode"
-msgstr "Shortcode"
+#: includes/class-fcbkbttn-settings.php:197
+msgid "After content"
+msgstr ""
 
-#: facebook-button-plugin.php:354
-msgid "Facebook buttons language"
-msgstr "Idioma Facebook Buttons"
+#: includes/class-fcbkbttn-settings.php:203
+msgid "Language"
+msgstr ""
 
-#: facebook-button-plugin.php:365
-msgid "Change the language of Facebook Button"
+#: includes/class-fcbkbttn-settings.php:214
+#, fuzzy
+msgid "Select the default language for Facebook button(-s)."
 msgstr "Cambie el idioma de Facebook Button"
 
-#: facebook-button-plugin.php:370 facebook-button-plugin.php:373
-#: facebook-button-plugin.php:378
-msgid "Use the current site language"
-msgstr "Utilize el lenguaje actual del sitio"
+#: includes/class-fcbkbttn-settings.php:223
+#: includes/class-fcbkbttn-settings.php:226
+#: includes/class-fcbkbttn-settings.php:230
+msgid ""
+"Enable to switch language automatically on multilingual website using "
+"Multilanguage plugin."
+msgstr ""
 
-#: facebook-button-plugin.php:370 facebook-button-plugin.php:374
-#: facebook-button-plugin.php:379
-msgid "Using"
-msgstr "En uso"
-
-#: facebook-button-plugin.php:374
-msgid "Activate"
+#: includes/class-fcbkbttn-settings.php:226
+#, fuzzy, php-format
+msgid "Activate %s"
 msgstr "Activado"
 
-#: facebook-button-plugin.php:379
-msgid "Download"
-msgstr "Descarga"
-
-#: facebook-button-plugin.php:386
-msgid "Display buttons in excerpt"
-msgstr "Despliegue el botón en el fragmento"
-
-#: facebook-button-plugin.php:397 facebook-button-plugin.php:546
-#: facebook-button-plugin.php:583
-msgid "Close"
-msgstr "Cerrar"
-
-#: facebook-button-plugin.php:401
-msgid "Meta tags"
-msgstr "Meta etiquetas"
-
-#: facebook-button-plugin.php:404
-msgid "Image"
-msgstr "Imagen"
-
-#: facebook-button-plugin.php:407
-msgid "Featured Image"
-msgstr "Imagen distintitiva"
-
-#: facebook-button-plugin.php:411
-msgid "Custom Image"
-msgstr "Imagen customizada"
-
-#: facebook-button-plugin.php:411
-msgid "This image will be used for all of the posts"
-msgstr "Esta imagen serà usada para todos los posts"
-
-#: facebook-button-plugin.php:421
-msgid "Description"
-msgstr "Descripción"
-
-#: facebook-button-plugin.php:424
-msgid "Post excerpt"
-msgstr "Post fragmentado"
-
-#: facebook-button-plugin.php:429
-msgid "This description will be used for all of the posts"
-msgstr "Esta descripción será utilitzada en todos los post"
-
-#: facebook-button-plugin.php:436 facebook-button-plugin.php:557
-#: facebook-button-plugin.php:637
-msgid "If you upgrade to Pro version all your settings will be saved."
-msgstr "Si usted mejora a la versión Pro todos sus ajustes serán guardados"
-
-#: facebook-button-plugin.php:443 facebook-button-plugin.php:564
-#: facebook-button-plugin.php:592 facebook-button-plugin.php:644
-msgid "Unlock premium options by upgrading to Pro version"
-msgstr "Desbloquée las opciones Premium mejorando a la versión Pro"
-
-#: facebook-button-plugin.php:445 facebook-button-plugin.php:566
-#: facebook-button-plugin.php:594 facebook-button-plugin.php:646
+#: includes/class-fcbkbttn-settings.php:230
 msgid "Learn More"
 msgstr "Conozca más"
 
-#: facebook-button-plugin.php:453
-msgid "Your Facebook ID or username"
-msgstr "Su ID de Facebook o usuario"
+#: includes/class-fcbkbttn-settings.php:235
+#, fuzzy
+msgid "Excerpt"
+msgstr "Post fragmentado"
 
-#: facebook-button-plugin.php:460
-msgid "\"My page\" button image"
-msgstr "\"Mi pàgina\" (imagen del botón)"
+#: includes/class-fcbkbttn-settings.php:237
+#, fuzzy
+msgid "Enable to display buttons in excerpt."
+msgstr "Despliegue el botón en el fragmento"
 
-#: facebook-button-plugin.php:465
-msgid "Standard Facebook image"
+#: includes/class-fcbkbttn-settings.php:246
+#: includes/class-fcbkbttn-settings.php:422
+#: includes/class-fcbkbttn-settings.php:477
+msgid "Close"
+msgstr "Cerrar"
+
+#: includes/class-fcbkbttn-settings.php:250
+#, fuzzy
+msgid "Meta Image"
+msgstr "Meta etiquetas"
+
+#: includes/class-fcbkbttn-settings.php:255
+msgid "Featured Image"
+msgstr "Imagen distintitiva"
+
+#: includes/class-fcbkbttn-settings.php:259
+msgid "Custom Image"
+msgstr "Imagen customizada"
+
+#: includes/class-fcbkbttn-settings.php:259
+#, fuzzy
+msgid "This image will be used for all posts"
+msgstr "Esta imagen serà usada para todos los posts"
+
+#: includes/class-fcbkbttn-settings.php:266
+#, fuzzy
+msgid "Meta Description"
+msgstr "Descripción"
+
+#: includes/class-fcbkbttn-settings.php:270
+#, fuzzy
+msgid ""
+"This description will be used for all pages and posts. Leave blank to use "
+"page description."
+msgstr "Esta descripción será utilitzada en todos los post"
+
+#: includes/class-fcbkbttn-settings.php:279
+msgid "Profile URL Button"
 msgstr ""
 
-#: facebook-button-plugin.php:466
-msgid "Custom Facebook image"
-msgstr "Imagen de Facebook personalizada"
+#: includes/class-fcbkbttn-settings.php:282
+#, fuzzy
+msgid "Facebook ID or Username"
+msgstr "Su ID de Facebook o usuario"
 
-#: facebook-button-plugin.php:469
+#: includes/class-fcbkbttn-settings.php:289
+msgid "Profile Button Image"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:296
+msgid "Default"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:301
+#, fuzzy
+msgid "Custom image"
+msgstr "Imagen customizada"
+
+#: includes/class-fcbkbttn-settings.php:305
+#, fuzzy
 msgid ""
-"To use custom image you need to setup permissions to upload directory of "
+"To use custom image, You need to setup permissions for upload directory of "
 "your site"
 msgstr ""
 "Para utilizar imágenes personalizadas necessita instalar permisos para "
 "descargar el directorio de su sitio"
 
-#: facebook-button-plugin.php:476
+#: includes/class-fcbkbttn-settings.php:312
 msgid "Current image"
 msgstr "Imagen actual"
 
-#: facebook-button-plugin.php:484
+#: includes/class-fcbkbttn-settings.php:320
+#, fuzzy
 msgid ""
-"Image properties: max image width:100px; max image height:40px; max image "
+"Image requirements: max image width:100px; max image height:40px; max image "
 "size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
 msgstr ""
 "Propiedades de imagen: ancho máximo de imagen: 100 px; altura màxima de "
 "imagen: 40px; tamaño máximo de imagen: 32Kb; tipus de imagen: \"jpg\", \"jpeg"
 "\", \"png\"."
 
-#: facebook-button-plugin.php:488
-msgid "Button layout"
-msgstr "Diseño del botón"
-
-#: facebook-button-plugin.php:502
-msgid "Like button action"
+#: includes/class-fcbkbttn-settings.php:324
+#, fuzzy
+msgid "Like&Share Buttons"
 msgstr "Acción del botón \"me gusta\""
 
-#: facebook-button-plugin.php:506
+#: includes/class-fcbkbttn-settings.php:327
+#, fuzzy
+msgid "Layout"
+msgstr "Ancho del diseño"
+
+#: includes/class-fcbkbttn-settings.php:362
+#, fuzzy
+msgid "Like Button Action"
+msgstr "Acción del botón \"me gusta\""
+
+#: includes/class-fcbkbttn-settings.php:372
 msgid "Recommend"
 msgstr "Recomendar"
 
-#: facebook-button-plugin.php:511
-msgid "Show faces"
-msgstr "Mostrar fotos"
+#: includes/class-fcbkbttn-settings.php:378
+msgid "Friends faces"
+msgstr ""
 
-#: facebook-button-plugin.php:517
-msgid "Layout width"
+#: includes/class-fcbkbttn-settings.php:381
+msgid " Enable to show faces of your friends who submitted the button."
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:385
+#, fuzzy
+msgid "Layout Width"
 msgstr "Ancho del diseño"
 
-#: facebook-button-plugin.php:523
-msgid "Color scheme"
-msgstr "Color del esquema"
+#: includes/class-fcbkbttn-settings.php:387
+msgid "px"
+msgstr ""
 
-#: facebook-button-plugin.php:526
+#: includes/class-fcbkbttn-settings.php:391
+msgid "Theme"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:396
 msgid "Light"
 msgstr "Claro"
 
-#: facebook-button-plugin.php:527
+#: includes/class-fcbkbttn-settings.php:401
 msgid "Dark"
 msgstr "Oscuro"
 
-#: facebook-button-plugin.php:532
-msgid "Html tag for \"Like\" button"
-msgstr "Etiqueta Html para el botón \"Me gusta\""
+#: includes/class-fcbkbttn-settings.php:407
+#, fuzzy
+msgid "Like Button HTML Tag"
+msgstr "Acción del botón \"me gusta\""
 
-#: facebook-button-plugin.php:537
-msgid "Use this tag to improve validation of your site"
-msgstr "Use esta etiqueta para mejorar la validez de su sitio"
-
-#: facebook-button-plugin.php:550
-msgid "\"Like\" for an entire site on every page:"
-msgstr "\"Me gusta\" para la totalidad de su sitio en todas las páginas"
-
-#: facebook-button-plugin.php:552
-msgid ""
-"Notice: \"Like for the entire site\" option does not create an extra button. "
-"This option merely allows your users to like the entire website when this "
-"option is enabled, or a single post when this option is disabled, when "
-"clicking the regular \"Like\" button."
+#: includes/class-fcbkbttn-settings.php:413
+#, php-format
+msgid "Tag %s can be used to improve website code validation."
 msgstr ""
-"Tenga en cuenta: La opción \"Me gusta para todo el sitio\" no crea un botón "
-"addicional. Esta opción simplemente permite a sus usuarios dar un me gusta a "
-"la totalidad de la web cuando la opción está marcada o a un post en "
-"particular si la opción está desmarcada cuando hagan click sobre el botón "
-"\"Me gusta\"."
 
-#: facebook-button-plugin.php:574 facebook-button-plugin.php:632
-msgid "Save Changes"
-msgstr "Guardar cambios"
+#: includes/class-fcbkbttn-settings.php:426
+msgid "URL to Like"
+msgstr ""
 
-#: facebook-button-plugin.php:586
-msgid "Facebook Button preview:"
+#: includes/class-fcbkbttn-settings.php:428
+msgid "Leave blank to use a current page."
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:456
+#, fuzzy
+msgid "Facebook Buttons Shortchode"
+msgstr "Posición Facebook Buttons"
+
+#: includes/class-fcbkbttn-settings.php:459
+msgid ""
+"Add Facebook button(-s) to your posts, pages, custom post types or widgets "
+"by using the following shortcode:"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:478
+#, fuzzy
+msgid "Facebook Buttons Preview"
 msgstr "Vista preliminar del Facebook Button"
 
-#: facebook-button-plugin.php:614
+#: includes/class-fcbkbttn-settings.php:493
+#, fuzzy
+msgid "Display Settings"
+msgstr "Botón despliegue"
+
+#: includes/class-fcbkbttn-settings.php:502
 msgid ""
 "Please choose the necessary post types (or single pages) where Facebook "
 "button will be displayed:"
@@ -327,29 +350,114 @@ msgstr ""
 "Por favor, escoja los tipos de post necesario (o pàgines individuales) donde "
 "el Facebook Button debe ser mostrado:"
 
-#: facebook-button-plugin.php:621
+#: includes/class-fcbkbttn-settings.php:509
 msgid "Show URL for pages"
 msgstr "Mostrar la URL de las páginas"
 
-#: facebook-button-plugin.php:627
+#: includes/class-fcbkbttn-settings.php:515
 msgid "Example of the site's pages tree"
 msgstr "Ejemplo de las tres páginas del sitio"
 
-#: facebook-button-plugin.php:627
+#: includes/class-fcbkbttn-settings.php:515
 msgid "Example of site pages' tree"
 msgstr "Ejemplo de las tres pàgines del sitio"
 
-#: facebook-button-plugin.php:756
-msgid "Add Facebook buttons to your page or post"
-msgstr "Añada los botones de Facebook a su página o post"
+#~ msgid "All plugin settings were restored."
+#~ msgstr "Todos los ajustes del pluggin fueron restaurados"
 
-#: facebook-button-plugin.php:861
-msgid "FAQ"
-msgstr "Preguntas frecuentes"
+#~ msgid "How to Use Step-by-step Instruction"
+#~ msgstr "Instrucciones Paso a Paso"
 
-#: facebook-button-plugin.php:862
-msgid "Support"
-msgstr "Soporte"
+#~ msgid "Extra settings"
+#~ msgstr "Ajustes extra"
+
+#~ msgid "Go PRO"
+#~ msgstr "Ir a PRO"
+
+#~ msgid ""
+#~ "If you would like to add Facebook buttons to your page or post, please "
+#~ "use %s button"
+#~ msgstr ""
+#~ "Si usted quiere añadir Facebook Buttons a su pàgina o post utilice por "
+#~ "favor el botón %s"
+
+#~ msgid ""
+#~ "You can add Facebook buttons to your page or post by clicking on %s "
+#~ "button in the content edit block using the Visual mode. If the button "
+#~ "isn't displayed, please use the shortcode %s"
+#~ msgstr ""
+#~ "Usted puede añadir Facebook Buttons a su pàgina o post haciendo click en "
+#~ "el botón %s en el edit block contenido usando el modo Visual. Si el botón "
+#~ "no se despliega, por favor use el atajo %s"
+
+#~ msgid "My Page"
+#~ msgstr "Mi página"
+
+#~ msgid "Before"
+#~ msgstr "Antes"
+
+#~ msgid "After"
+#~ msgstr "Después"
+
+#~ msgid "Shortcode"
+#~ msgstr "Shortcode"
+
+#~ msgid "Facebook buttons language"
+#~ msgstr "Idioma Facebook Buttons"
+
+#~ msgid "Use the current site language"
+#~ msgstr "Utilize el lenguaje actual del sitio"
+
+#~ msgid "Using"
+#~ msgstr "En uso"
+
+#~ msgid "Download"
+#~ msgstr "Descarga"
+
+#~ msgid "Image"
+#~ msgstr "Imagen"
+
+#~ msgid "If you upgrade to Pro version all your settings will be saved."
+#~ msgstr "Si usted mejora a la versión Pro todos sus ajustes serán guardados"
+
+#~ msgid "Unlock premium options by upgrading to Pro version"
+#~ msgstr "Desbloquée las opciones Premium mejorando a la versión Pro"
+
+#~ msgid "\"My page\" button image"
+#~ msgstr "\"Mi pàgina\" (imagen del botón)"
+
+#~ msgid "Custom Facebook image"
+#~ msgstr "Imagen de Facebook personalizada"
+
+#~ msgid "Show faces"
+#~ msgstr "Mostrar fotos"
+
+#~ msgid "Color scheme"
+#~ msgstr "Color del esquema"
+
+#~ msgid "Html tag for \"Like\" button"
+#~ msgstr "Etiqueta Html para el botón \"Me gusta\""
+
+#~ msgid "Use this tag to improve validation of your site"
+#~ msgstr "Use esta etiqueta para mejorar la validez de su sitio"
+
+#~ msgid "\"Like\" for an entire site on every page:"
+#~ msgstr "\"Me gusta\" para la totalidad de su sitio en todas las páginas"
+
+#~ msgid ""
+#~ "Notice: \"Like for the entire site\" option does not create an extra "
+#~ "button. This option merely allows your users to like the entire website "
+#~ "when this option is enabled, or a single post when this option is "
+#~ "disabled, when clicking the regular \"Like\" button."
+#~ msgstr ""
+#~ "Tenga en cuenta: La opción \"Me gusta para todo el sitio\" no crea un "
+#~ "botón addicional. Esta opción simplemente permite a sus usuarios dar un "
+#~ "me gusta a la totalidad de la web cuando la opción está marcada o a un "
+#~ "post en particular si la opción está desmarcada cuando hagan click sobre "
+#~ "el botón \"Me gusta\"."
+
+#~ msgid "Save Changes"
+#~ msgstr "Guardar cambios"
 
 #~ msgid "None"
 #~ msgstr "Ninguno"
@@ -410,9 +518,6 @@ msgstr "Soporte"
 
 #~ msgid "Plugins page"
 #~ msgstr "Página de pluggins"
-
-#~ msgid "Wrong license key"
-#~ msgstr "Clave de licencia incorrecta"
 
 #~ msgid ""
 #~ "Something went wrong. Try again later. If the error will appear again, "
