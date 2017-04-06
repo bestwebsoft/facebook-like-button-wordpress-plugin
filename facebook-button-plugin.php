@@ -1,17 +1,17 @@
 <?php
 /*##
 Plugin Name: Facebook Button by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/
+Plugin URI: https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/
 Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pages and widgets.
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.53
-Author URI: http://bestwebsoft.com/
+Version: 2.54
+Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  Copyright 2017  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  Copyright 2017  BestWebSoft  ( https://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -41,7 +41,7 @@ if ( ! function_exists( 'fcbkbttn_add_pages' ) ) {
 			$submenu['facebook-button-plugin.php'][] = array( 
 				'<span style="color:#d86463"> ' . __( 'Upgrade to Pro', 'facebook-button-plugin' ) . '</span>',
 				'manage_options',
-				'http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=' . $fcbkbttn_plugin_info["Version"] . '&wp_v=' . $wp_version );
+				'https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=' . $fcbkbttn_plugin_info["Version"] . '&wp_v=' . $wp_version );
 		/* pls*/
 		add_action( 'load-' . $settings, 'fcbkbttn_add_tabs' );
 	}
@@ -220,7 +220,7 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 		
 		if ( 1 == $fcbkbttn_options['my_page'] ) {
 			$button .=	'<div class="fcbk_button">
-							<a href="http://www.facebook.com/' . $fcbkbttn_options['link'] . '"	target="_blank">
+							<a href="https://www.facebook.com/' . $fcbkbttn_options['link'] . '"	target="_blank">
 								<img src="' . $fcbkbttn_options['fb_img_link'] . '" alt="Fb-Button" />
 							</a>
 						</div>';
@@ -421,8 +421,8 @@ if ( ! function_exists ( 'fcbkbttn_links' ) ) {
 		if ( $file == $base ) {
 			if ( ! is_network_admin() )
 				$links[]	=	'<a href="admin.php?page=facebook-button-plugin.php">' . __( 'Settings', 'facebook-button-plugin' ) . '</a>';
-			$links[]	=	'<a href="http://support.bestwebsoft.com/hc/en-us/sections/200538939" target="_blank">' . __( 'FAQ', 'facebook-button-plugin' ) . '</a>';
-			$links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support', 'facebook-button-plugin' ) . '</a>';
+			$links[]	=	'<a href="https://support.bestwebsoft.com/hc/en-us/sections/200538939" target="_blank">' . __( 'FAQ', 'facebook-button-plugin' ) . '</a>';
+			$links[]	=	'<a href="https://support.bestwebsoft.com">' . __( 'Support', 'facebook-button-plugin' ) . '</a>';
 		}
 		return $links;
 	}

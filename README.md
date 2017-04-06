@@ -1,4 +1,4 @@
-<a href="http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/" target=_blank>Facebook Button WordPress Plugin</a>
+<a href="https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/" target=_blank>Facebook Button WordPress Plugin</a>
 ========================
 
 Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widgets.

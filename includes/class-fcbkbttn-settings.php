@@ -172,7 +172,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 				$this->all_plugins = get_plugins();
 			} ?>
-			<h3 class="bws_tab_label"><?php _e( 'Facebook button Settings', 'facebook-button-plugin' ); ?></h3>
+			<h3 class="bws_tab_label"><?php _e( 'Facebook Button Settings', 'facebook-button-plugin' ); ?></h3>
 			<?php $this->help_phrase(); ?>
 			<hr>
 			<div class="bws_tab_sub_label"><?php _e( 'General', 'facebook-button-plugin' ); ?></div>
@@ -231,7 +231,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 							<?php }
 						} else { ?>
 							<input disabled="disabled" type="checkbox" name="fcbkbttn_use_multilanguage_locale" value="1" />
-							<span class="bws_info"><?php _e( 'Enable to switch language automatically on multilingual website using Multilanguage plugin.', 'facebook-button-plugin' ); ?> <a href="http://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=196fb3bb74b6e8b1e08f92cddfd54313&pn=78&v=<?php echo $this->plugins_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a></span>
+							<span class="bws_info"><?php _e( 'Enable to switch language automatically on multilingual website using Multilanguage plugin.', 'facebook-button-plugin' ); ?> <a href="https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=196fb3bb74b6e8b1e08f92cddfd54313&pn=78&v=<?php echo $this->plugins_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Learn More', 'facebook-button-plugin' ); ?></a></span>
 						<?php } ?>
 					</td>
 				</tr>
@@ -379,7 +379,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					</td>
 				</tr>
 				<tr class="fcbkbttn_like_enabled fcbkbttn_like_standard_layout">
-					<th><?php _e( 'Friends faces', 'facebook-button-plugin' ); ?></th>
+					<th><?php _e( 'Friends Faces', 'facebook-button-plugin' ); ?></th>
 					<td>
 						<input name="fcbkbttn_faces" type='checkbox' value="1" <?php if ( 1 == $this->options['faces'] ) echo 'checked="checked"'; ?> /> 
 						<span class="bws_info"><?php _e( ' Enable to show faces of your friends who submitted the button.', 'facebook-button-plugin' ); ?></span>

@@ -1,10 +1,10 @@
 ﻿=== Facebook Button by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: http://bestwebsoft.com/donate/
+Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.8
-Tested up to: 4.7.2
-Stable tag: 2.53
+Tested up to: 4.7.3
+Stable tag: 2.54
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ Facebook plugin is a best social media solution which adds Follow, Like, and Sha
 
 Customize the appearance, configure settings, and enable other advanced options to get more social traffic to your website and keep your visitors involved!
 
-http://www.youtube.com/watch?v=hGNQs-rF8b8
+https://www.youtube.com/watch?v=hGNQs-rF8b8
 
 = Free Features =
 
@@ -36,7 +36,7 @@ http://www.youtube.com/watch?v=hGNQs-rF8b8
 	* Before and after
 	* Custom position (using shortcode)
 * Show/hide faces option
-* Compatible with [Multilanguage](http://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) (current website language detection)
+* Compatible with [Multilanguage](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) (current website language detection)
 * Choose Like button action – like or recommend
 * Use a standard Follow button image or replace it with custom one	 
 * Add custom code via plugin settings page
@@ -58,11 +58,11 @@ http://www.youtube.com/watch?v=hGNQs-rF8b8
 > 	* Single pages
 > * Facebook button preview 
 > * Configure all subsites on the network
-> * Get answer to your support question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+> * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
-> [Upgrade to Pro Now](http://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=4caab51af6593e97ad1e329fe0f53072)
+> [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=4caab51af6593e97ad1e329fe0f53072)
 
-If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
 
 = Documentation & Videos =
 
@@ -73,10 +73,11 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <https://support.bestwebsoft.com/>
 
 = Translation =
 
+* Czech (cs_CZ) (thanks to [Michal Kučera](mailto:kucerami@gmail.com) www.n0lim.it)
 * Finnish (fi_FI) (thanks to [Juhani Honkanen](mailto:juhani.honkanen@dnainternet.net))
 * French (fr_FR) (thanks to [Murat](mailto:wpthemefr@gmail.com))
 * Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
@@ -86,66 +87,70 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 * Turkish (tr_TR) (thanks to [Can Atasever](mailto:webmaster@canatasever.com))
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](https://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](https://www.poedit.net/download.php).
 
 = Recommended Plugins =
 
-* [Updater](http://bestwebsoft.com/products/wordpress/plugins/updater/?k=5019f1216fc048f1419fe4645da69381) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
-* [Google +1](http://bestwebsoft.com/products/wordpress/plugins/google-plus-one/?k=1f911e6a8a57be8dec36aa4c617773d2) - Add Google +1 Share, Follow, Hangout buttons and profile badge to WordPress posts, pages and widgets.
-* [LinkedIn](http://bestwebsoft.com/products/wordpress/plugins/linkedin/?k=b51477f9bcefca82ad8a4a1901806171) - Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. 5 plugins included – profile, insider, etc.
-* [Multilanguage](http://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) - Translate WordPress website content to other languages manually. Create multilingual pages, posts, widgets, menus, etc.
-* [Pinterest](http://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92) - Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages and widgets.
-* [Twitter](http://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d) - Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages and widgets.
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=5019f1216fc048f1419fe4645da69381) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
+* [Google +1](https://bestwebsoft.com/products/wordpress/plugins/google-plus-one/?k=1f911e6a8a57be8dec36aa4c617773d2) - Add Google +1 Share, Follow, Hangout buttons and profile badge to WordPress posts, pages and widgets.
+* [LinkedIn](https://bestwebsoft.com/products/wordpress/plugins/linkedin/?k=b51477f9bcefca82ad8a4a1901806171) - Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. 5 plugins included – profile, insider, etc.
+* [Multilanguage](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) - Translate WordPress website content to other languages manually. Create multilingual pages, posts, widgets, menus, etc.
+* [Pinterest](https://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92) - Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages and widgets.
+* [Twitter](https://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d) - Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages and widgets.
 
 = Donate =
 
 Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
 
-[Donate Now](http://bestwebsoft.com/donate/)
+[Donate Now](https://bestwebsoft.com/donate/)
 
 == Installation ==
 
 1. Upload the folder `facebook-button-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust the necessary settings in your WordPress admin panel - "BWS Panel" > "Facebook Button".
+3. You can adjust the necessary settings in your WordPress admin panel - "Facebook Button".
 
 [View a Step-by-step Instruction on Facebook Button by BestWebSoft Installation](https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/)
 
-http://www.youtube.com/watch?v=pAKsQPz3RZc
+https://www.youtube.com/watch?v=pAKsQPz3RZc
 
 == Frequently Asked Questions ==
 
-= I cannot see Facebook Button icon in the post after the plugin installation =
-
-In WordPress admin panel, please go to "Plugins", find "Facebook Button by BestWebSoft" and click "Activate".
-
-=  After clicking Facebook Button icon I see the Facebook Home page instead of the necessary account page =
-
-1. In WordPress admin panel, please go to "BWS Panel", find Facebook Button settings page and enter your Facebook ID or username. Then click "Save Changes".
-2. If you do not have Facebook account yet, you should create it using this link: <http://www.facebook.com>. After the account is created please follow the instructions above.
-
-= How to adjust Facebook Button position on the page =
-
-In WordPress admin panel, please go to "BWS Panel", find Facebook Button settings page and choose one of the listed positions: Before, After, Before and After or Shortcode. Then click "Save Changes".
-
-= How to change Facebook Button icon ("My page") =
-
-1. In WordPress admin panel, please go to "BWS Panel", find Facebook Button settings page and choose one of the listed positions: Standard Facebook image or Custom Facebook image. Then click "Save Changes".
-2. If you choose Custom Facebook image, you can upload your own picture. You should click "Choose file" and choose an image in your folder. Then click "Save Changes".
-
-= After the plugin installation and settings adjustment on the settings page it is still not working =
+= After the plugin installation and settings adjustment on the settings page, it is still not working =
 
 1. You should click "Save Changes". Make sure that you got the message "Settings saved".
-2. After saving your settings you should refresh your web page where Facebook Button icon should be placed.
+2. Refresh your web page where Facebook Button icon should be placed.
+
+= How to change Facebook Button icon ("Profile URL")? =
+
+1. In WordPress admin panel, please go to Facebook Button settings page and choose one of the listed positions: Default Profile Button Image or Custom Profile Button Image. Then click "Save Changes".
+2. If you choose Custom Profile Button Image, you can upload your own picture. You should click "Choose file" and choose an image in your folder. Then click "Save Changes".
+
+= How to set Facebook Button position on the page? =
+
+In WordPress admin panel, please go to Facebook Button settings page and choose one of the listed positions: Before content or After content. Then click "Save Changes".
+
+= After clicking Facebook Button icon, I see the Facebook Home page instead of the necessary account page =
+
+1. In WordPress admin panel, please go to Facebook Button settings page and enter your Facebook ID or username. Then click "Save Changes".
+2. If you do not have the Facebook account yet, you should create it here. After the account is created, please follow the instructions above.
+
+= When people like and/or leave comments to my post, will this be displayed on my Facebook page? =
+
+No, it will not. The case is: Like for a WordPress site is a Like of a certain URL, but not the page content, while on Facebook it's Like of the content, not the URL. I.e. these are two different things, and it is impossible to link them.
+For more data on the Like button, please check the developers' page (<https://developers.facebook.com/docs/plugins/like-button>).
+
+= If I install a new version of the plugin, will I lose all the likes I got on the previous version (I mean will they switch to zero on my website?)? =
+
+You will not lose them because they are stored on the Facebook server.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
-
-1. the link to the page where the problem occurs
-2. the name of the plugin and its version. If you are using a pro version - your order number.
-3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
+Please make sure that the problem hasn't been discussed yet on our forum (<https://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
+- The link to the page where the problem occurs
+- The name of the plugin and its version. If you are using a pro version - your order number.
+- The version of your WordPress installation
+- Copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/)
 
 == Screenshots ==
 
@@ -154,6 +159,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.54 - 06.04.2017 =
+* NEW : Czech language file is added.
+* Bugfix : Bug with incorrect My Page Facebook button link was fixed.
 
 = V2.53 - 31.01.2017 =
 * Update : The plugin settings page has been updated.
@@ -368,6 +377,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.54 =
+* Languages updated.
 
 = V2.53 =
 * Usability improved.
