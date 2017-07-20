@@ -6,7 +6,7 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.54
+Version: 2.55
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -70,7 +70,7 @@ if ( ! function_exists( 'fcbkbttn_init' ) ) {
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
 		bws_include_init( plugin_basename( __FILE__ ) );
 		
-		bws_wp_min_version_check( plugin_basename( __FILE__ ), $fcbkbttn_plugin_info, '3.8' );/* check compatible with current WP version ##*/
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $fcbkbttn_plugin_info, '3.9' );/* check compatible with current WP version ##*/
 
 		/* Get options from the database */
 		if ( ! is_admin() || ( isset( $_GET['page'] ) && ( "facebook-button-plugin.php" == $_GET['page'] || "social-buttons.php" == $_GET['page'] ) ) ) {
@@ -112,18 +112,6 @@ if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
 if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 	function fcbkbttn_settings() {
 		global $fcbkbttn_options, $fcbkbttn_plugin_info;
-		/**
-		* @since 2.49
-		* @todo remove after 08.02.2017
-		*/
-		if ( $old_options = get_option( 'fcbk_bttn_plgn_options' ) ) {
-			if ( ! get_option( 'fcbkbttn_options' ) )
-				add_option( 'fcbkbttn_options', $old_options );
-			else
-				update_option( 'fcbkbttn_options', $old_options );
-			delete_option( 'fcbk_bttn_plgn_options' );
-		}
-		/* end @todo */
 
 		/* Install the option defaults */
 		if ( ! get_option( 'fcbkbttn_options' ) ) {
@@ -137,24 +125,6 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 		if ( ! isset( $fcbkbttn_options['plugin_option_version'] ) || $fcbkbttn_options['plugin_option_version'] != $fcbkbttn_plugin_info["Version"] ) {
 			/* show pro features */
 			$fcbkbttn_options['hide_premium_options'] = array();
-
-			/**
-			* @since 2.49
-			* @todo remove after 08.02.2017
-			*/
-			if ( ! is_array( $fcbkbttn_options['where'] ) ) {
-				switch ( $fcbkbttn_options['where'] ) {
-					case 'shortcode':
-						$fcbkbttn_options['where'] = array();
-						break;
-					case 'beforeandafter':
-						$fcbkbttn_options['where'] = array( 'before', 'after' );
-						break;					
-					default:
-						$fcbkbttn_options['where'] = array( $fcbkbttn_options['where'] );
-						break;
-				}
-			}/* end @todo */
 
 			$options_default = fcbkbttn_get_options_default();
 			$fcbkbttn_options = array_merge( $options_default, $fcbkbttn_options );
@@ -182,6 +152,7 @@ if ( ! function_exists( 'fcbkbttn_get_options_default' ) ) {
 			'share'						=>	0,
 			'faces'						=>	0,
 			'width'						=>	450,
+			'size'						=>	'small',
 			'where'						=>	array( 'before' ),
 			'display_option'			=>	'standard',
 			'count_icon'				=>	1,
@@ -190,7 +161,7 @@ if ( ! function_exists( 'fcbkbttn_get_options_default' ) ) {
 			'locale' 					=>	'en_US',
 			'html5'						=>	0,
 			'use_multilanguage_locale'	=>  0,
-			'display_for_excerpt'		=>  0			
+			'display_for_excerpt'		=>  0
 		);
 		return $options_default;
 	}
@@ -219,7 +190,7 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 		$button	= '<div class="fcbk_share">';
 		
 		if ( 1 == $fcbkbttn_options['my_page'] ) {
-			$button .=	'<div class="fcbk_button">
+			$button .= '<div class="fcbk_button">
 							<a href="https://www.facebook.com/' . $fcbkbttn_options['link'] . '"	target="_blank">
 								<img src="' . $fcbkbttn_options['fb_img_link'] . '" alt="Fb-Button" />
 							</a>
@@ -233,8 +204,9 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 				$button .=	'<div class="fb-like" data-href="' . $permalink_post . '" data-colorscheme="' . $fcbkbttn_options['color_scheme'] . '" data-layout="' . $fcbkbttn_options['layout_option'] . '" data-action="' . $fcbkbttn_options['like_action'] . '" ';
 				if ( 'standard' == $fcbkbttn_options['layout_option'] ) {
 					$button .= ' data-width="' . $fcbkbttn_options['width'] . 'px"';
-					$button .= ( 1 == $fcbkbttn_options['faces'] ) ? "data-show-faces='true'" : "data-show-faces='false'";
+					$button .= ( 1 == $fcbkbttn_options['faces'] ) ? " data-show-faces='true'" : " data-show-faces='false'";
 				}
+				$button .= ' data-size="' . $fcbkbttn_options['size'] . '"';
 				$button .= ( 1 == $fcbkbttn_options['share'] ) ? ' data-share="true"' : ' data-share="false"';
 				$button .= '></div></div>';
 			} else {
@@ -243,12 +215,13 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 					$button .= ( 1 == $fcbkbttn_options['faces'] ) ? "show-faces='true'" : "show-faces='false'";
 					$button .= ' width="' . $fcbkbttn_options['width'] . 'px"';
 				}
+
+				$button .= ' size="' . $fcbkbttn_options['size'] . '"';
 				$button .= ( 1 == $fcbkbttn_options['share'] ) ? ' share="true"' : ' share="false"';
 				$button .= '></fb:like></div>';
 			}
-
 		} else if ( 1 != $fcbkbttn_options['like'] && 1 == $fcbkbttn_options['share'] ) {
-			$button .=	'<div class="fb-share-button" data-href="' . $permalink_post . '" data-type="' . $fcbkbttn_options['layout_option'] . '"></div>';
+			$button .=	'<div class="fb-share-button" data-href="' . $permalink_post . '" data-type="' . $fcbkbttn_options['layout_option'] . '" data-size="' . $fcbkbttn_options['size'] . '"></div>';
 		}
 
 		$button .= '</div>';

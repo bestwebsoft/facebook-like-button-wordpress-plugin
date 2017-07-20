@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook-button-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-06 10:49+0300\n"
-"PO-Revision-Date: 2017-04-06 10:49+0300\n"
+"POT-Creation-Date: 2017-07-10 12:19+0300\n"
+"PO-Revision-Date: 2017-07-10 12:20+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: facebook-button-plugin.php:35 facebook-button-plugin.php:36
-#: facebook-button-plugin.php:205 includes/class-fcbkbttn-settings.php:175
+#: facebook-button-plugin.php:176 includes/class-fcbkbttn-settings.php:181
 msgid "Facebook Button Settings"
 msgstr "Настройки Facebook Button"
 
-#: facebook-button-plugin.php:36 facebook-button-plugin.php:409
-#: facebook-button-plugin.php:423 includes/class-fcbkbttn-settings.php:23
+#: facebook-button-plugin.php:36 facebook-button-plugin.php:382
+#: facebook-button-plugin.php:396 includes/class-fcbkbttn-settings.php:23
 msgid "Settings"
 msgstr "Настройки"
 
@@ -30,19 +30,19 @@ msgstr "Настройки"
 msgid "Upgrade to Pro"
 msgstr "Обновиться до Pro"
 
-#: facebook-button-plugin.php:206
+#: facebook-button-plugin.php:177
 msgid "Please, enable JavaScript in Your browser."
 msgstr "Пожалуйста, включите поддержку JavaScript в вашем браузере."
 
-#: facebook-button-plugin.php:302
+#: facebook-button-plugin.php:275
 msgid "Add Facebook buttons to your page or post"
 msgstr "Добавить Facebook кнопки на вашу страницу или запись"
 
-#: facebook-button-plugin.php:424
+#: facebook-button-plugin.php:397
 msgid "FAQ"
 msgstr "FAQ"
 
-#: facebook-button-plugin.php:425
+#: facebook-button-plugin.php:398
 msgid "Support"
 msgstr "Поддержка"
 
@@ -62,78 +62,90 @@ msgstr "Пользовательский код"
 msgid "License Key"
 msgstr "Лицензионный ключ"
 
-#: includes/class-fcbkbttn-settings.php:99
+#: includes/class-fcbkbttn-settings.php:107
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: includes/class-fcbkbttn-settings.php:128
-msgid "Error: File size > 32K"
-msgstr "Ошибка: Размер файла > 32К"
+#: includes/class-fcbkbttn-settings.php:136
+msgid "Error: File size must not exceed 32KB"
+msgstr "Ошибка: Размер файла не должен превышать 32КБ"
 
-#: includes/class-fcbkbttn-settings.php:131
+#: includes/class-fcbkbttn-settings.php:139
 msgid "Error: Invalid file type"
 msgstr "Ошибка: Некорректный тип файла"
 
-#: includes/class-fcbkbttn-settings.php:137
+#: includes/class-fcbkbttn-settings.php:145
 msgid "Upload successful."
 msgstr "Загрузка прошла удачно."
 
-#: includes/class-fcbkbttn-settings.php:147
+#: includes/class-fcbkbttn-settings.php:153
 msgid "Error: failed to move file."
 msgstr "Ошибка: При перемещении файла произошла ошибка."
 
-#: includes/class-fcbkbttn-settings.php:150
+#: includes/class-fcbkbttn-settings.php:156
 msgid "Error: check image width or height."
 msgstr "Ошибка: Проверьте ширину и высоту изображения."
 
-#: includes/class-fcbkbttn-settings.php:154
+#: includes/class-fcbkbttn-settings.php:160
 msgid "Uploading Error: check image properties"
 msgstr "Ошибка загрузки: Проверьте опции изображения"
 
-#: includes/class-fcbkbttn-settings.php:178
+#: includes/class-fcbkbttn-settings.php:184
 msgid "General"
 msgstr "Общее"
 
-#: includes/class-fcbkbttn-settings.php:181
+#: includes/class-fcbkbttn-settings.php:187
 msgid "Buttons"
-msgstr "Кнопоки"
+msgstr "Кнопки"
 
-#: includes/class-fcbkbttn-settings.php:184
+#: includes/class-fcbkbttn-settings.php:190
 msgid "Profile URL"
 msgstr "URL профиля"
 
-#: includes/class-fcbkbttn-settings.php:185
-#: includes/class-fcbkbttn-settings.php:371
+#: includes/class-fcbkbttn-settings.php:191
+#: includes/class-fcbkbttn-settings.php:386
 msgid "Like"
 msgstr "Нравится"
 
-#: includes/class-fcbkbttn-settings.php:186
+#: includes/class-fcbkbttn-settings.php:192
 msgid "Share"
 msgstr "Поделиться"
 
-#: includes/class-fcbkbttn-settings.php:191
+#: includes/class-fcbkbttn-settings.php:197
+msgid "Buttons Size"
+msgstr "Величина кнопок"
+
+#: includes/class-fcbkbttn-settings.php:200
+msgid "Small"
+msgstr "Маленькие"
+
+#: includes/class-fcbkbttn-settings.php:201
+msgid "Large"
+msgstr "Большие"
+
+#: includes/class-fcbkbttn-settings.php:206
 msgid "Buttons Position"
 msgstr "Позиция кнопок"
 
-#: includes/class-fcbkbttn-settings.php:196
+#: includes/class-fcbkbttn-settings.php:211
 msgid "Before content"
 msgstr "Перед содержимым"
 
-#: includes/class-fcbkbttn-settings.php:201
+#: includes/class-fcbkbttn-settings.php:216
 msgid "After content"
 msgstr "После содержимого"
 
-#: includes/class-fcbkbttn-settings.php:207
+#: includes/class-fcbkbttn-settings.php:222
 msgid "Language"
 msgstr "Язык"
 
-#: includes/class-fcbkbttn-settings.php:218
+#: includes/class-fcbkbttn-settings.php:233
 msgid "Select the default language for Facebook button(-s)."
 msgstr "Выберите язык отображения по умолчанию для кнопок Facebook."
 
-#: includes/class-fcbkbttn-settings.php:227
-#: includes/class-fcbkbttn-settings.php:230
-#: includes/class-fcbkbttn-settings.php:234
+#: includes/class-fcbkbttn-settings.php:242
+#: includes/class-fcbkbttn-settings.php:245
+#: includes/class-fcbkbttn-settings.php:249
 msgid ""
 "Enable to switch language automatically on multilingual website using "
 "Multilanguage plugin."
@@ -141,50 +153,50 @@ msgstr ""
 "Включить, чтобы переключить язык автоматически на многоязычном сайте, "
 "используя Multilanguage плагин."
 
-#: includes/class-fcbkbttn-settings.php:230
+#: includes/class-fcbkbttn-settings.php:245
 #, php-format
 msgid "Activate %s"
 msgstr "Активировать %s"
 
-#: includes/class-fcbkbttn-settings.php:234
+#: includes/class-fcbkbttn-settings.php:249
 msgid "Learn More"
 msgstr "Подробнее"
 
-#: includes/class-fcbkbttn-settings.php:239
+#: includes/class-fcbkbttn-settings.php:254
 msgid "Excerpt"
 msgstr "Цитата"
 
-#: includes/class-fcbkbttn-settings.php:241
+#: includes/class-fcbkbttn-settings.php:256
 msgid "Enable to display buttons in excerpt."
 msgstr "Включите, чтоб отображать кнопки для цитаты."
 
-#: includes/class-fcbkbttn-settings.php:250
-#: includes/class-fcbkbttn-settings.php:426
-#: includes/class-fcbkbttn-settings.php:481
+#: includes/class-fcbkbttn-settings.php:265
+#: includes/class-fcbkbttn-settings.php:441
+#: includes/class-fcbkbttn-settings.php:496
 msgid "Close"
 msgstr "Закрыть"
 
-#: includes/class-fcbkbttn-settings.php:254
+#: includes/class-fcbkbttn-settings.php:269
 msgid "Meta Image"
 msgstr "Мета изображение"
 
-#: includes/class-fcbkbttn-settings.php:259
+#: includes/class-fcbkbttn-settings.php:274
 msgid "Featured Image"
 msgstr "Миниатюра записи"
 
-#: includes/class-fcbkbttn-settings.php:263
+#: includes/class-fcbkbttn-settings.php:278
 msgid "Custom Image"
 msgstr "Пользовательское изображение"
 
-#: includes/class-fcbkbttn-settings.php:263
+#: includes/class-fcbkbttn-settings.php:278
 msgid "This image will be used for all posts"
 msgstr "Это изображение будет использоваться для всех записей"
 
-#: includes/class-fcbkbttn-settings.php:270
+#: includes/class-fcbkbttn-settings.php:285
 msgid "Meta Description"
 msgstr "Мета описание"
 
-#: includes/class-fcbkbttn-settings.php:274
+#: includes/class-fcbkbttn-settings.php:289
 msgid ""
 "This description will be used for all pages and posts. Leave blank to use "
 "page description."
@@ -192,27 +204,27 @@ msgstr ""
 "Это описание будет использоваться для всех записей и страниц. Оставьте "
 "пустым, чтобы использовать описание страницы."
 
-#: includes/class-fcbkbttn-settings.php:283
+#: includes/class-fcbkbttn-settings.php:298
 msgid "Profile URL Button"
 msgstr "Кнопка URL профиля"
 
-#: includes/class-fcbkbttn-settings.php:286
+#: includes/class-fcbkbttn-settings.php:301
 msgid "Facebook ID or Username"
 msgstr "Facebook ID или имя пользователя"
 
-#: includes/class-fcbkbttn-settings.php:293
+#: includes/class-fcbkbttn-settings.php:308
 msgid "Profile Button Image"
 msgstr "Изображение кнопки профиля"
 
-#: includes/class-fcbkbttn-settings.php:300
+#: includes/class-fcbkbttn-settings.php:315
 msgid "Default"
 msgstr "По умолчанию"
 
-#: includes/class-fcbkbttn-settings.php:305
+#: includes/class-fcbkbttn-settings.php:320
 msgid "Custom image"
 msgstr "Пользовательское изображение"
 
-#: includes/class-fcbkbttn-settings.php:309
+#: includes/class-fcbkbttn-settings.php:324
 msgid ""
 "To use custom image, You need to setup permissions for upload directory of "
 "your site"
@@ -220,11 +232,11 @@ msgstr ""
 "Для использования пользовательского изображения Вам нужно выдать права "
 "доступа на папку загрузок на вашем сайте"
 
-#: includes/class-fcbkbttn-settings.php:316
+#: includes/class-fcbkbttn-settings.php:331
 msgid "Current image"
 msgstr "Текущее изображение"
 
-#: includes/class-fcbkbttn-settings.php:324
+#: includes/class-fcbkbttn-settings.php:339
 msgid ""
 "Image requirements: max image width:100px; max image height:40px; max image "
 "size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
@@ -232,72 +244,72 @@ msgstr ""
 "Требования к изображению: максимальная ширина:100px; максимальная "
 "высота:40px; максимальный размер:32Kb; тип файла:\"jpg\", \"jpeg\", \"png\"."
 
-#: includes/class-fcbkbttn-settings.php:328
+#: includes/class-fcbkbttn-settings.php:343
 msgid "Like&Share Buttons"
 msgstr "Кнопки \"Нравится\" и \"Поделиться\""
 
-#: includes/class-fcbkbttn-settings.php:331
+#: includes/class-fcbkbttn-settings.php:346
 msgid "Layout"
 msgstr "Вид"
 
-#: includes/class-fcbkbttn-settings.php:366
+#: includes/class-fcbkbttn-settings.php:381
 msgid "Like Button Action"
 msgstr "Действие кнопки \"Нравится\""
 
-#: includes/class-fcbkbttn-settings.php:376
+#: includes/class-fcbkbttn-settings.php:391
 msgid "Recommend"
 msgstr "Рекомендую"
 
-#: includes/class-fcbkbttn-settings.php:382
+#: includes/class-fcbkbttn-settings.php:397
 msgid "Friends Faces"
 msgstr "Лица друзей"
 
-#: includes/class-fcbkbttn-settings.php:385
+#: includes/class-fcbkbttn-settings.php:400
 msgid " Enable to show faces of your friends who submitted the button."
 msgstr "Включить, чтобы показать лица своих друзей, которые нажали кнопку."
 
-#: includes/class-fcbkbttn-settings.php:389
+#: includes/class-fcbkbttn-settings.php:404
 msgid "Layout Width"
 msgstr "Ширина блока"
 
-#: includes/class-fcbkbttn-settings.php:391
+#: includes/class-fcbkbttn-settings.php:406
 msgid "px"
 msgstr "пикс"
 
-#: includes/class-fcbkbttn-settings.php:395
+#: includes/class-fcbkbttn-settings.php:410
 msgid "Theme"
 msgstr "Тема"
 
-#: includes/class-fcbkbttn-settings.php:400
+#: includes/class-fcbkbttn-settings.php:415
 msgid "Light"
 msgstr "Светлая"
 
-#: includes/class-fcbkbttn-settings.php:405
+#: includes/class-fcbkbttn-settings.php:420
 msgid "Dark"
 msgstr "Тёмная"
 
-#: includes/class-fcbkbttn-settings.php:411
+#: includes/class-fcbkbttn-settings.php:426
 msgid "Like Button HTML Tag"
 msgstr "HTML тег кнопки \"Нравится\""
 
-#: includes/class-fcbkbttn-settings.php:417
+#: includes/class-fcbkbttn-settings.php:432
 #, php-format
 msgid "Tag %s can be used to improve website code validation."
 msgstr "Тег %s может быть использован для улучшения валидации кода сайта."
 
-#: includes/class-fcbkbttn-settings.php:430
+#: includes/class-fcbkbttn-settings.php:445
 msgid "URL to Like"
 msgstr "URL кнопки \"Нравится\""
 
-#: includes/class-fcbkbttn-settings.php:432
+#: includes/class-fcbkbttn-settings.php:447
 msgid "Leave blank to use a current page."
 msgstr "Оставьте пустым, чтобы использовать текущую страницу."
 
-#: includes/class-fcbkbttn-settings.php:460
-msgid "Facebook Buttons Shortchode"
-msgstr "Шорткод Facebook кнопок"
+#: includes/class-fcbkbttn-settings.php:475
+msgid "Facebook Buttons Shortcode"
+msgstr "Шорткод кнопки Facebook"
 
-#: includes/class-fcbkbttn-settings.php:463
+#: includes/class-fcbkbttn-settings.php:478
 msgid ""
 "Add Facebook button(-s) to your posts, pages, custom post types or widgets "
 "by using the following shortcode:"
@@ -305,15 +317,15 @@ msgstr ""
 "Добавить кнопки Facebook на ваши записи, страницы, пользовательские типы "
 "записей или виджеты с помощью данного шорткода:"
 
-#: includes/class-fcbkbttn-settings.php:482
+#: includes/class-fcbkbttn-settings.php:497
 msgid "Facebook Buttons Preview"
 msgstr "Предварительный просмотр Facebook кнопок"
 
-#: includes/class-fcbkbttn-settings.php:497
+#: includes/class-fcbkbttn-settings.php:512
 msgid "Display Settings"
 msgstr "Настройка отображения"
 
-#: includes/class-fcbkbttn-settings.php:506
+#: includes/class-fcbkbttn-settings.php:521
 msgid ""
 "Please choose the necessary post types (or single pages) where Facebook "
 "button will be displayed:"
@@ -321,17 +333,25 @@ msgstr ""
 "Пожалуйста, выберите те типы записей (или отдельные страницы), где будут "
 "отображаться кнопки Facebook:"
 
-#: includes/class-fcbkbttn-settings.php:513
+#: includes/class-fcbkbttn-settings.php:528
 msgid "Show URL for pages"
 msgstr "Отображать URL для страниц"
 
-#: includes/class-fcbkbttn-settings.php:519
-msgid "Example of the site's pages tree"
+#: includes/class-fcbkbttn-settings.php:534
+msgid "Example of site pages tree"
 msgstr "Пример дерева страниц сайта"
 
-#: includes/class-fcbkbttn-settings.php:519
-msgid "Example of site pages' tree"
-msgstr "Пример дерева страниц сайта"
+#~ msgid "Error: File size > 32K"
+#~ msgstr "Ошибка: Размер файла не должен превышать 32Кб"
+
+#~ msgid "Example of site pages' tree"
+#~ msgstr "Пример дерева страниц сайта"
+
+#~ msgid "Example of the site's pages tree"
+#~ msgstr "Пример дерева страниц сайта"
+
+#~ msgid "Facebook Buttons Shortchode"
+#~ msgstr "Шорткод Facebook кнопок"
 
 #~ msgid "Facebook button Settings"
 #~ msgstr "Настройки Facebook button"

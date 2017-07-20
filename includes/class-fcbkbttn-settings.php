@@ -67,11 +67,19 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			$this->options['link']				= str_replace( 'https://www.facebook.com/profile.php?id=', '', $this->options['link'] );
 			$this->options['link']				= str_replace( 'https://www.facebook.com/', '', $this->options['link'] );
 
+			$this->options['size']				= 'large' == $_REQUEST['fcbkbttn_size'] ? 'large' : 'small';
 			$this->options['where']				= isset( $_REQUEST['fcbkbttn_where'] ) ? $_REQUEST['fcbkbttn_where'] : array();
-			$this->options['display_option']	= $_REQUEST['fcbkbttn_display_option'];
+			$this->options['display_option']	= ( 'custom' == $_REQUEST['fcbkbttn_display_option'] ) ? 'custom' : 'standard';
+
 			if ( 'standard' == $this->options['display_option'] ) {
-				$this->options['fb_img_link']	= plugins_url( 'images/standard-facebook-ico.png', dirname( __FILE__ ) );
-			}				
+				$img_name =
+					'large' == $this->options['size'] ?
+					'large-facebook-ico' :
+					'standard-facebook-ico';
+
+				$this->options['fb_img_link']	= plugins_url( 'images/' . $img_name . '.png', dirname( __FILE__ ) );
+			}
+
 			$this->options['my_page']			= isset( $_REQUEST['fcbkbttn_my_page'] ) ? 1 : 0;
 			$this->options['like']				= isset( $_REQUEST['fcbkbttn_like'] ) ? 1 : 0;
 			$this->options['layout_option']		= $_REQUEST['fcbkbttn_layout_option'];
@@ -125,7 +133,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 						$filename	=	$_FILES['fcbkbttn_uploadfile']['tmp_name'];
 						$ext		=	substr( $_FILES['fcbkbttn_uploadfile']['name'], 1 + strrpos( $_FILES['fcbkbttn_uploadfile']['name'], '.' ) );
 						if ( filesize( $filename ) > $max_image_size ) {
-							$error	=	__( "Error: File size > 32K", 'facebook-button-plugin' );
+							$error	=	__( "Error: File size must not exceed 32KB", 'facebook-button-plugin' );
 						}
 						elseif ( ! in_array( strtolower( $ext ), $valid_types ) ) {
 							$error	=	__( "Error: Invalid file type", 'facebook-button-plugin' );
@@ -135,14 +143,12 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 								/* If file satisfies requirements, we will move them from temp to your plugin folder and rename to 'facebook_ico.jpg' */
 								if ( move_uploaded_file( $_FILES['fcbkbttn_uploadfile']['tmp_name'], $uploadfile ) ) {
 									$message .= '. ' . __( "Upload successful.", 'facebook-button-plugin' );
-									
-									if ( 'standard' == $this->options['display_option'] ) {
-										$fb_img_link = plugins_url( 'images/standard-facebook-ico.png', dirname( __FILE__ ) );
-									} else if ( 'custom' == $this->options['display_option'] ) {
-										$fb_img_link = $this->upload_dir['baseurl'] . '/facebook-image/facebook-ico' . $this->options['count_icon'] . '.' . $this->options['extention'];
+
+									if ( 'custom' == $this->options['display_option'] ) {
+										$this->options['fb_img_link'] = $this->upload_dir['baseurl'] . '/facebook-image/facebook-ico' . $this->options['count_icon'] . '.' . $this->options['extention'];
+
+										update_option( 'fcbkbttn_options', $this->options );
 									}
-									$this->options['fb_img_link'] = $fb_img_link ;
-									update_option( 'fcbkbttn_options', $this->options );
 								} else {
 									$error = __( "Error: failed to move file.", 'facebook-button-plugin' );
 								}
@@ -188,16 +194,25 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					</td>
 				</tr>
 				<tr>
+					<th><?php _e( "Buttons Size", 'facebook-button-plugin' ); ?></th>
+					<td>
+						<fieldset>
+							<label><input name="fcbkbttn_size" type="radio" value="small" <?php checked( 'small', $this->options['size'] ); ?> /> <?php _e( 'Small', 'facebook-button-plugin' ); ?></label><br />
+							<label><input name="fcbkbttn_size" type="radio" value="large" <?php checked( 'large', $this->options['size'] ); ?> /> <?php _e( 'Large', 'facebook-button-plugin' ); ?></label>
+						</fieldset>
+					</td>
+				</tr>
+				<tr>
 					<th><?php _e( 'Buttons Position', 'facebook-button-plugin' ); ?></th>
 					<td>
 						<fieldset>
 							<label>
-								<input type="checkbox" name="fcbkbttn_where[]" value="before" <?php if ( in_array( 'before', $this->options['where'] ) ) echo 'checked="checked"'; ?> /> 
+								<input type="checkbox" name="fcbkbttn_where[]" value="before" <?php echo in_array( 'before', $this->options['where'] ) ? 'checked="checked"' : ''; ?> /> 
 								<?php _e( 'Before content', 'facebook-button-plugin' ); ?></option>
 							</label>
 							<br>
 							<label>
-								<input type="checkbox" name="fcbkbttn_where[]" value="after" <?php if ( in_array( 'after', $this->options['where'] ) ) echo 'checked="checked"'; ?> /> 
+								<input type="checkbox" name="fcbkbttn_where[]" value="after" <?php echo in_array( 'after', $this->options['where'] ) ? 'checked="checked"' : ''; ?> /> 
 								<?php _e( 'After content', 'facebook-button-plugin' ); ?></option>
 							</label>
 						</fieldset>
@@ -332,11 +347,11 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<td>
 						<fieldset class="fcbkbttn_layout_option">
 							<label class="fcbkbttn_like_layout">
-								<input type="radio" name="fcbkbttn_layout_option" <?php if ( 'standard' == $this->options['layout_option'] || 1 == $this->options['like'] ) echo 'checked="checked"'; ?> value="standard" />
+								<input id="fcbkbttn_standard_layout" type="radio" name="fcbkbttn_layout_option" <?php if ( 'standard' == $this->options['layout_option'] || 1 == $this->options['like'] ) echo 'checked="checked"'; ?> value="standard" />
 								Standard
 							</label>
 							<label>
-								<input type="radio" name="fcbkbttn_layout_option" <?php if ( 'box_count' == $this->options['layout_option'] ) echo 'checked="checked"'; ?> value="box_count" />
+								<input id="fcbkbttn_box_count_layout" type="radio" name="fcbkbttn_layout_option" <?php if ( 'box_count' == $this->options['layout_option'] ) echo 'checked="checked"'; ?> value="box_count" />
 								Box count
 							</label>
 							<label>
@@ -457,7 +472,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 		public function display_metabox() { ?>
 			<div class="postbox">
 				<h3 class="hndle">
-					<?php _e( 'Facebook Buttons Shortchode', 'facebook-button-plugin' ); ?>
+					<?php _e( 'Facebook Buttons Shortcode', 'facebook-button-plugin' ); ?>
 				</h3>
 				<div class="inside">
 					<?php _e( "Add Facebook button(-s) to your posts, pages, custom post types or widgets by using the following shortcode:", 'facebook-button-plugin' ); ?>
@@ -516,7 +531,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 						</tr>
 						<tr>
 							<td colspan="2">
-								<img src="<?php echo plugins_url( 'images/pro_screen_1.png', dirname( __FILE__ ) ); ?>" alt="<?php _e( "Example of the site's pages tree", 'facebook-button-plugin' ); ?>" title="<?php _e( "Example of site pages' tree", 'facebook-button-plugin' ); ?>" />
+								<img src="<?php echo plugins_url( 'images/pro_screen_1.png', dirname( __FILE__ ) ); ?>" alt="<?php _e( "Example of site pages tree", 'facebook-button-plugin' ); ?>" title="<?php _e( "Example of site pages tree", 'facebook-button-plugin' ); ?>" />
 							</td>
 						</tr>
 					</table>

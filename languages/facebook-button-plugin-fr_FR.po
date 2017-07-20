@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook-button-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-06 10:49+0300\n"
-"PO-Revision-Date: 2017-04-06 10:49+0300\n"
+"POT-Creation-Date: 2017-07-10 12:20+0300\n"
+"PO-Revision-Date: 2017-07-10 12:20+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: http://wptheme.fr/\n"
 "Language: fr\n"
@@ -18,12 +18,12 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: facebook-button-plugin.php:35 facebook-button-plugin.php:36
-#: facebook-button-plugin.php:205 includes/class-fcbkbttn-settings.php:175
+#: facebook-button-plugin.php:176 includes/class-fcbkbttn-settings.php:181
 msgid "Facebook Button Settings"
 msgstr "Réglages du bouton Facebook"
 
-#: facebook-button-plugin.php:36 facebook-button-plugin.php:409
-#: facebook-button-plugin.php:423 includes/class-fcbkbttn-settings.php:23
+#: facebook-button-plugin.php:36 facebook-button-plugin.php:382
+#: facebook-button-plugin.php:396 includes/class-fcbkbttn-settings.php:23
 msgid "Settings"
 msgstr "Réglages"
 
@@ -31,20 +31,20 @@ msgstr "Réglages"
 msgid "Upgrade to Pro"
 msgstr ""
 
-#: facebook-button-plugin.php:206
+#: facebook-button-plugin.php:177
 msgid "Please, enable JavaScript in Your browser."
 msgstr ""
 
-#: facebook-button-plugin.php:302
+#: facebook-button-plugin.php:275
 #, fuzzy
 msgid "Add Facebook buttons to your page or post"
 msgstr "Position du bouton Facebook"
 
-#: facebook-button-plugin.php:424
+#: facebook-button-plugin.php:397
 msgid "FAQ"
 msgstr "FAQ"
 
-#: facebook-button-plugin.php:425
+#: facebook-button-plugin.php:398
 msgid "Support"
 msgstr "Support"
 
@@ -66,175 +66,187 @@ msgstr "Image Facebook personnalisée"
 msgid "License Key"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:99
+#: includes/class-fcbkbttn-settings.php:107
 msgid "Settings saved"
 msgstr "Réglages sauvegardés "
 
-#: includes/class-fcbkbttn-settings.php:128
-msgid "Error: File size > 32K"
-msgstr "Erreur : Poids du fichier > 32K"
+#: includes/class-fcbkbttn-settings.php:136
+msgid "Error: File size must not exceed 32KB"
+msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:131
+#: includes/class-fcbkbttn-settings.php:139
 msgid "Error: Invalid file type"
 msgstr "Erreur : Type de fichier invalide"
 
-#: includes/class-fcbkbttn-settings.php:137
+#: includes/class-fcbkbttn-settings.php:145
 msgid "Upload successful."
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:147
+#: includes/class-fcbkbttn-settings.php:153
 #, fuzzy
 msgid "Error: failed to move file."
 msgstr "Erreur : le déplacement du fichier a echoué"
 
-#: includes/class-fcbkbttn-settings.php:150
+#: includes/class-fcbkbttn-settings.php:156
 #, fuzzy
 msgid "Error: check image width or height."
 msgstr "Erreur : Vérifiez la taille et la largeur de l'image"
 
-#: includes/class-fcbkbttn-settings.php:154
+#: includes/class-fcbkbttn-settings.php:160
 msgid "Uploading Error: check image properties"
 msgstr "Erreur d'upload : vérifiez les propriétés de l'image"
 
-#: includes/class-fcbkbttn-settings.php:178
+#: includes/class-fcbkbttn-settings.php:184
 msgid "General"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:181
+#: includes/class-fcbkbttn-settings.php:187
 #, fuzzy
 msgid "Buttons"
 msgstr "Position du bouton Facebook"
 
-#: includes/class-fcbkbttn-settings.php:184
+#: includes/class-fcbkbttn-settings.php:190
 msgid "Profile URL"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:185
-#: includes/class-fcbkbttn-settings.php:371
+#: includes/class-fcbkbttn-settings.php:191
+#: includes/class-fcbkbttn-settings.php:386
 msgid "Like"
 msgstr "Like"
 
-#: includes/class-fcbkbttn-settings.php:186
+#: includes/class-fcbkbttn-settings.php:192
 msgid "Share"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:191
+#: includes/class-fcbkbttn-settings.php:197
+msgid "Buttons Size"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:200
+msgid "Small"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:201
+msgid "Large"
+msgstr ""
+
+#: includes/class-fcbkbttn-settings.php:206
 #, fuzzy
 msgid "Buttons Position"
 msgstr "Position du bouton Facebook"
 
-#: includes/class-fcbkbttn-settings.php:196
+#: includes/class-fcbkbttn-settings.php:211
 #, fuzzy
 msgid "Before content"
 msgstr "Avant et après"
 
-#: includes/class-fcbkbttn-settings.php:201
+#: includes/class-fcbkbttn-settings.php:216
 msgid "After content"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:207
+#: includes/class-fcbkbttn-settings.php:222
 msgid "Language"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:218
+#: includes/class-fcbkbttn-settings.php:233
 #, fuzzy
 msgid "Select the default language for Facebook button(-s)."
 msgstr "Changer la langue du bouton Facebook"
 
-#: includes/class-fcbkbttn-settings.php:227
-#: includes/class-fcbkbttn-settings.php:230
-#: includes/class-fcbkbttn-settings.php:234
+#: includes/class-fcbkbttn-settings.php:242
+#: includes/class-fcbkbttn-settings.php:245
+#: includes/class-fcbkbttn-settings.php:249
 msgid ""
 "Enable to switch language automatically on multilingual website using "
 "Multilanguage plugin."
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:230
+#: includes/class-fcbkbttn-settings.php:245
 #, php-format
 msgid "Activate %s"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:234
+#: includes/class-fcbkbttn-settings.php:249
 msgid "Learn More"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:239
+#: includes/class-fcbkbttn-settings.php:254
 msgid "Excerpt"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:241
+#: includes/class-fcbkbttn-settings.php:256
 #, fuzzy
 msgid "Enable to display buttons in excerpt."
 msgstr "Afficher le bouton"
 
-#: includes/class-fcbkbttn-settings.php:250
-#: includes/class-fcbkbttn-settings.php:426
-#: includes/class-fcbkbttn-settings.php:481
+#: includes/class-fcbkbttn-settings.php:265
+#: includes/class-fcbkbttn-settings.php:441
+#: includes/class-fcbkbttn-settings.php:496
 msgid "Close"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:254
+#: includes/class-fcbkbttn-settings.php:269
 #, fuzzy
 msgid "Meta Image"
 msgstr "Image Facebook personnalisée"
 
-#: includes/class-fcbkbttn-settings.php:259
+#: includes/class-fcbkbttn-settings.php:274
 msgid "Featured Image"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:263
+#: includes/class-fcbkbttn-settings.php:278
 #, fuzzy
 msgid "Custom Image"
 msgstr "Image Facebook personnalisée"
 
-#: includes/class-fcbkbttn-settings.php:263
+#: includes/class-fcbkbttn-settings.php:278
 msgid "This image will be used for all posts"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:270
+#: includes/class-fcbkbttn-settings.php:285
 msgid "Meta Description"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:274
+#: includes/class-fcbkbttn-settings.php:289
 msgid ""
 "This description will be used for all pages and posts. Leave blank to use "
 "page description."
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:283
+#: includes/class-fcbkbttn-settings.php:298
 msgid "Profile URL Button"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:286
+#: includes/class-fcbkbttn-settings.php:301
 #, fuzzy
 msgid "Facebook ID or Username"
 msgstr "Votre identifiant Facebook"
 
-#: includes/class-fcbkbttn-settings.php:293
+#: includes/class-fcbkbttn-settings.php:308
 msgid "Profile Button Image"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:300
+#: includes/class-fcbkbttn-settings.php:315
 msgid "Default"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:305
+#: includes/class-fcbkbttn-settings.php:320
 #, fuzzy
 msgid "Custom image"
 msgstr "Image Facebook personnalisée"
 
-#: includes/class-fcbkbttn-settings.php:309
+#: includes/class-fcbkbttn-settings.php:324
 msgid ""
 "To use custom image, You need to setup permissions for upload directory of "
 "your site"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:316
+#: includes/class-fcbkbttn-settings.php:331
 #, fuzzy
 msgid "Current image"
 msgstr "Image actuelle"
 
-#: includes/class-fcbkbttn-settings.php:324
+#: includes/class-fcbkbttn-settings.php:339
 #, fuzzy
 msgid ""
 "Image requirements: max image width:100px; max image height:40px; max image "
@@ -243,105 +255,107 @@ msgstr ""
 "Propriétés de l'image : largeur max:100px; hauteur max: 40px; poids max : "
 "32kb; type d'image :\"jpg\", \"jpeg\", \"png\"."
 
-#: includes/class-fcbkbttn-settings.php:328
+#: includes/class-fcbkbttn-settings.php:343
 msgid "Like&Share Buttons"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:331
+#: includes/class-fcbkbttn-settings.php:346
 msgid "Layout"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:366
+#: includes/class-fcbkbttn-settings.php:381
 msgid "Like Button Action"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:376
+#: includes/class-fcbkbttn-settings.php:391
 msgid "Recommend"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:382
+#: includes/class-fcbkbttn-settings.php:397
 msgid "Friends Faces"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:385
+#: includes/class-fcbkbttn-settings.php:400
 msgid " Enable to show faces of your friends who submitted the button."
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:389
+#: includes/class-fcbkbttn-settings.php:404
 msgid "Layout Width"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:391
+#: includes/class-fcbkbttn-settings.php:406
 msgid "px"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:395
+#: includes/class-fcbkbttn-settings.php:410
 msgid "Theme"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:400
+#: includes/class-fcbkbttn-settings.php:415
 msgid "Light"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:405
+#: includes/class-fcbkbttn-settings.php:420
 msgid "Dark"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:411
+#: includes/class-fcbkbttn-settings.php:426
 msgid "Like Button HTML Tag"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:417
+#: includes/class-fcbkbttn-settings.php:432
 #, php-format
 msgid "Tag %s can be used to improve website code validation."
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:430
+#: includes/class-fcbkbttn-settings.php:445
 msgid "URL to Like"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:432
+#: includes/class-fcbkbttn-settings.php:447
 msgid "Leave blank to use a current page."
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:460
-#, fuzzy
-msgid "Facebook Buttons Shortchode"
-msgstr "Position du bouton Facebook"
+#: includes/class-fcbkbttn-settings.php:475
+msgid "Facebook Buttons Shortcode"
+msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:463
+#: includes/class-fcbkbttn-settings.php:478
 msgid ""
 "Add Facebook button(-s) to your posts, pages, custom post types or widgets "
 "by using the following shortcode:"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:482
+#: includes/class-fcbkbttn-settings.php:497
 #, fuzzy
 msgid "Facebook Buttons Preview"
 msgstr "Bouton Facebook"
 
-#: includes/class-fcbkbttn-settings.php:497
+#: includes/class-fcbkbttn-settings.php:512
 #, fuzzy
 msgid "Display Settings"
 msgstr "Afficher le bouton"
 
-#: includes/class-fcbkbttn-settings.php:506
+#: includes/class-fcbkbttn-settings.php:521
 msgid ""
 "Please choose the necessary post types (or single pages) where Facebook "
 "button will be displayed:"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:513
+#: includes/class-fcbkbttn-settings.php:528
 msgid "Show URL for pages"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:519
-msgid "Example of the site's pages tree"
+#: includes/class-fcbkbttn-settings.php:534
+msgid "Example of site pages tree"
 msgstr ""
 
-#: includes/class-fcbkbttn-settings.php:519
-msgid "Example of site pages' tree"
-msgstr ""
+#~ msgid "Error: File size > 32K"
+#~ msgstr "Erreur : Poids du fichier > 32K"
+
+#, fuzzy
+#~ msgid "Facebook Buttons Shortchode"
+#~ msgstr "Position du bouton Facebook"
 
 #, fuzzy
 #~ msgid "Facebook button Settings"

@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
-Requires at least: 3.8
-Tested up to: 4.7.3
-Stable tag: 2.54
+Requires at least: 3.9
+Tested up to: 4.8
+Stable tag: 2.55
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widg
 
 == Description ==
 
-Facebook plugin is a best social media solution which adds Follow, Like, and Share buttons to your Wordpress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand. 
+Facebook plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand. 
 
 Customize the appearance, configure settings, and enable other advanced options to get more social traffic to your website and keep your visitors involved!
 
@@ -67,8 +67,8 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 = Documentation & Videos =
 
 * [[Doc] How to Use](https://docs.google.com/document/d/1gy5uDVoebmYRUvlKRwBmc97jdJFz7GvUCtXy3L7r_Yg/)
-* [[Doc] Installation](https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/)
-* [[Doc] Purchase, Installation & Configuration](https://docs.google.com/document/d/1iYerN1G4RrM7EelBlbmQdcYv_tzWWBYwBtYmIkcnOVo/)
+* [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+* [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
 * [[Video] Installation Instruction](https://www.youtube.com/watch?v=pAKsQPz3RZc)
 
 = Help & Support =
@@ -91,18 +91,12 @@ Some of these translations are not complete. We are constantly adding new featur
 
 = Recommended Plugins =
 
-* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=5019f1216fc048f1419fe4645da69381) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=5019f1216fc048f1419fe4645da69381) -  Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
 * [Google +1](https://bestwebsoft.com/products/wordpress/plugins/google-plus-one/?k=1f911e6a8a57be8dec36aa4c617773d2) - Add Google +1 Share, Follow, Hangout buttons and profile badge to WordPress posts, pages and widgets.
 * [LinkedIn](https://bestwebsoft.com/products/wordpress/plugins/linkedin/?k=b51477f9bcefca82ad8a4a1901806171) - Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. 5 plugins included – profile, insider, etc.
 * [Multilanguage](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) - Translate WordPress website content to other languages manually. Create multilingual pages, posts, widgets, menus, etc.
-* [Pinterest](https://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92) - Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages and widgets.
-* [Twitter](https://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d) - Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages and widgets.
-
-= Donate =
-
-Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
-
-[Donate Now](https://bestwebsoft.com/donate/)
+* [Pinterest](https://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92) - Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages, and widgets.
+* [Twitter](https://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d) - Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages, and widgets.
 
 == Installation ==
 
@@ -110,7 +104,7 @@ Donations play an important role in supporting open-source projects. We greatly 
 2. Activate the plugin via the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust the necessary settings in your WordPress admin panel - "Facebook Button".
 
-[View a Step-by-step Instruction on Facebook Button by BestWebSoft Installation](https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/)
+[View a Step-by-step Instruction on Facebook Button by BestWebSoft Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
 https://www.youtube.com/watch?v=pAKsQPz3RZc
 
@@ -159,6 +153,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.55 - 20.07.2017 =
+* NEW : Ability to choose buttons size has been added.
+* Update : Default button appearance has been updated.
 
 = V2.54 - 06.04.2017 =
 * NEW : Czech language file is added.
@@ -377,6 +375,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.55 =
+* Functionality expanded.
+* Appearance improved.
 
 = V2.54 =
 * Languages updated.

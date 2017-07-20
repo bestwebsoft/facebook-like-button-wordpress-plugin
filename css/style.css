@@ -5,9 +5,13 @@
 	clear: both;
 	line-height: 1;
 }
+.fcbk_share * {
+    vertical-align: top;
+}
 .fcbk_button {
 	display: inline-block;
 	margin-right: 10px;
+	margin-bottom: 5px;
 }
 .fcbk_button a {
 	display: block;
