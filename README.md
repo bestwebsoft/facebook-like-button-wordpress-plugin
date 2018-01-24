@@ -3,14 +3,15 @@
 
 <p>Facebook plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.</p>
 <p>Customize the appearance, configure settings, and enable other advanced options to get more social traffic to your website and keep your visitors involved!</p>
+<p><a href="https://bestwebsoft.com/demo-for-facebook-buttons/?ref=readme" rel="nofollow">View Demo</a></p>
 <p><span class="embed-youtube" style="text-align:center; display: block;"></span></p>
 <h4>Free Features</h4>
 <ul>
 <li>Add Facebook buttons such as:
 <ul>
-<li>Like </li>
-<li>Share </li>
-<li>Follow </li>
+<li>Like</li>
+<li>Share</li>
+<li>Follow</li>
 </ul>
 </li>
 <li>Change color scheme for Share button</li>
@@ -32,8 +33,8 @@
 </li>
 <li>Show/hide faces option</li>
 <li>Compatible with <a href="https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3" rel="nofollow">Multilanguage</a> (current website language detection)</li>
-<li>Choose Like button action – like or recommend</li>
-<li>Use a standard Follow button image or replace it with custom one   </li>
+<li>Choose Like button action &#8211; like or recommend</li>
+<li>Use a standard Follow button image or replace it with custom one</li>
 <li>Add custom code via plugin settings page</li>
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
@@ -44,7 +45,7 @@
 <p><strong>Pro Features</strong></p>
 <p>All features from Free version included plus:</p>
 <ul>
-<li>Display Facebook buttons for certain pages and/or post types     </li>
+<li>Display Facebook buttons for certain pages and/or post types</li>
 <li>Сhange meta tags:
 <ul>
 <li>Image</li>
@@ -57,7 +58,7 @@
 <li>Single pages</li>
 </ul>
 </li>
-<li>Facebook button preview </li>
+<li>Facebook button preview</li>
 <li>Configure all subsites on the network</li>
 <li>Get answer to your support question within one business day (<a href="https://bestwebsoft.com/support-policy/" rel="nofollow">Support Policy</a>)</li>
 </ul>

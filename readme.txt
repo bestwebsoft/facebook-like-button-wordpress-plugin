@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.9
-Tested up to: 4.8
-Stable tag: 2.55
+Tested up to: 4.9.2
+Stable tag: 2.56
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,18 +12,20 @@ Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widg
 
 == Description ==
 
-Facebook plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand. 
+Facebook plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.
 
 Customize the appearance, configure settings, and enable other advanced options to get more social traffic to your website and keep your visitors involved!
+
+[View Demo](https://bestwebsoft.com/demo-for-facebook-buttons/?ref=readme)
 
 https://www.youtube.com/watch?v=hGNQs-rF8b8
 
 = Free Features =
 
 * Add Facebook buttons such as:
-	* Like 
-	* Share 
-	* Follow 
+	* Like
+	* Share
+	* Follow
 * Change color scheme for Share button
 * Select layout for Like and Share buttons:
 	* Standard
@@ -37,8 +39,8 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 	* Custom position (using shortcode)
 * Show/hide faces option
 * Compatible with [Multilanguage](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) (current website language detection)
-* Choose Like button action – like or recommend
-* Use a standard Follow button image or replace it with custom one	 
+* Choose Like button action - like or recommend
+* Use a standard Follow button image or replace it with custom one
 * Add custom code via plugin settings page
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
@@ -49,14 +51,14 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 >
 > All features from Free version included plus:
 >
-> * Display Facebook buttons for certain pages and/or post types	 
+> * Display Facebook buttons for certain pages and/or post types
 > * Сhange meta tags:
 > 	* Image
 > 	* Description
 > * Enable like option for:
 > 	* Entire website
 > 	* Single pages
-> * Facebook button preview 
+> * Facebook button preview
 > * Configure all subsites on the network
 > * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
@@ -153,6 +155,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.56 - 24.01.2018 =
+* Bugfix : Compatibility with Multilanguage plugin by BestWebSoft has been fixed.
+* Update : The Czech language file has been updated.
 
 = V2.55 - 20.07.2017 =
 * NEW : Ability to choose buttons size has been added.
@@ -306,7 +312,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : The English language is updated in the plugin.
 
 = V2.18 - 22.03.2013 =
-* Bugfix : The bug of displaying icons in the admin menu is fixed. 
+* Bugfix : The bug of displaying icons in the admin menu is fixed.
 
 = V2.17 - 04.03.2013 =
 * NEW : The Ukrainian language file is added to the plugin.
@@ -321,7 +327,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 = V2.14 - 24.07.2012 =
 * NEW : The Arabic language file is added to the plugin.
-* Bugfix : Cross Site Request Forgery bug is fixed. 
+* Bugfix : Cross Site Request Forgery bug is fixed.
 
 = V2.13 - 10.07.2012 =
 * NEW : The Hebrew language file is added to the plugin.
@@ -340,7 +346,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Bugfix : The bug with upload custom image for button is fixed.
 
 = V2.09 - 12.03.2012 =
-* Changed : BWS plugins section. 
+* Changed : BWS plugins section.
 
 = V2.08 - 24.02.2012 =
 * NEW : The Spanish language file is added to the plugin.
@@ -350,19 +356,19 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Changed : BWS plugins section.
 
 = V2.06 - 27.12.2011 =
-* NEW : Language files are added to the plugin. 
+* NEW : Language files are added to the plugin.
 * NEW : Style for facebook button block is added.
 
 = V2.05 - 23.08.2011 =
 * Bugfix : Redirect to profile page bug is fixed.
 
 = V2.04 - 22.08.2011 =
-* Bugfix : BWS Plugin's menu section was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. 
-* Bugfix : The bug of positioning in admin menu is fixed. 
+* Bugfix : BWS Plugin's menu section was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins.
+* Bugfix : The bug of positioning in admin menu is fixed.
 * Changed : Facebook button plugin functionality was changed in connection with the change of Facebook API.
 
 = V2.03 - 14.07.2011 =
-* Changed : BWS Plugin's menu sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins. 
+* Changed : BWS Plugin's menu sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins.
 * Bugfix : Displaying of the icons is fixed.
 
 = V2.02 =
@@ -375,6 +381,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.56 =
+* Bugs fixed.
+* Languages updated.
 
 = V2.55 =
 * Functionality expanded.
@@ -489,7 +499,7 @@ The error related to creation the path to the Facebook button image is fixed. BW
 The English language is updated in the plugin.
 
 = V2.18 =
-The bug of displaying icons in the admin menu was fixed. 
+The bug of displaying icons in the admin menu was fixed.
 
 = V2.17 =
 The Ukrainian language file is added to the plugin.
@@ -501,7 +511,7 @@ We updated CSS file. We updated all functionality for wordpress 3.5.1.
 Persian and Serbian language files are added to the plugin. We updated all functionality for wordpress 3.5.
 
 = V2.14 =
-The Arabic language file is added to the plugin. Cross Site Request Forgery bug was fixed. 
+The Arabic language file is added to the plugin. Cross Site Request Forgery bug was fixed.
 
 = V2.13 =
 The Hebrew language file is added to the plugin. We updated all functionality for wordpress 3.4.1.
@@ -516,7 +526,7 @@ Added a possibility to change language for Like button. We updated all functiona
 Added a possibility to turn off the display of the buttons. The Turkish language file is added to the plugin. The bug with upload custom image for button is fixed.
 
 = V2.09 =
-BWS plugins section has been changed. 
+BWS plugins section has been changed.
 
 = V2.08 =
 The Spanish language file is added to the plugin. Code that is used to connect styles and scripts is added to the plugin for correct SSL verification.
@@ -531,7 +541,7 @@ Language files are added to the plugin. Style for facebook button block was adde
 Redirect to profile page bug is fixed.
 
 = V2.04 =
-BWS Panel sections was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. The bug of positioning in admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API. 
+BWS Panel sections was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. The bug of positioning in admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API.
 
 = V2.03 =
 BWS Panel sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins. Icons displaying is fixed.
