@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.9
-Tested up to: 4.9.2
-Stable tag: 2.56
+Tested up to: 4.9.4
+Stable tag: 2.57
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,17 +26,23 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 	* Like
 	* Share
 	* Follow
+* Сhange Facebook App ID [NEW]
 * Change color scheme for Share button
 * Select layout for Like and Share buttons:
 	* Standard
 	* Box count
 	* Button count
 	* Button
-* Select the button position:
-	* Before content
-	* After content
-	* Before and after
-	* Custom position (using shortcode)
+* Select buttons 
+	* Position:
+		* Before content
+		* After content
+		* Before and after
+		* Custom position (using shortcode)
+	* Align: [NEW]
+		* Right
+		* Left
+		* Center
 * Show/hide faces option
 * Compatible with [Multilanguage](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) (current website language detection)
 * Choose Like button action - like or recommend
@@ -155,6 +161,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.57 - 09.03.2018 =
+* NEW : Ability to change buttons align has been added.
+* NEW : Ability to change Facebook App ID has been added.
 
 = V2.56 - 24.01.2018 =
 * Bugfix : Compatibility with Multilanguage plugin by BestWebSoft has been fixed.
@@ -381,6 +391,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.57 =
+* Functionality expanded.
 
 = V2.56 =
 * Bugs fixed.

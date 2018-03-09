@@ -14,6 +14,7 @@
 <li>Follow</li>
 </ul>
 </li>
+<li>Сhange Facebook App ID [NEW]</li>
 <li>Change color scheme for Share button</li>
 <li>Select layout for Like and Share buttons:
 <ul>
@@ -23,12 +24,23 @@
 <li>Button</li>
 </ul>
 </li>
-<li>Select the button position:
+<li>Select buttons
+<ul>
+<li>Position:
 <ul>
 <li>Before content</li>
 <li>After content</li>
 <li>Before and after</li>
 <li>Custom position (using shortcode)</li>
+</ul>
+</li>
+<li>Align: [NEW]
+<ul>
+<li>Right</li>
+<li>Left</li>
+<li>Center</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Show/hide faces option</li>

@@ -1,21 +1,21 @@
 <?php
 /**
- * Displays the content on the plugin settings page
- */
+* Displays the content on the plugin settings page
+*/
 
 require_once( dirname( dirname( __FILE__ ) ) . '/bws_menu/class-bws-settings.php' );
 
 if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 	class Fcbkbttn_Settings_Tabs extends Bws_Settings_Tabs {
 		/**
-		 * Constructor.
-		 *
-		 * @access public
-		 *
-		 * @see Bws_Settings_Tabs::__construct() for more information on default arguments.
-		 *
-		 * @param string $plugin_basename
-		 */
+		* Constructor.
+		*
+		* @access public
+		*
+		* @see Bws_Settings_Tabs::__construct() for more information on default arguments.
+		*
+		* @param string $plugin_basename
+		*/
 		public function __construct( $plugin_basename ) {
 			global $fcbkbttn_options, $fcbkbttn_plugin_info;
 
@@ -49,20 +49,27 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 		}
 
 		/**
-		 * Save plugin options to the database
-		 * @access public
-		 * @param  void
-		 * @return array    The action results
-		 */
+		* Save plugin options to the database
+		* @access public
+		* @param  void
+		* @return array    The action results
+		*/
 		public function save_options() {
 
 			/* Takes all the changed settings on the plugin's admin page and saves them in array 'fcbkbttn_options'. */
+			if ( ! empty( $_REQUEST['fcbkbttn_id'] ) ) {
+				$this->options['id']	= stripslashes( esc_html( $_REQUEST['fcbkbttn_id'] ) );
+			} else {
+				$this->options['id']	= 1443946719181573;
+			}
+
 			$this->options['link']				= stripslashes( esc_html( $_REQUEST['fcbkbttn_link'] ) );
 			$this->options['link']				= str_replace( 'https://www.facebook.com/profile.php?id=', '', $this->options['link'] );
 			$this->options['link']				= str_replace( 'https://www.facebook.com/', '', $this->options['link'] );
 
 			$this->options['size']				= isset( $_REQUEST['fcbkbttn_size'] ) ? $_REQUEST['fcbkbttn_size'] : $this->options['size'];
 			$this->options['where']				= isset( $_REQUEST['fcbkbttn_where'] ) ? $_REQUEST['fcbkbttn_where'] : array();
+			$this->options['location']			= isset( $_REQUEST['fcbkbttn_location'] ) ? $_REQUEST['fcbkbttn_location'] : $this->options['location'];
 			$this->options['display_option']	= isset( $_REQUEST['fcbkbttn_display_option'] ) ? $_REQUEST['fcbkbttn_display_option'] : $this->options['display_option'];
 
 			if ( 'standard' == $this->options['display_option'] ) {
@@ -71,7 +78,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					'large-facebook-ico' :
 					'standard-facebook-ico';
 
-				$this->options['fb_img_link']	= plugins_url( 'images/' . $img_name . '.png', dirname( __FILE__ ) );
+				$this->options['fb_img_link']		= plugins_url( 'images/' . $img_name . '.png', dirname( __FILE__ ) );
 			}
 
 			$this->options['my_page']				= isset( $_REQUEST['fcbkbttn_my_page'] ) ? 1 : 0;
@@ -162,8 +169,8 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 		}
 
 		/**
-		 *
-		 */
+		*
+		*/
 		public function tab_settings() {
 			global $fcbkbttn_lang_codes, $wp_version;
 			if ( ! $this->upload_dir ) {
@@ -177,10 +184,24 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				$this->all_plugins = get_plugins();
 			} ?>
 			<h3 class="bws_tab_label"><?php _e( 'Facebook Button Settings', 'facebook-button-plugin' ); ?></h3>
-			<?php $this->help_phrase(); ?>
+			<?php $this->help_phrase(); 
+			$output_key;
+			if ( 1443946719181573 == $this->options['id'] ) {
+				$output_key = '';
+			} else {
+				$output_key = $this->options['id'];
+			} ?>
 			<hr>
 			<div class="bws_tab_sub_label"><?php _e( 'General', 'facebook-button-plugin' ); ?></div>
 			<table class="form-table">
+				<tr>
+					<th scope="row"><?php _e( 'Change App ID', 'facebook-button-plugin' ); ?></th>
+					<td>
+						<input name='fcbkbttn_id' type='text' maxlength='250' value='<?php echo $output_key; ?>' />
+						<br />
+						<span class="bws_info"><?php _e( 'You can use standard App ID or', 'facebook-button-plugin' ); ?>&nbsp;<a href="https://developers.facebook.com/quickstarts/?platform=web" target="_blank"><?php _e( 'create a new one', 'facebook-button-plugin' ); ?></a><br /><?php _e( ' Leave blank to use standard App ID.', 'facebook-button-plugin' ); ?></span>
+					</td>
+				</tr>
 				<tr>
 					<th scope="row"><?php _e( 'Buttons', 'facebook-button-plugin' ); ?></th>
 					<td>
@@ -208,11 +229,21 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 								<input type="checkbox" name="fcbkbttn_where[]" value="before" <?php checked( in_array( 'before', $this->options['where'] ) ); ?> />
 								<?php _e( 'Before content', 'facebook-button-plugin' ); ?></option>
 							</label>
-							<br>
+							<br />
 							<label>
 								<input type="checkbox" name="fcbkbttn_where[]" value="after" <?php checked( in_array( 'after', $this->options['where'] ) ); ?> />
 								<?php _e( 'After content', 'facebook-button-plugin' ); ?></option>
 							</label>
+						</fieldset>
+					</td>
+				</tr>
+				<tr>
+					<th><?php _e( 'Buttons Align', 'facebook-button-plugin' ); ?></th>
+					<td>
+						<fieldset>
+							<label><input name="fcbkbttn_location" type="radio" value="right" <?php checked( 'right', $this->options['location'] ); ?> /> <?php _e( 'Right', 'facebook-button-plugin' ); ?></label><br />
+							<label><input name="fcbkbttn_location" type="radio" value="middle" <?php checked( 'middle', $this->options['location'] ); ?> /> <?php _e( 'Center', 'facebook-button-plugin' ); ?></label><br />
+							<label><input name="fcbkbttn_location" type="radio" value="left" <?php checked( 'left', $this->options['location'] ); ?> /> <?php _e( 'Left', 'facebook-button-plugin' ); ?></label><br />
 						</fieldset>
 					</td>
 				</tr>
@@ -282,7 +313,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 								<th><?php _e( 'Meta Description', 'facebook-button-plugin' ); ?></th>
 								<td>
 									<textarea disabled="disabled" name="fcbkbttn_meta_description_custom"></textarea>
-									<br>
+									<br />
 									<span class="bws_info"><?php _e( 'This description will be used for all pages and posts. Leave blank to use page description.', 'facebook-button-plugin' ); ?></span>
 								</td>
 							</tr>
@@ -310,7 +341,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 									<input type="radio" name="fcbkbttn_display_option" value="standard" <?php checked( 'standard', $this->options['display_option'] ); ?> />
 									<?php _e( 'Default', 'facebook-button-plugin' ); ?>
 								</label>
-								<br>
+								<br />
 								<label>
 									<input type="radio" name="fcbkbttn_display_option" value="custom" <?php checked( 'custom', $this->options['display_option'] ); ?> />
 									<?php _e( 'Custom image', 'facebook-button-plugin' ); ?>
@@ -400,7 +431,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 								<input type="radio" name="fcbkbttn_like_action" value="like" <?php checked( 'like', $this->options['like_action'] ); ?> />
 								<?php _e( 'Like', 'facebook-button-plugin' ); ?>
 							</label>
-							<br>
+							<br />
 							<label>
 								<input type="radio" name="fcbkbttn_like_action" value="recommend" <?php checked( 'recommend', $this->options['like_action'] ); ?> />
 								<?php _e( 'Recommend', 'facebook-button-plugin' ); ?>
@@ -418,7 +449,10 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				<tr class="fcbkbttn_like_standard_layout">
 					<th><?php _e( 'Layout Width', 'facebook-button-plugin' ); ?></th>
 					<td>
-						<label><input name="fcbkbttn_width" type="number" step="1" min="225" max="450" value="<?php echo $this->options['width']; ?>"> <?php _e( 'px', 'facebook-button-plugin' ); ?></label>
+						<label>
+							<input name="fcbkbttn_width" type="number" step="1" min="225" max="450" value="<?php echo $this->options['width']; ?>" />
+							<?php _e( 'px', 'facebook-button-plugin' ); ?>
+						</label>
 					</td>
 				</tr>
 				<tr class="fcbkbttn_like_standard_layout">
@@ -429,7 +463,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 								<input type="radio" name="fcbkbttn_color_scheme" value="light" <?php checked( 'light', $this->options['color_scheme'] ) ; ?> />
 								<?php _e( 'Light', 'facebook-button-plugin' ); ?>
 							</label>
-							<br>
+							<br />
 							<label>
 								<input type="radio" name="fcbkbttn_color_scheme" value="dark" <?php checked( 'dark', $this->options['color_scheme'] ); ?> />
 								<?php _e( 'Dark', 'facebook-button-plugin' ); ?>
@@ -441,9 +475,10 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<th scope="row"><?php _e( 'Like Button HTML Tag', 'facebook-button-plugin' ); ?></th>
 					<td>
 						<fieldset>
-							<label><input name='fcbkbttn_html5' type='radio' value='0' <?php checked( '0', $this->options['html5'] ); ?> /><?php echo "&lt;fb:like&gt;"; ?></label><br />
-							<label><input name='fcbkbttn_html5' type='radio' value='1' <?php checked( '1', $this->options['html5'] ); ?> /><?php echo "&lt;div&gt;"; ?></label>
-							<br>
+							<label><input name='fcbkbttn_html5' type='radio' value='0' <?php checked( '0', $this->options['html5'] ); ?> /><?php echo "&lt;fb:like&gt;"; ?>
+							</label><br />
+							<label><input name='fcbkbttn_html5' type='radio' value='1' <?php checked( '1', $this->options['html5'] ); ?> /><?php echo "&lt;div&gt;"; ?>
+							</label><br />
 							<span class="bws_info"><?php printf( __( "Tag %s can be used to improve website code validation.", 'facebook-button-plugin' ), '&lt;div&gt;' ); ?></span>
 						</fieldset>
 					</td>
@@ -469,19 +504,19 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 		<?php }
 
 		/**
-		 * Display custom options on the 'misc' tab
-		 * @access public
-		 */
+		* Display custom options on the 'misc' tab
+		* @access public
+		*/
 		public function additional_misc_options() {
 			do_action( 'fcbkbttn_settings_page_misc_action', $this->options );
 		}
 
 		/**
-		 * Display custom metabox
-		 * @access public
-		 * @param  void
-		 * @return array    The action results
-		 */
+		* Display custom metabox
+		* @access public
+		* @param  void
+		* @return array    The action results
+		*/
 		public function display_metabox() { ?>
 			<div class="postbox">
 				<h3 class="hndle">
@@ -495,11 +530,11 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 		<?php }
 
 		/**
-		 * Display custom metabox
-		 * @access public
-		 * @param  void
-		 * @return array    The action results
-		 */
+		* Display custom metabox
+		* @access public
+		* @param  void
+		* @return array    The action results
+		*/
 		public function display_second_postbox() {
 			/*pls */
 			if ( ! $this->hide_pro_tabs ) { ?>
@@ -518,8 +553,8 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 		}
 
 		/**
-		 *
-		 */
+		*
+		*/
 		public function tab_display() { ?>
 			<h3 class="bws_tab_label"><?php _e( 'Display Settings', 'facebook-button-plugin' ); ?></h3>
 			<?php $this->help_phrase(); ?>
