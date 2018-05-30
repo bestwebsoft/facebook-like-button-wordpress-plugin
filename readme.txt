@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.9
-Tested up to: 4.9.4
-Stable tag: 2.58
+Tested up to: 4.9.6
+Stable tag: 2.59
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,20 +26,20 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 	* Like
 	* Share
 	* Follow
-* Сhange Facebook App ID [NEW]
+* Сhange Facebook App ID
 * Change color scheme for Share button
 * Select layout for Like and Share buttons:
 	* Standard
 	* Box count
 	* Button count
 	* Button
-* Select buttons 
+* Select buttons
 	* Position:
 		* Before content
 		* After content
 		* Before and after
 		* Custom position (using shortcode)
-	* Align: [NEW]
+	* Align:
 		* Right
 		* Left
 		* Center
@@ -162,8 +162,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
+= V2.59 - 30.05.2018 =
+* Bugfix: Bug with incorrect Facebook buttons displaying has been fixed.
+* Bugfix: Bug with incorrect Facebook buttons preview has been fixed.
+* Bugfix: Compatibility with Graph API v2.12 has been fixed.
+
 = V2.58 - 12.03.2018 =
-* Bugfix : Bug with incorrect Facebook buttons displaying was fixed
+* Bugfix : Bug with incorrect Facebook buttons displaying has been fixed.
 
 = V2.57 - 09.03.2018 =
 * NEW : Ability to change buttons align has been added.
@@ -255,7 +260,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Update : BWS plugins section is updated.
 
 = V2.34 - 13.08.2014 =
-* Budfix : Security Exploit was fixed.
+* Bugfix : Security Exploit was fixed.
 
 = V2.33 - 06.08.2014 =
 * Update : We updated all functionality for wordpress 4.0-beta2.
@@ -273,7 +278,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Update : We updated all functionality for wordpress 3.8.2.
 
 = V2.29 - 03.03.2014 =
-* Budfix : Plugin optimization is done.
+* Bugfix : Plugin optimization is done.
 * Update : Plugin tabs is added.
 
 = V2.28 - 13.02.2014 =
@@ -281,9 +286,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Update : Screenshots are updated.
 * Update : BWS plugins section is updated.
 * Update : We updated all functionality for wordpress 3.8.1.
-* Budfix : Problem with blinking of Like button is fixed.
-* Budfix : Problem with getting wrong thumbnails when putting Like is fixed.
-* Budfix : Problem with language of Like button when using shortcode is fixed.
+* Bugfix : Problem with blinking of Like button is fixed.
+* Bugfix : Problem with getting wrong thumbnails when putting Like is fixed.
+* Bugfix : Problem with language of Like button when using shortcode is fixed.
 
 = V2.27 - 23.12.2013 =
 * NEW : The French language file is added to the plugin.
@@ -394,6 +399,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.59 =
+* Bugs fixed.
 
 = V2.58 =
 * Bugs fixed.

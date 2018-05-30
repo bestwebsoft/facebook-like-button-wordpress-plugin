@@ -185,12 +185,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			} ?>
 			<h3 class="bws_tab_label"><?php _e( 'Facebook Button Settings', 'facebook-button-plugin' ); ?></h3>
 			<?php $this->help_phrase(); 
-			$output_key;
-			if ( 1443946719181573 == $this->options['id'] ) {
-				$output_key = '';
-			} else {
-				$output_key = $this->options['id'];
-			} ?>
+			$output_key = ( 1443946719181573 != $this->options['id'] ) ? $this->options['id'] : ''; ?>
 			<hr>
 			<div class="bws_tab_sub_label"><?php _e( 'General', 'facebook-button-plugin' ); ?></div>
 			<table class="form-table">

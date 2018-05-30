@@ -6,7 +6,7 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.58
+Version: 2.59
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -247,6 +247,12 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 						</div>';
 		}
 
+		$location_share = ( 'right' == $fcbkbttn_options['location'] && "standard" == $fcbkbttn_options['layout_like_option'] ) ? 1 : 0;
+
+		if ( ! empty( $fcbkbttn_options['share'] ) && ! empty( $location_share ) ) {
+			$button .= '<div class="fb-share-button ' . $if_large . ' " data-href="' . $permalink_post . '" data-type="' . $fcbkbttn_options['layout_share_option'] . '" data-size="' . $fcbkbttn_options['size'] . '"></div>';
+		}
+
 		if ( ! empty( $fcbkbttn_options['like'] ) ) {
 			$button .= '<div class="fcbkbttn_like ' . $if_large . '">';
 
@@ -269,7 +275,7 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 				$button .= '></fb:like></div>';
 			}
 		}
-		if ( ! empty( $fcbkbttn_options['share'] ) ){
+		if ( ! empty( $fcbkbttn_options['share'] ) && empty( $location_share ) ) {
 			$button .= '<div class="fb-share-button ' . $if_large . ' " data-href="' . $permalink_post . '" data-type="' . $fcbkbttn_options['layout_share_option'] . '" data-size="' . $fcbkbttn_options['size'] . '"></div>';
 		}
 
@@ -291,10 +297,10 @@ if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 
 		$button = apply_filters( 'fcbkbttn_button_in_the_content', fcbkbttn_button() );
 		/* Indication where show Facebook Button depending on selected item in admin page. */
-		if ( in_array( 'before', $fcbkbttn_options['where'] ) ) {
+		if ( ! empty( $fcbkbttn_options['where'] ) && in_array( 'before', $fcbkbttn_options['where'] ) ) {
 			$content = $button . $content;
 		}
-		if ( in_array( 'after', $fcbkbttn_options['where'] ) ) {
+		if ( ! empty( $fcbkbttn_options['where'] ) && in_array( 'after', $fcbkbttn_options['where'] ) ) {
 			$content .= $button;
 		}
 
@@ -335,7 +341,7 @@ if ( ! function_exists( 'fcbkbttn_shortcode_button_content' ) ) {
 /* Functions adds some right meta for Facebook */
 if ( ! function_exists( 'fcbkbttn_meta' ) ) {
 	function fcbkbttn_meta() {
-		global $fcbkbttn_options;
+		global $fcbkbttn_options, $post;
 		if ( ! empty( $fcbkbttn_options['like'] ) || ! empty( $fcbkbttn_options['share'] ) ) {
 			if ( is_singular() ) {
 				$image = '';
@@ -343,14 +349,23 @@ if ( ! function_exists( 'fcbkbttn_meta' ) ) {
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' );
 					$image = $image[0];
 				}
-				$title = apply_filters( 'fcbkbttn_meta_title', esc_attr( get_the_title() ) );
-				$site_name = apply_filters( 'fcbkbttn_meta_site_name', esc_attr( get_bloginfo() ) );
-				$meta_image = apply_filters( 'fcbkbttn_meta_image', esc_url( $image ) );
+
+				$description = ( has_excerpt() ) ? get_the_excerpt() : strip_tags( substr( $post->post_content, 0, 200 ) );
+
+				$url 			= apply_filters( 'fcbkbttn_meta_url', esc_attr( get_permalink() ) );
+				$description	= apply_filters( 'fcbkbttn_meta_description',  esc_attr( $description ) );
+				$title 			= apply_filters( 'fcbkbttn_meta_title', esc_attr( get_the_title() ) );
+				$site_name 		= apply_filters( 'fcbkbttn_meta_site_name', esc_attr( get_bloginfo() ) );
+				$meta_image 	= apply_filters( 'fcbkbttn_meta_image', esc_url( $image ) );
 				print "\n" . '<!-- fcbkbttn meta start -->';
+				print "\n" . '<meta property="og:url" content="' . $url . '"/>';
 				print "\n" . '<meta property="og:title" content="' . $title . '"/>';
 				print "\n" . '<meta property="og:site_name" content="' . $site_name . '"/>';
 				if ( ! empty( $image ) ) {
 					print "\n" . '<meta property="og:image" content="' . $meta_image . '"/>';
+				}
+				if ( ! empty( $description ) ) {
+					print "\n" . '<meta property="og:description" content="' . $description . '"/>';
 				}
 				print "\n" . '<!-- fcbkbttn meta end -->';
 			}
@@ -401,7 +416,7 @@ if ( ! function_exists( 'fcbkbttn_footer_script' ) ) {
 				if (d.getElementById(id)) return;
 				js = d.createElement(s); js.id = id;
 
-				js.src = "//connect.facebook.net/<?php echo fcbkbttn_get_locale(); ?>/sdk.js#xfbml=1&appId=<?php echo $fcbkbttn_options['id']; ?>&version=v2.57";
+				js.src = "//connect.facebook.net/<?php echo fcbkbttn_get_locale(); ?>/sdk.js#xfbml=1&appId=<?php echo $fcbkbttn_options['id']; ?>&version=v2.12";
 				fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 			</script>
