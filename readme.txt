@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.9
-Tested up to: 4.9.6
-Stable tag: 2.59
+Tested up to: 4.9.8
+Stable tag: 2.60
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -162,10 +162,16 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
+= V2.60 - 26.11.2018 =
+* Bugfix: The compatibility with Custom Admin Page plugin has been fixed.
+* Bugfix: The compatibility with Graph API v3.2 has been fixed.
+
 = V2.59 - 30.05.2018 =
 * Bugfix: Bug with incorrect Facebook buttons displaying has been fixed.
 * Bugfix: Bug with incorrect Facebook buttons preview has been fixed.
-* Bugfix: Compatibility with Graph API v2.12 has been fixed.
+* Bugfix: Compatibility with Graph = V2.60 =
+* Bugs fixed.
+* Usability improved. API v2.12 has been fixed.
 
 = V2.58 - 12.03.2018 =
 * Bugfix : Bug with incorrect Facebook buttons displaying has been fixed.
@@ -399,6 +405,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.60 =
+* Bugs fixed.
+* Usability improved.
 
 = V2.59 =
 * Bugs fixed.

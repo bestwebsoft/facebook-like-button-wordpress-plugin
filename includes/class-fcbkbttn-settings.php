@@ -24,7 +24,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				'display'		=> array( 'label' => __( 'Display', 'facebook-button-plugin' ), 'is_pro' => 1 ),
 				'misc'			=> array( 'label' => __( 'Misc', 'facebook-button-plugin' ) ),
 				'custom_code'	=> array( 'label' => __( 'Custom Code', 'facebook-button-plugin' ) ),
-				'license'		=> array( 'label' => __( 'License Key', 'facebook-button-plugin' ) ),
+				'license'		=> array( 'label' => __( 'License Key', 'facebook-button-plugin' ) )
 			);
 
 			parent::__construct( array(
@@ -110,8 +110,9 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			$message = __( "Settings saved", 'facebook-button-plugin' );
 
 			if ( ! empty( $_FILES['fcbkbttn_uploadfile']['tmp_name'] ) ) {
-				if ( ! $this->upload_dir )
+				if ( ! $this->upload_dir ) {
 					$this->upload_dir = wp_upload_dir();
+				}
 
 				if ( ! $this->upload_dir["error"] ) {
 					$fcbkbttn_cstm_mg_folder = $this->upload_dir['basedir'] . '/facebook-image';
