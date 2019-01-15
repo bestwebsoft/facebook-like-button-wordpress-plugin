@@ -6,12 +6,12 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.60
+Version: 2.61
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  Copyright 2018  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  Copyright 2019  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -189,6 +189,7 @@ if ( ! function_exists( 'fcbkbttn_get_options_default' ) ) {
 			'html5'						=>	0,
 			'use_multilanguage_locale'	=>	0,
 			'display_for_excerpt'		=>	0,
+			'display_for_open_graph'	=>	0,
 			'location'					=>	'left',
 			'id'						=>	1443946719181573
 		);
@@ -296,6 +297,73 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 	}
 }
 
+if ( ! function_exists( 'fcbkbttn_function_display_arhive' ) ) {
+	function fcbkbttn_function_display_arhive()
+	{
+		global $post, $fcbkbttn_options,$wp;
+		if ( is_archive()) {
+			$if_large = '';
+			if ($fcbkbttn_options['size'] == 'large') {
+				$if_large = 'fcbkbttn_large_button';
+			}
+			if ('right' == $fcbkbttn_options['location']) {
+				$button = '<div class="fcbkbttn_buttons_block fcbkbttn_arhiv" id="fcbkbttn_right">';
+			} elseif ('middle' == $fcbkbttn_options['location']) {
+				$button = '<div class="fcbkbttn_buttons_block fcbkbttn_arhiv" id="fcbkbttn_middle">';
+			} elseif ('left' == $fcbkbttn_options['location']) {
+				$button = '<div class="fcbkbttn_buttons_block fcbkbttn_arhiv" id="fcbkbttn_left">';
+			}
+			if (!empty($fcbkbttn_options['my_page'])) {
+				$button .= '<div class="fcbkbttn_button">
+                            <a href="https://www.facebook.com/' . $fcbkbttn_options['link'] . '" target="_blank">
+                                <img src="' . $fcbkbttn_options['fb_img_link'] . '" alt="Fb-Button" />
+                            </a>
+                        </div>';
+			}
+
+			$permalink_page = home_url($wp->request);
+			$permalink = explode("/page/", $permalink_page);
+			$permalink_page = $permalink[0];
+
+
+			$location_share = ('right' == $fcbkbttn_options['location'] && "standard" == $fcbkbttn_options['layout_like_option']) ? 1 : 0;
+			if (!empty($fcbkbttn_options['share']) && !empty($location_share)) {
+				$button .= '<div class="fb-share-button ' . $if_large . ' " data-href="' . $permalink_page . '" data-type="' . $fcbkbttn_options['layout_share_option'] . '" data-size="' . $fcbkbttn_options['size'] . '"></div>';
+			}
+
+			if (!empty($fcbkbttn_options['like'])) {
+				$button .= '<div class="fcbkbttn_like ' . $if_large . '">';
+
+				if (!empty($fcbkbttn_options['html5'])) {
+					$button .= '<div class="fb-like fb-like-' . $fcbkbttn_options['layout_like_option'] . '" data-href="' . $permalink_page . '" data-colorscheme="' . $fcbkbttn_options['color_scheme'] . '" data-layout="' . $fcbkbttn_options['layout_like_option'] . '" data-action="' . $fcbkbttn_options['like_action'] . '" ';
+					if ('standard' == $fcbkbttn_options['layout_like_option']) {
+						$button .= ' data-width="' . $fcbkbttn_options['width'] . 'px"';
+						$button .= (!empty($fcbkbttn_options['faces'])) ? " data-show-faces='true'" : " data-show-faces='false'";
+					}
+					$button .= ' data-size="' . $fcbkbttn_options['size'] . '"';
+					$button .= '></div></div>';
+				} else {
+					$button .= '<fb:like href="' . $permalink_page . '" action="' . $fcbkbttn_options['like_action'] . '" colorscheme="' . $fcbkbttn_options['color_scheme'] . '" layout="' . $fcbkbttn_options['layout_like_option'] . '" ';
+					if ('standard' == $fcbkbttn_options['layout_like_option']) {
+						$button .= (!empty($fcbkbttn_options['faces'])) ? "show-faces='true'" : "show-faces='false'";
+						$button .= ' width="' . $fcbkbttn_options['width'] . 'px"';
+					}
+
+					$button .= ' size="' . $fcbkbttn_options['size'] . '"';
+					$button .= '></fb:like></div>';
+				}
+			}
+
+
+			if (!empty($fcbkbttn_options['share']) && empty($location_share)) {
+				$button .= '<div class="fb-share-button ' . $if_large . ' " data-href="' . $permalink_page . '" data-type="' . $fcbkbttn_options['layout_share_option'] . '" data-size="' . $fcbkbttn_options['size'] . '"></div>';
+			}
+			$button .= '</div>';
+			echo $button;
+		}
+	}
+}
+
 /* Function taking from array 'fcbkbttn_options' necessary information to create Facebook Button and reacting to your choise in plugin menu - points where it appears. */
 if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 	function fcbkbttn_display_button( $content ) {
@@ -354,15 +422,15 @@ if ( ! function_exists( 'fcbkbttn_shortcode_button_content' ) ) {
 /* Functions adds some right meta for Facebook */
 if ( ! function_exists( 'fcbkbttn_meta' ) ) {
 	function fcbkbttn_meta() {
-		global $fcbkbttn_options, $post;
+		global $fcbkbttn_options, $post, $wp;
 		if ( ! empty( $fcbkbttn_options['like'] ) || ! empty( $fcbkbttn_options['share'] ) ) {
-			if ( is_singular() ) {
+			if ( is_singular() && 0 == $fcbkbttn_options['display_for_open_graph'] ) {
 				$image = '';
 				if ( has_post_thumbnail( get_the_ID() ) ) {
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' );
 					$image = $image[0];
 				}
-
+				
 				$description = ( has_excerpt() ) ? get_the_excerpt() : strip_tags( substr( $post->post_content, 0, 200 ) );
 
 				$url 			= apply_filters( 'fcbkbttn_meta_url', esc_attr( get_permalink() ) );
@@ -372,15 +440,41 @@ if ( ! function_exists( 'fcbkbttn_meta' ) ) {
 				$meta_image 	= apply_filters( 'fcbkbttn_meta_image', esc_url( $image ) );
 				print "\n" . '<!-- fcbkbttn meta start -->';
 				print "\n" . '<meta property="og:url" content="' . $url . '"/>';
+				print "\n" . '<meta property="og:type" content="article"/>';
 				print "\n" . '<meta property="og:title" content="' . $title . '"/>';
 				print "\n" . '<meta property="og:site_name" content="' . $site_name . '"/>';
 				if ( ! empty( $image ) ) {
 					print "\n" . '<meta property="og:image" content="' . $meta_image . '"/>';
+				} else {
+					print "\n" . '<meta property="og:image" content=""/>';
 				}
 				if ( ! empty( $description ) ) {
 					print "\n" . '<meta property="og:description" content="' . $description . '"/>';
 				}
-				print "\n" . '<!-- fcbkbttn meta end -->';
+				print "\n" . '<!-- fcbkbttn meta end -->' . "\n";
+			}
+			if (  is_archive() && 0 == $fcbkbttn_options['display_for_open_graph'] ) {
+				$image = '';
+
+				$permalink_page = home_url($wp->request);
+				$permalink = explode("/page/", $permalink_page);
+				$permalink_page = $permalink[0];
+				$name =  get_the_archive_title();
+				$description = get_the_archive_description(); 
+					
+				$url 			= apply_filters( 'fcbkbttn_meta_url', esc_attr( $permalink_page ) );
+				$description	= apply_filters( 'fcbkbttn_meta_description',  esc_attr( $description ) );
+				$title 			= apply_filters( 'fcbkbttn_meta_title', esc_attr( $name ) );
+				$site_name 		= apply_filters( 'fcbkbttn_meta_site_name', esc_attr( get_bloginfo() ) );
+				
+				print "\n" . '<!-- fcbkbttn meta start -->';
+				print "\n" . '<meta property="og:url" content="' . $url . '"/>';
+				print "\n" . '<meta property="og:title" content="' . $title . '"/>';
+				print "\n" . '<meta property="og:site_name" content="' . $site_name . '"/>';
+				if ( ! empty( $description ) ) {
+					print "\n" . '<meta property="og:description" content="' . $description . '"/>';
+				}
+				print "\n" . '<!-- fcbkbttn meta end -->' . "\n";
 			}
 		}
 	}
@@ -589,6 +683,7 @@ add_action( 'admin_menu', 'fcbkbttn_admin_menu' );
 add_action( 'plugins_loaded', 'fcbkbttn_plugins_loaded' );
 add_action( 'init', 'fcbkbttn_init' );
 add_action( 'admin_init', 'fcbkbttn_admin_init' );
+add_action( 'loop_start' , 'fcbkbttn_function_display_arhive' );
 /* Adding stylesheets */
 add_action( 'wp_enqueue_scripts', 'fcbkbttn_enqueue_scripts' );
 add_action( 'admin_enqueue_scripts', 'fcbkbttn_enqueue_scripts' );

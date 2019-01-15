@@ -104,6 +104,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 
 			$this->options['use_multilanguage_locale'] = isset( $_REQUEST['fcbkbttn_use_multilanguage_locale'] ) ? 1 : 0;
 			$this->options['display_for_excerpt'] = isset( $_REQUEST['fcbkbttn_display_for_excerpt'] ) ? 1 : 0;
+			$this->options['display_for_open_graph'] = isset( $_REQUEST['fcbkbttn_display_for_open_graph'] ) ? 1 : 0;
 
 			$this->options = apply_filters( 'fcbkbttn_before_save_options', $this->options );
 			update_option( 'fcbkbttn_options', $this->options );
@@ -281,6 +282,12 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 						<input name='fcbkbttn_display_for_excerpt' type='checkbox' value='1' <?php checked( $this->options['display_for_excerpt'] ); ?> /> <span class="bws_info"><?php _e( 'Enable to display buttons in excerpt.', 'facebook-button-plugin' ); ?></span>
 					</td>
 				</tr>
+				<tr>
+					<th><?php _e( 'Meta Tags', 'facebook-button-plugin' ); ?></th>
+					<td>
+						<input name='fcbkbttn_display_for_open_graph' type='checkbox' value='1' <?php checked( $this->options['display_for_open_graph'] ); ?> /> <span class="bws_info"><?php _e( 'Disable meta tags.', 'facebook-button-plugin' ); ?></span>
+					</td>
+				</tr>
 				<?php do_action( 'fcbkbttn_settings_page_action', $this->options ); ?>
 			</table>
 			<?php if ( ! $this->hide_pro_tabs ) { ?>
@@ -446,7 +453,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<th><?php _e( 'Layout Width', 'facebook-button-plugin' ); ?></th>
 					<td>
 						<label>
-							<input name="fcbkbttn_width" type="number" step="1" min="225" max="450" value="<?php echo $this->options['width']; ?>" />
+							<input required name="fcbkbttn_width" type="number" step="1" min="225" max="450" value="<?php echo $this->options['width']; ?>" />
 							<?php _e( 'px', 'facebook-button-plugin' ); ?>
 						</label>
 					</td>

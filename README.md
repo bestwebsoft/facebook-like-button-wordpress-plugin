@@ -44,6 +44,7 @@
 </ul>
 </li>
 <li>Show/hide faces option</li>
+<li>Disable Meta Tags [NEW]</li>
 <li>Compatible with <a href="https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3" rel="nofollow">Multilanguage</a> (current website language detection)</li>
 <li>Choose Like button action &#8211; like or recommend</li>
 <li>Use a standard Follow button image or replace it with custom one</li>
