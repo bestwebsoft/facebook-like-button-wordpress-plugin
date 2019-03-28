@@ -45,6 +45,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 
 			add_action( get_parent_class( $this ) . '_additional_misc_options', array( $this, 'additional_misc_options' ) );
 			add_action( get_parent_class( $this ) . '_display_metabox', array( $this, 'display_metabox' ) );
+			/* display preview */
 			add_action( get_parent_class( $this ) . '_display_second_postbox', array( $this, 'display_second_postbox' ) );
 		}
 
@@ -290,6 +291,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				</tr>
 				<?php do_action( 'fcbkbttn_settings_page_action', $this->options ); ?>
 			</table>
+			<!-- general --><!-- pls -->
 			<?php if ( ! $this->hide_pro_tabs ) { ?>
 				<div class="bws_pro_version_bloc">
 					<div class="bws_pro_version_table_bloc">
@@ -325,6 +327,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<?php $this->bws_pro_block_links(); ?>
 				</div>
 			<?php } ?>
+			<!-- end general --><!-- end pls -->
 			<div class="bws_tab_sub_label fcbkbttn_my_page_enabled"><?php _e( 'Profile URL Button', 'facebook-button-plugin' ); ?></div>
 			<table class="form-table fcbkbttn_my_page_enabled">
 				<tr>
@@ -487,6 +490,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					</td>
 				</tr>
 			</table>
+			<!-- general --><!-- pls -->
 			<?php if ( ! $this->hide_pro_tabs ) { ?>
 				<div class="bws_pro_version_bloc fcbkbttn_like_enabled">
 					<div class="bws_pro_version_table_bloc">
@@ -504,6 +508,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<?php $this->bws_pro_block_links(); ?>
 				</div>
 			<?php } ?>
+			<!-- end general --><!-- end pls -->
 		<?php }
 
 		/**

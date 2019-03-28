@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.9
-Tested up to: 5.0.2
-Stable tag: 2.61
+Tested up to: 5.1.1
+Stable tag: 2.62
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,7 +44,7 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 		* Left
 		* Center
 * Show/hide faces option
-* Disable Meta Tags [NEW]
+* Disable Meta Tags
 * Compatible with [Multilanguage](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) (current website language detection)
 * Choose Like button action - like or recommend
 * Use a standard Follow button image or replace it with custom one
@@ -59,6 +59,7 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 > All features from Free version included plus:
 >
 > * Display Facebook buttons for certain pages and/or post types
+> * Display the widget with the most liked posts [NEW]
 > * Сhange meta tags:
 > 	* Image
 > 	* Description
@@ -162,6 +163,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.62 - 28.03.2019 =
+* PRO: Ability to displayi the posts with the greatest number of Facebook likes has been added.
+* Update : All functionality was updated for WordPress 5.1.1.
 
 = V2.61 - 15.01.2019 =
 * NEW: Ability to disable Meta Tags has been added.
@@ -408,6 +413,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.62 =
+* New features added.
+* The compatibility with new WordPress version updated.
 
 = V2.61 =
 * Functionality expanded.
