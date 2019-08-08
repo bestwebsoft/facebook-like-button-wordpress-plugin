@@ -186,7 +186,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				}
 				$this->all_plugins = get_plugins();
 			} ?>
-			<h3 class="bws_tab_label"><?php _e( 'Facebook Button Settings', 'facebook-button-plugin' ); ?></h3>
+			<h3 class="bws_tab_label"><?php _e( 'BestWebSoft Like & Share Settings', 'facebook-button-plugin' ); ?></h3>
 			<?php $this->help_phrase(); 
 			$output_key = ( 1443946719181573 != $this->options['id'] ) ? $this->options['id'] : ''; ?>
 			<hr>
@@ -257,7 +257,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 							} ?>
 						</select>
 						<br />
-						<span class="bws_info"><?php _e( 'Select the default language for Facebook button(-s).', 'facebook-button-plugin' ); ?></span>
+						<span class="bws_info"><?php _e( 'Select the default language for Like & Share buttons.', 'facebook-button-plugin' ); ?></span>
 					</td>
 				</tr>
 				<tr>
@@ -528,10 +528,10 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 		public function display_metabox() { ?>
 			<div class="postbox">
 				<h3 class="hndle">
-					<?php _e( 'Facebook Button Shortcode', 'facebook-button-plugin' ); ?>
+					<?php _e( 'BestWebSoft Like & Share Shortcode', 'facebook-button-plugin' ); ?>
 				</h3>
 				<div class="inside">
-					<?php _e( "Add Facebook button(-s) to your posts, pages, custom post types or widgets by using the following shortcode:", 'facebook-button-plugin' ); ?>
+					<?php _e( "Add Like & Share buttons to your posts, pages, custom post types or widgets by using the following shortcode:", 'facebook-button-plugin' ); ?>
 					<?php bws_shortcode_output( '[fb_button]' ); ?>
 				</div>
 			</div>
@@ -550,7 +550,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<div class="bws_table_bg"></div>
 					<h3 class="hndle">
 						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'facebook-button-plugin' ); ?>"></button>
-						<?php _e( 'Facebook Buttons Preview', 'facebook-button-plugin' ); ?>
+						<?php _e( 'Like & Share buttons Preview', 'facebook-button-plugin' ); ?>
 					</h3>
 					<div class="inside">
 						<img src='<?php echo plugins_url( 'images/preview.png', dirname( __FILE__ ) ); ?>' />
@@ -573,7 +573,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<table class="form-table bws_pro_version">
 						<tr>
 							<td colspan="2">
-								<?php _e( 'Please choose the necessary post types (or single pages) where Facebook button will be displayed:', 'facebook-button-plugin' ); ?>
+								<?php _e( 'Please choose the necessary post types (or single pages) where Like & Share buttons will be displayed:', 'facebook-button-plugin' ); ?>
 							</td>
 						</tr>
 						<tr>

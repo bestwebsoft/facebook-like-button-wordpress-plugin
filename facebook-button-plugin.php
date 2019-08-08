@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: Facebook Button by BestWebSoft
+Plugin Name: BestWebSoft Like & Share
 Plugin URI: https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/
 Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pages and widgets.
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.62
+Version: 2.63
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -35,7 +35,7 @@ if ( ! function_exists( 'fcbkbttn_admin_menu' ) ) {
             ! is_plugin_active( 'facebook-button-plus/facebook-button-plus.php' )
         ) {
             $settings = add_menu_page(
-                    __( 'Facebook Button Settings', 'facebook-button-plugin' ),
+                    __( 'BestWebSoft Like & Share Settings', 'facebook-button-plugin' ),
                     'Facebook Button', 'manage_options',
                     'facebook-button-plugin.php',
                     'fcbkbttn_settings_page',
@@ -43,7 +43,7 @@ if ( ! function_exists( 'fcbkbttn_admin_menu' ) ) {
             );
             add_submenu_page(
                     'facebook-button-plugin.php',
-                    __( 'Facebook Button Settings', 'facebook-button-plugin' ),
+                    __( 'BestWebSoft Like & Share Settings', 'facebook-button-plugin' ),
                     __( 'Settings', 'facebook-button-plugin' ),
                     'manage_options',
                     'facebook-button-plugin.php',
@@ -127,7 +127,7 @@ if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
 		}
 
 		/* add Facebook to global $bws_shortcode_list */
-		$bws_shortcode_list['fcbkbttn'] = array( 'name' => 'Facebook Button' );
+		$bws_shortcode_list['fcbkbttn'] = array( 'name' => 'BestWebSoft Like & Share' );
 
 	}
 }
@@ -218,7 +218,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		require_once( dirname( __FILE__ ) . '/includes/class-fcbkbttn-settings.php' );
 		$page = new Fcbkbttn_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
 		<div class="wrap">
-			<h1><?php _e( 'Facebook Button Settings', 'facebook-button-plugin' ); ?></h1>
+			<h1><?php _e( 'BestWebSoft Like & Share Settings', 'facebook-button-plugin' ); ?></h1>
 			<noscript>
 				<div class="error below-h2">
 					<p><strong><?php _e( "Please, enable JavaScript in your browser.", 'facebook-button-plugin' ); ?></strong></p>
@@ -363,7 +363,7 @@ if ( ! function_exists( 'fcbkbttn_function_display_arhive' ) ) {
 	}
 }
 
-/* Function taking from array 'fcbkbttn_options' necessary information to create Facebook Button and reacting to your choise in plugin menu - points where it appears. */
+/* Function taking from array 'fcbkbttn_options' necessary information to create BestWebSoft Like & Share and reacting to your choise in plugin menu - points where it appears. */
 if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 	function fcbkbttn_display_button( $content ) {
 	    global $post;
@@ -375,7 +375,7 @@ if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
             global $fcbkbttn_options;
 
             $button = apply_filters( 'fcbkbttn_button_in_the_content', fcbkbttn_button() );
-            /* Indication where show Facebook Button depending on selected item in admin page. */
+            /* Indication where show BestWebSoft Like & Share buttons depending on selected item in admin page. */
             if ( ! empty( $fcbkbttn_options['where'] ) && in_array( 'before', $fcbkbttn_options['where'] ) ) {
                 $content = $button . $content;
             }
@@ -387,7 +387,7 @@ if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 	}
 }
 
-/* Function 'fcbkbttn_shortcode' is used to create content for Facebook Button shortcode. */
+/* Function 'fcbkbttn_shortcode' is used to create content for BestWebSoft Like & Share shortcode. */
 if ( ! function_exists( 'fcbkbttn_shortcode' ) ) {
 	function fcbkbttn_shortcode( $content ) {
 		global $post, $fcbkbttn_options, $fcbkbttn_shortcode_add_script;
@@ -410,7 +410,7 @@ if ( ! function_exists( 'fcbkbttn_shortcode_button_content' ) ) {
 	function fcbkbttn_shortcode_button_content( $content ) { ?>
 		<div id="fcbkbttn" style="display:none;">
 			<fieldset>
-				<?php _e( 'Add Facebook buttons to your page or post', 'facebook-button-plugin' ); ?>
+				<?php _e( 'Add Like & Share buttons to your page or post', 'facebook-button-plugin' ); ?>
 			</fieldset>
 			<input class="bws_default_shortcode" type="hidden" name="default" value="[fb_button]" />
 			<div class="clear"></div>

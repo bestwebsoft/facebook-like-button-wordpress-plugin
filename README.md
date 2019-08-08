@@ -1,13 +1,13 @@
-<a href="https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/" target=_blank>Facebook Button WordPress Plugin</a>
+<a href="https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/" target=_blank>BestWebSoft Like & Share WordPress Plugin</a>
 ========================
 
 <p>Facebook plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.</p>
-<p>Customize the appearance, configure settings, and enable other advanced options to get more social traffic to your website and keep your visitors involved!</p>
+<p>Customize the appearance, configure settings and enable other advanced options to get more social traffic to your website and keep your visitors involved!</p>
 <p><a href="https://bestwebsoft.com/demo-for-facebook-buttons/?ref=readme" rel="nofollow">View Demo</a></p>
 <p><span class="embed-youtube" style="text-align:center; display: block;"></span></p>
 <h4>Free Features</h4>
 <ul>
-<li>Add Facebook buttons such as:
+<li>Add иuttons for Facebook such as:
 <ul>
 <li>Like</li>
 <li>Share</li>
@@ -44,7 +44,7 @@
 </ul>
 </li>
 <li>Show/hide faces option</li>
-<li>Disable Meta Tags [NEW]</li>
+<li>Disable Meta Tags</li>
 <li>Compatible with <a href="https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3" rel="nofollow">Multilanguage</a> (current website language detection)</li>
 <li>Choose Like button action &#8211; like or recommend</li>
 <li>Use a standard Follow button image or replace it with custom one</li>
@@ -58,7 +58,8 @@
 <p><strong>Pro Features</strong></p>
 <p>All features from Free version included plus:</p>
 <ul>
-<li>Display Facebook buttons for certain pages and/or post types</li>
+<li>Display buttons for Facebooks for certain pages and/or post types</li>
+<li>Display the widget with the most liked posts [NEW]</li>
 <li>Сhange meta tags:
 <ul>
 <li>Image</li>
@@ -71,7 +72,7 @@
 <li>Single pages</li>
 </ul>
 </li>
-<li>Facebook button preview</li>
+<li>Buttons for Facebook preview</li>
 <li>Configure all subsites on the network</li>
 <li>Get answer to your support question within one business day (<a href="https://bestwebsoft.com/support-policy/" rel="nofollow">Support Policy</a>)</li>
 </ul>

@@ -1,10 +1,10 @@
-﻿=== Facebook Button by BestWebSoft ===
+﻿=== BestWebSoft Like & Share ===
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.9
-Tested up to: 5.1.1
-Stable tag: 2.62
+Tested up to: 5.2.2
+Stable tag: 2.63
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widg
 
 Facebook plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.
 
-Customize the appearance, configure settings, and enable other advanced options to get more social traffic to your website and keep your visitors involved!
+Customize the appearance, configure settings and enable other advanced options to get more social traffic to your website and keep your visitors involved!
 
 [View Demo](https://bestwebsoft.com/demo-for-facebook-buttons/?ref=readme)
 
@@ -22,7 +22,7 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 
 = Free Features =
 
-* Add Facebook buttons such as:
+* Add иuttons for Facebook such as:
 	* Like
 	* Share
 	* Follow
@@ -58,7 +58,7 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 >
 > All features from Free version included plus:
 >
-> * Display Facebook buttons for certain pages and/or post types
+> * Display buttons for Facebooks for certain pages and/or post types
 > * Display the widget with the most liked posts [NEW]
 > * Сhange meta tags:
 > 	* Image
@@ -66,7 +66,7 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 > * Enable like option for:
 > 	* Entire website
 > 	* Single pages
-> * Facebook button preview
+> * Buttons for Facebook preview
 > * Configure all subsites on the network
 > * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
@@ -112,9 +112,9 @@ Some of these translations are not complete. We are constantly adding new featur
 
 1. Upload the folder `facebook-button-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust the necessary settings in your WordPress admin panel - "Facebook Button".
+3. You can adjust the necessary settings in your WordPress admin panel - "BestWebSoft Like & Share".
 
-[View a Step-by-step Instruction on Facebook Button by BestWebSoft Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+[View a Step-by-step Instruction on BestWebSoft Like & Share by BestWebSoft Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
 https://www.youtube.com/watch?v=pAKsQPz3RZc
 
@@ -123,20 +123,20 @@ https://www.youtube.com/watch?v=pAKsQPz3RZc
 = After the plugin installation and settings adjustment on the settings page, it is still not working =
 
 1. You should click "Save Changes". Make sure that you got the message "Settings saved".
-2. Refresh your web page where Facebook Button icon should be placed.
+2. Refresh your web page where BestWebSoft Like & Share icon should be placed.
 
-= How to change Facebook Button icon ("Profile URL")? =
+= How to change BestWebSoft Like & Share icon ("Profile URL")? =
 
-1. In WordPress admin panel, please go to Facebook Button settings page and choose one of the listed positions: Default Profile Button Image or Custom Profile Button Image. Then click "Save Changes".
+1. In WordPress admin panel, please go to BestWebSoft Like & Share settings page and choose one of the listed positions: Default Profile Button Image or Custom Profile Button Image. Then click "Save Changes".
 2. If you choose Custom Profile Button Image, you can upload your own picture. You should click "Choose file" and choose an image in your folder. Then click "Save Changes".
 
-= How to set Facebook Button position on the page? =
+= How to set BestWebSoft Like & Share position on the page? =
 
-In WordPress admin panel, please go to Facebook Button settings page and choose one of the listed positions: Before content or After content. Then click "Save Changes".
+In WordPress admin panel, please go to BestWebSoft Like & Share settings page and choose one of the listed positions: Before content or After content. Then click "Save Changes".
 
-= After clicking Facebook Button icon, I see the Facebook Home page instead of the necessary account page =
+= After clicking BestWebSoft Like & Share icon, I see the Facebook Home page instead of the necessary account page =
 
-1. In WordPress admin panel, please go to Facebook Button settings page and enter your Facebook ID or username. Then click "Save Changes".
+1. In WordPress admin panel, please go to BestWebSoft Like & Share settings page and enter your Facebook ID or username. Then click "Save Changes".
 2. If you do not have the Facebook account yet, you should create it here. After the account is created, please follow the instructions above.
 
 = When people like and/or leave comments to my post, will this be displayed on my Facebook page? =
@@ -158,11 +158,14 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Screenshots ==
 
-1. Displaying Facebook Buttons before your post.
-2. Displaying Facebook Buttons in your post via the shortcode.
+1. Displaying buttons for Facebook before your post.
+2. Displaying buttons for Facebook in your post via the shortcode.
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.63 - 08.08.2019 =
+* Update : Plugin renamed.
 
 = V2.62 - 28.03.2019 =
 * PRO: Ability to displayi the posts with the greatest number of Facebook likes has been added.
@@ -170,19 +173,19 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 = V2.61 - 15.01.2019 =
 * NEW: Ability to disable Meta Tags has been added.
-* NEW: Ability to enable Facebook buttons for archives has been added.
+* NEW: Ability to enable buttons for Facebook for archives has been added.
 
 = V2.60 - 26.11.2018 =
 * Bugfix: The compatibility with Custom Admin Page plugin has been fixed.
 * Bugfix: The compatibility with Graph API v3.2 has been fixed.
 
 = V2.59 - 30.05.2018 =
-* Bugfix: Bug with incorrect Facebook buttons displaying has been fixed.
-* Bugfix: Bug with incorrect Facebook buttons preview has been fixed.
+* Bugfix: Bug with incorrect buttons for Facebook displaying has been fixed.
+* Bugfix: Bug with incorrect buttons for Facebook preview has been fixed.
 * Bugfix: Compatibility with Graph API v2.12 has been fixed.
 
 = V2.58 - 12.03.2018 =
-* Bugfix : Bug with incorrect Facebook buttons displaying has been fixed.
+* Bugfix : Bug with incorrect buttons for Facebook displaying has been fixed.
 
 = V2.57 - 09.03.2018 =
 * NEW : Ability to change buttons align has been added.
@@ -198,7 +201,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 = V2.54 - 06.04.2017 =
 * NEW : Czech language file is added.
-* Bugfix : Bug with incorrect My Page Facebook button link was fixed.
+* Bugfix : Bug with incorrect My Page buttons for Facebook link was fixed.
 
 = V2.53 - 31.01.2017 =
 * Update : The plugin settings page has been updated.
@@ -247,7 +250,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Update : We updated all functionality for wordpress 4.3.
 
 = V2.41 - 16.07.2015 =
-* Update : Ability to use the current site language for Facebook buttons (Using Multilanguage by BestWebSoft).
+* Update : Ability to use the current site language for buttons for Facebook (Using Multilanguage by BestWebSoft).
 * Bugfix : We fixed the 'share' button displaying bug (when the shortcode is used).
 
 = V2.40 - 15.06.2015 =
@@ -337,7 +340,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Update : We updated all functionality for wordpress 3.5.2.
 
 = V2.20 - 27.05.2013 =
-* Bugfix : The error related to creation the path to the Facebook button image is fixed.
+* Bugfix : The error related to creation the path to the buttons for Facebook image is fixed.
 * Update : BWS plugins section is updated.
 
 = V2.19 - 17.04.2013 =
@@ -389,7 +392,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 = V2.06 - 27.12.2011 =
 * NEW : Language files are added to the plugin.
-* NEW : Style for facebook button block is added.
+* NEW : Style for BestWebSoft Like & Share block is added.
 
 = V2.05 - 23.08.2011 =
 * Bugfix : Redirect to profile page bug is fixed.
@@ -397,7 +400,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 = V2.04 - 22.08.2011 =
 * Bugfix : BWS Plugin's menu section was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins.
 * Bugfix : The bug of positioning in admin menu is fixed.
-* Changed : Facebook button plugin functionality was changed in connection with the change of Facebook API.
+* Changed : BestWebSoft Like & Share plugin functionality was changed in connection with the change of Facebook API.
 
 = V2.03 - 14.07.2011 =
 * Changed : BWS Plugin's menu sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins.
@@ -410,9 +413,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Usability at the settings page of the plugin was improved.
 
 = V1 =
-* Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
+* Ability to install BestWebSoft Like & Share icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.63 =
+* The compatibility with new WordPress version updated.
 
 = V2.62 =
 * New features added.
@@ -482,7 +488,7 @@ Option to display the button in excerpt.
 We added buttons displaying for the excerpt. We updated all functionality for wordpress 4.3.
 
 = V2.41 =
-Ability to use the current site language for Facebook buttons (Using Multilanguage by BestWebSoft). We fixed the 'share' button displaying bug (when the shortcode is used).
+Ability to use the current site language for buttons for Facebook (Using Multilanguage by BestWebSoft). We fixed the 'share' button displaying bug (when the shortcode is used).
 
 = V2.40 =
 Ability to restore settings to defaults.
@@ -545,7 +551,7 @@ We updated all functionality for wordpress 3.6. Function for displaying BWS plug
 Added an ability to view and send system information by mail. We updated all functionality for wordpress 3.5.2.
 
 = V2.20 =
-The error related to creation the path to the Facebook button image is fixed. BWS plugins section is updated.
+The error related to creation the path to the buttons for Facebook image is fixed. BWS plugins section is updated.
 
 = V2.19 =
 The English language is updated in the plugin.
@@ -587,13 +593,13 @@ The Spanish language file is added to the plugin. Code that is used to connect s
 BWS plugin's section was changes.
 
 = V2.06 =
-Language files are added to the plugin. Style for facebook button block was added.
+Language files are added to the plugin. Style for BestWebSoft Like & Share block was added.
 
 = V2.05 =
 Redirect to profile page bug is fixed.
 
 = V2.04 =
-BWS Panel sections was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. The bug of positioning in admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API.
+BWS Panel sections was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. The bug of positioning in admin menu is fixed. BestWebSoft Like & Share plugin functionality was changed in connection with the change of Facebook API.
 
 = V2.03 =
 BWS Panel sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins. Icons displaying is fixed.
@@ -605,4 +611,4 @@ The bug of adjustment the link to the page is fixed in this version. Please upgr
 Usability at the settings page of the plugin was improved.
 
 = V1 =
-Ability to install Facebook Button icon with a link to the account page is created, including settings adjustment functionality via WordPress admin panel.
+Ability to install BestWebSoft Like & Share icon with a link to the account page is created, including settings adjustment functionality via WordPress admin panel.
