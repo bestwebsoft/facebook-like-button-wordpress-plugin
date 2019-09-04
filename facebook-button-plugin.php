@@ -6,7 +6,7 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.63
+Version: 2.64
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */

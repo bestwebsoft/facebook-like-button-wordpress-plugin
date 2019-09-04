@@ -7,7 +7,7 @@
 <p><span class="embed-youtube" style="text-align:center; display: block;"></span></p>
 <h4>Free Features</h4>
 <ul>
-<li>Add иuttons for Facebook such as:
+<li>Add buttons for Facebook such as:
 <ul>
 <li>Like</li>
 <li>Share</li>
@@ -59,7 +59,7 @@
 <p>All features from Free version included plus:</p>
 <ul>
 <li>Display buttons for Facebooks for certain pages and/or post types</li>
-<li>Display the widget with the most liked posts [NEW]</li>
+<li>Display the widget with the most liked posts</li>
 <li>Сhange meta tags:
 <ul>
 <li>Image</li>

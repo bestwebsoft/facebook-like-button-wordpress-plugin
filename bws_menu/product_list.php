@@ -121,7 +121,7 @@ $bws_plugins = array(
 	),
 	'facebook-button-plugin/facebook-button-plugin.php' => array(
 		'category'		=> array( 'smm' ),
-		'name'			=> 'BestWebSoft Like & Share',
+		'name'			=> 'Bestwebsoft Buttons for Facebook',
 		'description'	=> __( 'Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widgets.', 'bestwebsoft' ),
 		'link'			=> 'https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=05ec4f12327f55848335802581467d55&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'settings'		=> 'admin.php?page=facebook-button-plugin.php',

@@ -4,7 +4,7 @@ Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 3.9
 Tested up to: 5.2.2
-Stable tag: 2.63
+Stable tag: 2.64
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 
 = Free Features =
 
-* Add иuttons for Facebook such as:
+* Add buttons for Facebook such as:
 	* Like
 	* Share
 	* Follow
@@ -59,7 +59,7 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 > All features from Free version included plus:
 >
 > * Display buttons for Facebooks for certain pages and/or post types
-> * Display the widget with the most liked posts [NEW]
+> * Display the widget with the most liked posts
 > * Сhange meta tags:
 > 	* Image
 > 	* Description
@@ -163,6 +163,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.64 - 04.09.2019 =
+* Update : The deactivation feedback has been changed. Misleading buttons have been removed.
 
 = V2.63 - 08.08.2019 =
 * Update : Plugin renamed.
@@ -416,6 +419,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install BestWebSoft Like & Share icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.64 =
+* Usability improved.
 
 = V2.63 =
 * The compatibility with new WordPress version updated.
