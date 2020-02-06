@@ -1,10 +1,10 @@
-﻿=== BestWebSoft Like & Share ===
+﻿=== Like & Share by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
-Requires at least: 3.9
-Tested up to: 5.2.2
-Stable tag: 2.64
+Requires at least: 4.5
+Tested up to: 5.3.2
+Stable tag: 2.65
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and widg
 
 == Description ==
 
-Facebook plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.
+Like & Share plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.
 
 Customize the appearance, configure settings and enable other advanced options to get more social traffic to your website and keep your visitors involved!
 
@@ -102,19 +102,18 @@ Some of these translations are not complete. We are constantly adding new featur
 = Recommended Plugins =
 
 * [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=5019f1216fc048f1419fe4645da69381) -  Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
-* [Google +1](https://bestwebsoft.com/products/wordpress/plugins/google-plus-one/?k=1f911e6a8a57be8dec36aa4c617773d2) - Add Google +1 Share, Follow, Hangout buttons and profile badge to WordPress posts, pages and widgets.
-* [LinkedIn](https://bestwebsoft.com/products/wordpress/plugins/linkedin/?k=b51477f9bcefca82ad8a4a1901806171) - Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. 5 plugins included – profile, insider, etc.
+* [Linked](https://bestwebsoft.com/products/wordpress/plugins/linkedin/?k=b51477f9bcefca82ad8a4a1901806171) - Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. 5 plugins included – profile, insider, etc.
 * [Multilanguage](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3) - Translate WordPress website content to other languages manually. Create multilingual pages, posts, widgets, menus, etc.
-* [Pinterest](https://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92) - Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages, and widgets.
-* [Twitter](https://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d) - Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages, and widgets.
+* [Image Pinning](https://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92) - Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages, and widgets.
+* [Tweeting](https://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d) - Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages, and widgets.
 
 == Installation ==
 
 1. Upload the folder `facebook-button-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust the necessary settings in your WordPress admin panel - "BestWebSoft Like & Share".
+3. You can adjust the necessary settings in your WordPress admin panel - "Like & Share".
 
-[View a Step-by-step Instruction on BestWebSoft Like & Share by BestWebSoft Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+[View a Step-by-step Instruction on Like & Share by BestWebSoft Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
 https://www.youtube.com/watch?v=pAKsQPz3RZc
 
@@ -123,20 +122,20 @@ https://www.youtube.com/watch?v=pAKsQPz3RZc
 = After the plugin installation and settings adjustment on the settings page, it is still not working =
 
 1. You should click "Save Changes". Make sure that you got the message "Settings saved".
-2. Refresh your web page where BestWebSoft Like & Share icon should be placed.
+2. Refresh your web page where Like & Share icon should be placed.
 
-= How to change BestWebSoft Like & Share icon ("Profile URL")? =
+= How to change Like & Share icon ("Profile URL")? =
 
-1. In WordPress admin panel, please go to BestWebSoft Like & Share settings page and choose one of the listed positions: Default Profile Button Image or Custom Profile Button Image. Then click "Save Changes".
+1. In WordPress admin panel, please go to Like & Share settings page and choose one of the listed positions: Default Profile Button Image or Custom Profile Button Image. Then click "Save Changes".
 2. If you choose Custom Profile Button Image, you can upload your own picture. You should click "Choose file" and choose an image in your folder. Then click "Save Changes".
 
-= How to set BestWebSoft Like & Share position on the page? =
+= How to set Like & Share position on the page? =
 
-In WordPress admin panel, please go to BestWebSoft Like & Share settings page and choose one of the listed positions: Before content or After content. Then click "Save Changes".
+In WordPress admin panel, please go to Like & Share settings page and choose one of the listed positions: Before content or After content. Then click "Save Changes".
 
-= After clicking BestWebSoft Like & Share icon, I see the Facebook Home page instead of the necessary account page =
+= After clicking Like & Share icon, I see the Facebook Home page instead of the necessary account page =
 
-1. In WordPress admin panel, please go to BestWebSoft Like & Share settings page and enter your Facebook ID or username. Then click "Save Changes".
+1. In WordPress admin panel, please go to Like & Share settings page and enter your Facebook ID or username. Then click "Save Changes".
 2. If you do not have the Facebook account yet, you should create it here. After the account is created, please follow the instructions above.
 
 = When people like and/or leave comments to my post, will this be displayed on my Facebook page? =
@@ -163,6 +162,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.65 - 05.02.2020 =
+* Update : Plugin was renamed.
+* Update : We updated all functionality for wordpress 5.3.2.
+* Update : BWS plugins section is updated.
 
 = V2.64 - 04.09.2019 =
 * Update : The deactivation feedback has been changed. Misleading buttons have been removed.
@@ -419,6 +423,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install BestWebSoft Like & Share icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.65 =
+* The compatibility with new WordPress version updated.
 
 = V2.64 =
 * Usability improved.

@@ -1,6 +1,10 @@
 /*
 * Plugin styles
 */
+.fcbkbttn-image img {
+	max-width: 120px;
+}
+
 .fcbkbttn_buttons_block {
 	clear: both;
 	line-height: 1;
