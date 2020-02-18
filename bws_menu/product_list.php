@@ -48,6 +48,13 @@ $bws_plugins = array(
 		'icon'          => '//ps.w.org/car-rental/assets/icon-128x128.png',
 		'install_url'   => 'https://bestwebsoft.com/products/wordpress/plugins/car-rental-v2/'
 	),
+	'columns-bws/columns-bws.php' => array(
+		'category'		=> array( 'content' ),
+		'name'			=> 'Columns',
+		'description'	=> __( 'Add columns with custom content to WordPress website pages, posts, widgets, etc.', 'bestwebsoft' ),
+		'link'			=> 'https://bestwebsoft.com/products/wordpress/plugins/columns/?k=6d2cddc059a04e4d528cec14de47fb1e&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+		'settings'		=> 'admin.php?page=columns-settings.php'
+	),
 	'contact-form-plugin/contact_form.php' => array(
 		'category'		=> array( 'marketing', 'recommended' ),
 		'name'			=> 'Contact Form',

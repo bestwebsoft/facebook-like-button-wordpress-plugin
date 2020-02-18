@@ -6,7 +6,7 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.65
+Version: 2.66
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -315,6 +315,7 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
                 $button .= '></fb:like></div>';
             }
         }
+
         if ( ! empty( $fcbkbttn_options['share'] ) && empty( $location_share ) ) {
             $button .= '<div class="fb-share-button ' . $if_large . ' " data-href="' . $permalink_post . '" data-type="' . $fcbkbttn_options['layout_share_option'] . '" data-size="' . $fcbkbttn_options['size'] . '"></div>';
         }
@@ -575,9 +576,9 @@ if ( ! function_exists( 'fcbkbttn_footer_script' ) ) {
                     fjs.parentNode.insertBefore( js, fjs );
                 }( document, 'script', 'facebook-jssdk' ) );";
 
-            wp_register_script( 'fcbkbttn_script', '' );
-            wp_enqueue_script( 'fcbkbttn_script' );
-            wp_add_inline_script( 'fcbkbttn_script', sprintf( $script ) );
+            wp_register_script( 'fcbkbttn_footer_script', '' );
+            wp_enqueue_script( 'fcbkbttn_footer_script' );
+            wp_add_inline_script( 'fcbkbttn_footer_script', sprintf( $script ) );
 		}
 	}
 }
@@ -596,7 +597,7 @@ if ( ! function_exists( 'fcbkbttn_enqueue_scripts' ) ) {
 			bws_enqueue_settings_scripts();
 			bws_plugins_include_codemirror();
 			wp_enqueue_script( 'fcbkbttn_script', plugins_url( 'js/admin-script.js', __FILE__ ), array( 'jquery' ) );
-	        wp_enqueue_media();
+            wp_enqueue_media();
 	        wp_localize_script( 'fcbkbttn_script', 'fcbkbttn_var',
 		        array(
 			        'wp_media_title'    => __( 'Insert Media', 'facebook-button-plugin' ),
@@ -606,8 +607,8 @@ if ( ! function_exists( 'fcbkbttn_enqueue_scripts' ) ) {
             wp_enqueue_style( 'fcbkbttn_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 		} elseif ( ! is_admin() ) {
 			wp_enqueue_style( 'fcbkbttn_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-			wp_enqueue_script( 'fcbkbttn_script', plugins_url( 'js/script.js', __FILE__ ), array( 'jquery' ) );
-		}
+            wp_enqueue_script( 'fcbkbttn_script', plugins_url( 'js/script.js', __FILE__ ), array( 'jquery' ) );
+        }
 	}
 }
 
