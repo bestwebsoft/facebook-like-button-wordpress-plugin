@@ -1,4 +1,4 @@
-<a href="https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/" target=_blank>Like & Share (facebook) WordPress Plugin</a>
+<a href="https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/" target=_blank>BesWebSoft's Like & Share WordPress Plugin</a>
 ========================
 
 <p>Like &amp; Share plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.</p>
