@@ -109,8 +109,9 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					$valid_types 		= array( 'jpg', 'jpeg', 'png' );
 					$attachment_id = intval( $_REQUEST['fcbkbttn_button_image_custom'] );
 					$metadata = wp_get_attachment_metadata( $attachment_id );
+					$filename = pathinfo( $metadata['file'] );
 
-					if ( in_array( pathinfo( $metadata['file'] )['extension'], $valid_types ) ) {
+					if ( in_array( $filename['extension'], $valid_types ) ) {
 						if ( ( $metadata['width'] <= $max_image_width ) && ( $metadata['height'] <= $max_image_height ) ) {
 							$this->options['fb_img_link'] = $attachment_id;
 						} else {

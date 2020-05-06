@@ -81,7 +81,7 @@
 <p>If you have a feature suggestion or idea you&#8217;d like to see in the plugin, we&#8217;d love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow ugc">Suggest a Feature</a></p>
 <h4>Documentation &amp; Videos</h4>
 <ul>
-<li><a href="https://docs.google.com/document/d/1gy5uDVoebmYRUvlKRwBmc97jdJFz7GvUCtXy3L7r_Yg/" rel="nofollow ugc">[Doc] How to Use</a></li>
+<li><a href="https://docs.google.com/document/d/1gy5uDVoebmYRUvlKRwBmc97jdJFz7GvUCtXy3L7r_Yg/" rel="nofollow ugc">[Doc] User Guide</a></li>
 <li><a href="https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/" rel="nofollow ugc">[Doc] Installation</a></li>
 <li><a href="https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/" rel="nofollow ugc">[Doc] Purchase</a></li>
 <li><a href="https://www.youtube.com/watch?v=pAKsQPz3RZc" rel="nofollow ugc">[Video] Installation Instruction</a></li>
@@ -104,8 +104,8 @@
 <h4>Recommended Plugins</h4>
 <ul>
 <li><a href="https://bestwebsoft.com/products/wordpress/plugins/updater/?k=5019f1216fc048f1419fe4645da69381" rel="nofollow ugc">Updater</a> &#8211;  Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.</li>
-<li><a href="https://bestwebsoft.com/products/wordpress/plugins/linkedin/?k=b51477f9bcefca82ad8a4a1901806171" rel="nofollow ugc">Linked</a> &#8211; Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. 5 plugins included – profile, insider, etc.</li>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/linkedin/?k=b51477f9bcefca82ad8a4a1901806171" rel="nofollow ugc">BestWebSoft&#8217;s LinkedIn</a> &#8211; Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. 5 plugins included – profile, insider, etc.</li>
 <li><a href="https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3" rel="nofollow ugc">Multilanguage</a> &#8211; Translate WordPress website content to other languages manually. Create multilingual pages, posts, widgets, menus, etc.</li>
-<li><a href="https://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92" rel="nofollow ugc">Image Pinning</a> &#8211; Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages, and widgets.</li>
-<li><a href="https://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d" rel="nofollow ugc">Tweeting</a> &#8211; Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages, and widgets.</li>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/pinterest/?k=6c0ee1d224732f70f3099746cfc82c92" rel="nofollow ugc">BestWebSoft&#8217;s Pinterest</a> &#8211; Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, Profile) to WordPress posts, pages, and widgets.</li>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/twitter/?k=f1d29ef28baa75cc05d52def8ca1021d" rel="nofollow ugc">BestWebSoft&#8217;s Twitter</a> &#8211; Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts, pages, and widgets.</li>
 </ul>
