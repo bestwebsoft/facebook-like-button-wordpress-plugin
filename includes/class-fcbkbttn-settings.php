@@ -35,8 +35,6 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				'tabs'				=> $tabs,
 				'doc_link'			=> 'https://docs.google.com/document/d/1gy5uDVoebmYRUvlKRwBmc97jdJFz7GvUCtXy3L7r_Yg/',
 				'wp_slug'			=> 'facebook-button-plugin',
-				'pro_page'			=> 'admin.php?page=facebook-button-pro.php',
-				'bws_license_plugin'=> 'facebook-button-pro/facebook-button-pro.php',
 				'link_key'			=> '427287ceae749cbd015b4bba6041c4b8',
 				'link_pn'			=> '78'
 			) );
