@@ -66,6 +66,14 @@
 <li>Description</li>
 </ul>
 </li>
+<li>Statistics list with:
+<ul>
+<li>Page with Facebook buttons</li>
+<li>Like count</li>
+<li>Share count</li>
+<li>Follow count</li>
+</ul>
+</li>
 <li>Enable like option for:
 <ul>
 <li>Entire website</li>

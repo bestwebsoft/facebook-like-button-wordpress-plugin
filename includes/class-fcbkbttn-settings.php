@@ -41,8 +41,9 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 
 			add_action( get_parent_class( $this ) . '_additional_misc_options', array( $this, 'additional_misc_options' ) );
 			add_action( get_parent_class( $this ) . '_display_metabox', array( $this, 'display_metabox' ) );
-			/* display preview */
+			/*## display preview */
 			add_action( get_parent_class( $this ) . '_display_second_postbox', array( $this, 'display_second_postbox' ) );
+			/* ##*/
 		}
 
 		/**
