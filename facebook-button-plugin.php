@@ -6,7 +6,7 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.69
+Version: 2.70
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -49,7 +49,7 @@ if ( ! function_exists( 'fcbkbttn_admin_menu' ) ) {
                     'facebook-button-plugin.php',
                     'fcbkbttn_settings_page'
             );
-
+            /*pls */
 			add_submenu_page(
 				'facebook-button-plugin.php',
 				__( 'Statistics', 'facebook-button-plugin' ), __( 'Statistics', 'facebook-button-plugin' ),
@@ -57,6 +57,7 @@ if ( ! function_exists( 'fcbkbttn_admin_menu' ) ) {
 				'facebook-button-statistics.php',
 				'fcbkbttn_statistics_page'
 			);
+            /* pls*/
 
             add_submenu_page(
                     'facebook-button-plugin.php',
@@ -66,6 +67,7 @@ if ( ! function_exists( 'fcbkbttn_admin_menu' ) ) {
                     'fcbkbttn-bws-panel',
                     'bws_add_menu_render'
             );
+            /*pls */
             if ( isset( $submenu['facebook-button-plugin.php'] ) ) {
                 $submenu['facebook-button-plugin.php'][] = array(
                     '<span style="color:#d86463"> ' . __( 'Upgrade to Pro', 'facebook-button-plugin' ) . '</span>',
@@ -73,6 +75,7 @@ if ( ! function_exists( 'fcbkbttn_admin_menu' ) ) {
                     'https://bestwebsoft.com/products/wordpress/plugins/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=' . $fcbkbttn_plugin_info["Version"] . '&wp_v=' . $wp_version
                 );
             }
+            /* pls*/
 		    add_action( 'load-' . $settings, 'fcbkbttn_add_tabs' );
 		}
 	}
@@ -134,7 +137,7 @@ if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
 		if ( empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '78', 'version' => $fcbkbttn_plugin_info["Version"] );
 		}
-
+        /*pls */
         if ( 'plugins.php' == $pagenow ) {
             /* Install the option defaults */
             if ( function_exists( 'bws_plugin_banner_go_pro' ) ) {
@@ -142,8 +145,9 @@ if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
                 bws_plugin_banner_go_pro( $fcbkbttn_options, $fcbkbttn_plugin_info, 'fcbkbttn', 'facebook-like-button', '45862a4b3cd7a03768666310fbdb19db', '78', 'facebook-button-plugin' );
             }
         }
+        /* ##*/ /* pls*/
 
-		/* add Facebook to global $bws_shortcode_list ##*/
+		/* add Facebook to global $bws_shortcode_list */
 		$bws_shortcode_list['fcbkbttn'] = array( 'name' => 'Like & Share' );
 	}
 }
@@ -176,6 +180,8 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 		}
 	}
 }
+
+/*pls */
 if ( ! function_exists( 'fcbkbttn_statistics_page' ) ) {
 	function fcbkbttn_statistics_page() {
 		global $fcbkbttn_plugin_info, $wp_version, $fcbkbttn_options;
@@ -486,6 +492,8 @@ if ( ! function_exists( 'fcbkbttn_statistics_page' ) ) {
 		</div>
 	<?php }
 }
+/* pls*/
+
 if ( ! function_exists( 'fcbkbttn_get_options_default' ) ) {
 	function fcbkbttn_get_options_default() {
 		global $fcbkbttn_plugin_info;
@@ -541,7 +549,10 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
         if ( ! class_exists( 'Bws_Settings_Tabs' ) )
             require_once( dirname( __FILE__ ) . '/bws_menu/class-bws-settings.php' );
 		require_once( dirname( __FILE__ ) . '/includes/class-fcbkbttn-settings.php' );
-		$page = new Fcbkbttn_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
+		$page = new Fcbkbttn_Settings_Tabs( plugin_basename( __FILE__ ) ); 
+		if ( method_exists( $page, 'add_request_feature' ) ) {
+			$page->add_request_feature(); 
+		} ?>           
 		<div class="wrap">
 			<h1><?php _e( 'Like & Share Settings', 'facebook-button-plugin' ); ?></h1>
 			<noscript>

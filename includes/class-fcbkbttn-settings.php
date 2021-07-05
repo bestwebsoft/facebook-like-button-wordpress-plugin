@@ -19,10 +19,14 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 
 			$tabs = array(
 				'settings'		=> array( 'label' => __( 'Settings', 'facebook-button-plugin' ) ),
+                /*pls */
 				'display'		=> array( 'label' => __( 'Display', 'facebook-button-plugin' ), 'is_pro' => 1 ),
+                /* pls*/
 				'misc'			=> array( 'label' => __( 'Misc', 'facebook-button-plugin' ) ),
 				'custom_code'	=> array( 'label' => __( 'Custom Code', 'facebook-button-plugin' ) ),
+                /*pls */
 				'license'		=> array( 'label' => __( 'License Key', 'facebook-button-plugin' ) )
+                /* pls*/
 			);
 
 			parent::__construct( array(
@@ -33,17 +37,19 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				'options'			=> $fcbkbttn_options,
 				'is_network_options'=> is_network_admin(),
 				'tabs'				=> $tabs,
-				'doc_link'			=> 'https://docs.google.com/document/d/1gy5uDVoebmYRUvlKRwBmc97jdJFz7GvUCtXy3L7r_Yg/',
+				'doc_link'			=> 'https://bestwebsoft.com/documentation/bestwebsofts-like-share/bestwebsofts-like-share-user-guide/',
+                /*pls */
 				'wp_slug'			=> 'facebook-button-plugin',
 				'link_key'			=> '427287ceae749cbd015b4bba6041c4b8',
 				'link_pn'			=> '78'
+                /* pls*/
 			) );
 
 			add_action( get_parent_class( $this ) . '_additional_misc_options', array( $this, 'additional_misc_options' ) );
 			add_action( get_parent_class( $this ) . '_display_metabox', array( $this, 'display_metabox' ) );
-			/*## display preview */
+            /*pls */ /*## display preview */
 			add_action( get_parent_class( $this ) . '_display_second_postbox', array( $this, 'display_second_postbox' ) );
-			/* ##*/
+			/* ##*/ /* pls*/
 		}
 
 		/**
@@ -80,7 +86,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			$this->options['layout_like_option']	= ( isset( $_REQUEST['fcbkbttn_like_layout'] ) && in_array( $_REQUEST['fcbkbttn_like_layout'], array( 'standard', 'box_count', 'button_count', 'button' ) ) ) ? $_REQUEST['fcbkbttn_like_layout'] : $this->options['layout_like_option'];
 			$this->options['layout_share_option']	= ( isset( $_REQUEST['fcbkbttn_share_layout'] ) && in_array( $_REQUEST['fcbkbttn_share_layout'], array( 'box_count', 'button_count', 'button', 'icon_link', 'icon', 'link' ) ) )  ? $_REQUEST['fcbkbttn_share_layout'] : $this->options['layout_share_option'];
 			$this->options['faces']					= isset( $_REQUEST['fcbkbttn_faces'] ) ? 1 : 0;
-			$this->options['like_action']			= ( isset( $_REQUEST['fcbkbttn_like_action'] ) && in_array( $_REQUEST['fcbkbttn_like_action'], array( 'standard', 'custom' ) ) ) ? $_REQUEST['fcbkbttn_like_action'] : $this->options['like_action'];
+			$this->options['like_action']			= ( isset( $_REQUEST['fcbkbttn_like_action'] ) && in_array( $_REQUEST['fcbkbttn_like_action'], array( 'like', 'recommend' ) ) ) ? $_REQUEST['fcbkbttn_like_action'] : $this->options['like_action'];
 			$this->options['color_scheme']			= ( isset( $_REQUEST['fcbkbttn_color_scheme'] ) && in_array( $_REQUEST['fcbkbttn_color_scheme'], array( 'light', 'dark' ) ) ) ? $_REQUEST['fcbkbttn_color_scheme'] : $this->options['color_scheme'];
 			$this->options['width']					= intval( $_REQUEST['fcbkbttn_width'] );
 			$this->options['html5']					= ( isset( $_REQUEST['fcbkbttn_html5'] ) && in_array( $_REQUEST['fcbkbttn_html5'], array( '1', '0' ) ) ) ? $_REQUEST['fcbkbttn_html5'] : $this->options['html5'];
@@ -155,7 +161,14 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			$img_name = 'large' == $this->options['size'] ? 'large-facebook-ico' : 'standard-facebook-ico';
 			$fcbkbttn_img = plugins_url( 'images/' . $img_name . '.png', dirname( __FILE__ ) ); ?>
 			<hr>
-			<div class="bws_tab_sub_label"><?php _e( 'General', 'facebook-button-plugin' ); ?></div>
+			<div class="bws_tab_sub_label"><?php _e( 'General', 'facebook-button-plugin' ); ?>
+			</div>
+			<div class="bws_info">
+			<?php printf( '%s <a href="%s" target="_blank">%s</a>.',
+				__( 'To display buttons for other social networks use', 'facebook-button-plugin' ), 
+					'https://bestwebsoft.com/products/wordpress/plugins/social-buttons-pack/?k=a55dea6272a63899d3d51f5d8bc59d6e',
+					   __( 'Social Buttons Pack by BestWebSoft plugin' ,'facebook-button-plugin' ) ); ?>
+			</div>
 			<table class="form-table">
 				<tr>
 					<th scope="row"><?php _e( 'App ID', 'facebook-button-plugin' ); ?></th>
@@ -190,12 +203,12 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 						<fieldset>
 							<label>
 								<input type="checkbox" name="fcbkbttn_where[]" value="before" <?php checked( in_array( 'before', $this->options['where'] ) ); ?> />
-								<?php _e( 'Before content', 'facebook-button-plugin' ); ?></option>
+								<?php _e( 'Before content', 'facebook-button-plugin' ); ?>
 							</label>
 							<br />
 							<label>
 								<input type="checkbox" name="fcbkbttn_where[]" value="after" <?php checked( in_array( 'after', $this->options['where'] ) ); ?> />
-								<?php _e( 'After content', 'facebook-button-plugin' ); ?></option>
+								<?php _e( 'After content', 'facebook-button-plugin' ); ?>
 							</label>
 						</fieldset>
 					</td>
@@ -234,7 +247,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 								<span class="bws_info"><?php _e( 'Enable to switch language automatically on multilingual website using Multilanguage plugin.', 'facebook-button-plugin' ); ?></span>
 							<?php } else { ?>
 								<input disabled="disabled" type="checkbox" name="fcbkbttn_use_multilanguage_locale" value="1" />
-								<span class="bws_info"><?php _e( 'Enable to switch language automatically on multilingual website using Multilanguage plugin.', 'facebook-button-plugin' ); ?> <a href="<?php echo bloginfo( "url" ); ?>/wp-admin/plugins.php" target="_blank"><?php _e( 'Activate', 'facebook-button-plugin' ); ?></a></span>
+								<span class="bws_info"><?php _e( 'Enable to switch language automatically on multilingual website using Multilanguage plugin.', 'facebook-button-plugin' ); ?> <a href="<?php bloginfo( "url" ); ?>/wp-admin/plugins.php" target="_blank"><?php _e( 'Activate', 'facebook-button-plugin' ); ?></a></span>
 							<?php }
 						} else { ?>
 							<input disabled="disabled" type="checkbox" name="fcbkbttn_use_multilanguage_locale" value="1" />
@@ -453,11 +466,13 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<th scope="row"><?php _e( 'Like Button HTML Tag', 'facebook-button-plugin' ); ?></th>
 					<td>
 						<fieldset>
-							<label><input name='fcbkbttn_html5' type='radio' value='0' <?php checked( '0', $this->options['html5'] ); ?> /><?php echo "&lt;fb:like&gt;"; ?>
+							<label>
+								<input name='fcbkbttn_html5' type='radio' value='0' <?php checked( '0', $this->options['html5'] ); ?> /><?php echo "&lt;fb:like&gt;"; ?>
 							</label><br />
-							<label><input name='fcbkbttn_html5' type='radio' value='1' <?php checked( '1', $this->options['html5'] ); ?> /><?php echo "&lt;div&gt;"; ?>
+							<label>
+								<input name='fcbkbttn_html5' type='radio' value='1' <?php checked( '1', $this->options['html5'] ); ?> /><?php echo "&lt;div&gt;"; ?>
 							</label><br />
-							<span class="bws_info"><?php printf( __( "Tag %s can be used to improve website code validation.", 'facebook-button-plugin' ), '&lt;div&gt;' ); ?></span>
+							<span class="bws_info"><?php printf( __( "Tag %s can be used to improve website code validation.", 'facebook-button-plus' ), '&lt;div&gt;' ); ?></span>
 						</fieldset>
 					</td>
 				</tr>
@@ -509,6 +524,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			</div>
 		<?php }
 
+        /*pls */
 		/**
 		* Display custom metabox
 		* @access public
@@ -516,7 +532,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 		* @return array    The action results
 		*/
 		public function display_second_postbox() {
-			/*pls */
+
 			if ( ! $this->hide_pro_tabs ) { ?>
 				<div class="postbox bws_pro_version_bloc">
 					<div class="bws_table_bg"></div>
@@ -566,5 +582,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				<?php $this->bws_pro_block_links(); ?>
 			</div>
 		<?php }
+        /* pls*/
+
 	}
 }
