@@ -1,10 +1,10 @@
-﻿=== BestWebSoft's Like & Share ===
+﻿=== BestWebSoft's Like & Share - Posts, Pages and Widget Social Extension plugin for WordPress ===
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 4.5
-Tested up to: 5.7.2
-Stable tag: 2.70
+Tested up to: 5.8.1
+Stable tag: 2.71
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,10 +85,15 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 * [[Doc] Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
 * [[Doc] Purchase](https://bestwebsoft.com/documentation/how-to-purchase-a-wordpress-plugin/how-to-purchase-wordpress-plugin-from-bestwebsoft/)
 * [[Video] Installation Instruction](https://www.youtube.com/watch?v=pAKsQPz3RZc)
+* [[Video] User Guide](https://www.youtube.com/watch?v=rFPsPmo02gs)
 
 = Help & Support =
 
 Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <https://support.bestwebsoft.com/>
+
+= Affiliate Program =
+
+Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — https://bestwebsoft.com/affiliate/
 
 = Translation =
 
@@ -167,6 +172,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Plugin settings page.
 
 == Changelog ==
+
+= V2.71 - 11.11.2021 =
+* Update : All functionality was updated for WordPress 5.8.1
+* NEW : Video User Guide has been added.
+* PRO : The issue with fancytree has been fixed.
 
 = V2.70 - 02.07.2021 =
 * Update : All functionality was updated for WordPress 5.7.2
@@ -448,6 +458,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install BestWebSoft Like & Share icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.71 =
+* The compatibility with new WordPress version updated.
+* Usability improved.
+* Bugs fixed.
 
 = V2.70 =
 * The compatibility with new WordPress version updated.

@@ -45,7 +45,7 @@
 </li>
 <li>Show/hide faces option</li>
 <li>Disable Meta Tags</li>
-<li>Compatible with <a href="https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=ce7cc6ad47715a97a579a6d9b59ed8b3" rel="nofollow ugc">Multilanguage</a> (current website language detection)</li>
+<li>Compatible with <a href="https://bestwebsoft.com/products/wordpress/plugins/multilanguage/" rel="nofollow ugc">Multilanguage</a> (current website language detection)</li>
 <li>Choose Like button action &#8211; like or recommend</li>
 <li>Use a standard Follow button image or replace it with custom one</li>
 <li>Add custom code via plugin settings page</li>
@@ -89,15 +89,16 @@
 <p>If you have a feature suggestion or idea you&#8217;d like to see in the plugin, we&#8217;d love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow ugc">Suggest a Feature</a></p>
 <h4>Documentation &amp; Videos</h4>
 <ul>
-<li><a href="https://bestwebsoft.com/documentation/bestwebsofts-like-share/bestwebsofts-like-share-user-guide/" rel="nofollow ugc">[Doc] User Guide</a></li>
+<li><a href="https://bestwebsoft.com/documentation/bestwebsofts-like-share/bestwebsofts-like-share-user-guide" rel="nofollow ugc">[Doc] User Guide</a></li>
 <li><a href="https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/" rel="nofollow ugc">[Doc] Installation</a></li>
 <li><a href="https://bestwebsoft.com/documentation/how-to-purchase-a-wordpress-plugin/how-to-purchase-wordpress-plugin-from-bestwebsoft/" rel="nofollow ugc">[Doc] Purchase</a></li>
 <li><a href="https://www.youtube.com/watch?v=pAKsQPz3RZc" rel="nofollow ugc">[Video] Installation Instruction</a></li>
+<li><a href="https://www.youtube.com/watch?v=rFPsPmo02gs" rel="nofollow ugc">[Video] User Guide</a></li>
 </ul>
 <h4>Help &amp; Support</h4>
 <p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <a href="https://support.bestwebsoft.com/" rel="nofollow ugc">https://support.bestwebsoft.com/</a></p>
 <h4>Affiliate Program</h4>
-<p>Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — <a href="https://bestwebsoft.com/affiliate/" rel="nofollow">https://bestwebsoft.com/affiliate/</a></p>
+<p>Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — https://bestwebsoft.com/affiliate/</p>
 <h4>Translation</h4>
 <ul>
 <li>Czech (cs_CZ) (thanks to <a href="mailto:&#107;&#117;&#x63;&#x65;&#114;&#x61;&#x6d;&#105;&#064;&#x67;&#109;&#097;&#x69;&#108;&#046;&#x63;&#x6f;&#109;" rel="nofollow ugc">Michal Kučera</a> www.n0lim.it)</li>
