@@ -68,6 +68,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			/* Takes all the changed settings on the plugin's admin page and saves them in array 'fcbkbttn_options'. */
 
 			$this->options['id']                    = ! empty( $_REQUEST['fcbkbttn_id'] ) ? sanitize_text_field( $_REQUEST['fcbkbttn_id'] ) : 1443946719181573;
+			$this->options['app_secret']            = ! empty( $_REQUEST['fcbkbttn_app_secret'] ) ? sanitize_text_field( $_REQUEST['fcbkbttn_app_secret'] ) : 'd0f86a5b6447a9eade31c0acb7ad4581';
 			$this->options['my_page']				= isset( $_REQUEST['fcbkbttn_my_page'] ) ? 1 : 0;
 			$this->options['like']					= isset( $_REQUEST['fcbkbttn_like'] ) ? 1 : 0;
 			$this->options['share']					= isset( $_REQUEST['fcbkbttn_share'] ) ? 1 : 0;
@@ -86,7 +87,6 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			$this->options['display_option']        = ( isset( $_REQUEST['fcbkbttn_display_option'] ) && 'custom' == $_REQUEST['fcbkbttn_display_option'] && ! empty( $_REQUEST['fcbkbttn_button_image_custom'] ) ) ? 'custom' : 'standard';
 			$this->options['layout_like_option']	= ( isset( $_REQUEST['fcbkbttn_like_layout'] ) && in_array( $_REQUEST['fcbkbttn_like_layout'], array( 'standard', 'box_count', 'button_count', 'button' ) ) ) ? $_REQUEST['fcbkbttn_like_layout'] : $this->options['layout_like_option'];
 			$this->options['layout_share_option']	= ( isset( $_REQUEST['fcbkbttn_share_layout'] ) && in_array( $_REQUEST['fcbkbttn_share_layout'], array( 'box_count', 'button_count', 'button', 'icon_link', 'icon', 'link' ) ) )  ? $_REQUEST['fcbkbttn_share_layout'] : $this->options['layout_share_option'];
-			$this->options['faces']					= isset( $_REQUEST['fcbkbttn_faces'] ) ? 1 : 0;
 			$this->options['like_action']			= ( isset( $_REQUEST['fcbkbttn_like_action'] ) && in_array( $_REQUEST['fcbkbttn_like_action'], array( 'like', 'recommend' ) ) ) ? $_REQUEST['fcbkbttn_like_action'] : $this->options['like_action'];
 			$this->options['color_scheme']			= ( isset( $_REQUEST['fcbkbttn_color_scheme'] ) && in_array( $_REQUEST['fcbkbttn_color_scheme'], array( 'light', 'dark' ) ) ) ? $_REQUEST['fcbkbttn_color_scheme'] : $this->options['color_scheme'];
 			$this->options['width']					= intval( $_REQUEST['fcbkbttn_width'] );
@@ -102,6 +102,10 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			$this->options['use_multilanguage_locale'] = isset( $_REQUEST['fcbkbttn_use_multilanguage_locale'] ) ? 1 : 0;
 			$this->options['display_for_excerpt'] = isset( $_REQUEST['fcbkbttn_display_for_excerpt'] ) ? 1 : 0;
 			$this->options['display_for_open_graph'] = isset( $_REQUEST['fcbkbttn_display_for_open_graph'] ) ? 1 : 0;
+
+			if ( ( ! empty( $_REQUEST['fcbkbttn_app_secret'] ) && empty ( $_REQUEST['fcbkbttn_id'] ) ) || ( empty( $_REQUEST['fcbkbttn_app_secret'] ) && ! empty ( $_REQUEST['fcbkbttn_id'] ) ) ) {
+				$error	= esc_html__( "Error: Both \"App ID\" and \"App Secret\" fields must be filled or empty. ", 'facebook-button-plugin' );
+			}
 
 			/**
 			 * Update
@@ -159,6 +163,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			<h3 class="bws_tab_label"><?php esc_html_e( 'Like & Share Settings', 'facebook-button-plugin' ); ?></h3>
 			<?php $this->help_phrase();
 			$output_key = ( 1443946719181573 != $this->options['id'] ) ? $this->options['id'] : '';
+			$output_secret = ( 'd0f86a5b6447a9eade31c0acb7ad4581' != $this->options['app_secret'] ) ? $this->options['app_secret'] : '';
 			$img_name = 'large' == $this->options['size'] ? 'large-facebook-ico' : 'standard-facebook-ico';
 			$fcbkbttn_img = plugins_url( 'images/' . $img_name . '.png', dirname( __FILE__ ) ); ?>
 			<hr>
@@ -170,6 +175,12 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					'https://bestwebsoft.com/products/wordpress/plugins/social-buttons-pack/?k=a55dea6272a63899d3d51f5d8bc59d6e',
                 esc_html__( 'Social Buttons Pack by BestWebSoft plugin' ,'facebook-button-plugin' ) ); ?>
 			</div>
+			<div class="bws_info">
+				<?php printf( '%s <span>%s</span>',
+					esc_html__( 'Why are there no like and share buttons on the site?', 'facebook-button-plugin' ),
+					bws_add_help_box( '<div style="max-width: 450px;">' . esc_html__( 'Facebook will no longer support the \'Like\',  \'Share\' and  \' Feed \' Social Plugins for European Region users, unless they are both 1) Logged into their Facebook account, and 2) have provided consent to the “App and Website Cookies” control. If both of these requirements are met, the user will be able to see and interact with plugins such as the   \'Like\' and \'Share\' buttons and Facebook Feed. If either of the requirements above are not met, the user will not be able to see the plugins', 'facebook-button-plugin' ) . '.</div>', 'bws-hide-for-mobile bws-auto-width' ) ); ?>
+					
+				</div>
 			<table class="form-table">
 				<tr>
 					<th scope="row"><?php esc_html_e( 'App ID', 'facebook-button-plugin' ); ?></th>
@@ -180,12 +191,32 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
                     </td>
 				</tr>
 				<tr>
+						<th scope="row"><?php esc_html_e( 'App Secret', 'facebook-button-plugin' ); ?></th>
+						<td>
+							<input name='fcbkbttn_app_secret' type='text' maxlength='250' value='<?php echo $output_secret; ?>' /><br />
+							<span class="bws_info"><?php esc_html_e( 'Leave blank to use a default App Secret or', 'facebook-button-plugin' ); ?> <a href="https://developers.facebook.com/quickstarts/?platform=web" target="_blank"><?php esc_html_e( 'create a new one.', 'facebook-button-plugin' ); ?></a></span>
+						</td>
+					</tr>
+				<tr>
 					<th scope="row"><?php esc_html_e( 'Buttons', 'facebook-button-plugin' ); ?></th>
 					<td>
 						<fieldset>
 							<label><input name='fcbkbttn_my_page' type='checkbox' value='1' <?php checked( $this->options['my_page'] ); ?> /> <?php esc_html_e( 'Profile URL', 'facebook-button-plugin' ); ?></label><br />
 							<label><input name='fcbkbttn_like' type='checkbox' value='1' <?php checked( $this->options['like'] ); ?> /> <?php esc_html_e( "Like", 'facebook-button-plugin' ); ?></label><br />
 							<label><input name='fcbkbttn_share' type='checkbox' value='1' <?php checked( $this->options['share'] ); ?> /> <?php esc_html_e( "Share", 'facebook-button-plugin' ); ?></label><br />
+							<?php if ( ! $this->hide_pro_tabs ) { ?>
+								<div class="bws_pro_version_bloc">
+									<div class="bws_pro_version_table_bloc">
+										<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php esc_html_e( 'Close', 'facebook-button-plugin' ); ?>"></button>
+											<div class="bws_table_bg"></div>
+												<table class="form-table bws_pro_version">
+													<label><input type='checkbox' disabled /> <?php esc_html_e( 'Feed', 'facebook-button-plugin' ); ?></label><br />
+												</table>
+											</div>
+									<?php $this->bws_pro_block_links(); ?>
+								</div>
+							<?php } ?>
+
 						</fieldset>
 					</td>
 				</tr>
@@ -432,13 +463,6 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					</td>
 				</tr>
 				<tr class="fcbkbttn_like_standard_layout">
-					<th><?php esc_html_e( 'Friends Faces', 'facebook-button-plugin' ); ?></th>
-					<td>
-						<input name="fcbkbttn_faces" type='checkbox' value="1" <?php checked( $this->options['faces'] ); ?> />
-						<span class="bws_info"><?php esc_html_e( 'Enable to show faces of your friends who submitted the button.', 'facebook-button-plugin' ); ?></span>
-					</td>
-				</tr>
-				<tr class="fcbkbttn_like_standard_layout">
 					<th><?php esc_html_e( 'Layout Width', 'facebook-button-plugin' ); ?></th>
 					<td>
 						<label>
@@ -497,6 +521,44 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 				</div>
 			<?php } ?>
 			<!-- end general --><!-- end pls -->
+			<div class="bws_tab_sub_label fcbkbttn_feed_enabled"><?php esc_html_e( 'Facebook Feed', 'facebook-button-plugin' ); ?></div>
+			<?php if ( ! $this->hide_pro_tabs ) { ?>
+				<div class="bws_pro_version_bloc fcbkbttn_like_enabled">
+					<div class="bws_pro_version_table_bloc">
+						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php esc_html_e( 'Close', 'facebook-button-plugin' ); ?>"></button>
+						<div class="bws_table_bg"></div>
+						<table class="form-table bws_pro_version">
+							<tr>
+								<th scope="row"><?php esc_html_e( 'Facebook Feed URL', 'facebook-button-plugin' ); ?></th>
+								<td>
+									<input name='fcbkbttn_feed_url' type='text' maxlength='250'/><br />
+									<span class="bws_info"><?php esc_html_e( 'Enter Facebook URL that will be displayed in the feed', 'facebook-button-plugin' ); ?></a></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><?php esc_html_e( 'Feed Tabs', 'facebook-button-plugin' ); ?></th>
+								<td>
+									<fieldset>
+										<label>
+											<input type="checkbox" name="fcbkbttn_feed_tabs[]" value="timeline"/>
+											<?php esc_html_e( 'Timeline', 'facebook-button-plugin' ); ?>
+										</label><br />
+										<label>
+											<input type="checkbox" name="fcbkbttn_feed_tabs[]" value="events"/>
+											<?php esc_html_e( 'Events', 'facebook-button-plugin' ); ?>
+										</label><br />
+										<label>
+											<input type="checkbox" name="fcbkbttn_feed_tabs[]" value="messages"/>
+											<?php esc_html_e( 'Messages', 'facebook-button-plugin' ); ?>
+										</label>
+									</fieldset>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<?php $this->bws_pro_block_links(); ?>
+				</div>
+			<?php } ?>	
 		<?php }
 
 		/**
@@ -522,6 +584,20 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 					<?php esc_html_e( "Add Like & Share buttons to your posts, pages, custom post types or widgets by using the following shortcode:", 'facebook-button-plugin' ); ?>
 					<?php bws_shortcode_output( '[fb_button]' ); ?>
 				</div>
+				<?php if ( ! $this->hide_pro_tabs ) { ?>
+				<div class="bws_pro_version_bloc">
+					<div class="bws_pro_version_table_bloc">
+						<div class="bws_table_bg"></div>
+						<table class="form-table bws_pro_version"><br/>
+							<div class="inside">
+								<?php esc_html_e( "Add Feed to your posts, pages, custom post types or widgets by using the following shortcode:", 'facebook-button-plugin' ); ?>
+								<?php bws_shortcode_output( '[fb_feed]' ); ?>
+							</div>
+						</table>
+					</div>
+					<?php $this->bws_pro_block_links(); ?>
+				</div>
+				<?php } ?>
 			</div>
 		<?php }
 

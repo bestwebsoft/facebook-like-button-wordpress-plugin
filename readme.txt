@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
 Requires at least: 4.5
-Tested up to: 5.8.1
-Stable tag: 2.71
+Tested up to: 6.0
+Stable tag: 2.72
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,12 +43,10 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 		* Right
 		* Left
 		* Center
-* Show/hide faces option
 * Disable Meta Tags
 * Compatible with [Multilanguage](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/) (current website language detection)
 * Choose Like button action - like or recommend
 * Use a standard Follow button image or replace it with custom one
-* Add custom code via plugin settings page
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentation and videos
@@ -60,6 +58,12 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 >
 > * Display buttons for Facebooks for certain pages and/or post types
 > * Display the widget with the most liked posts
+> * Add buttons for Facebook such as: 
+>	* Feed
+> * Select tabs for Feed:
+>	* Timeline
+>	* Events
+>	* Messages
 > * Сhange meta tags:
 > 	* Image
 > 	* Description
@@ -72,6 +76,7 @@ https://www.youtube.com/watch?v=hGNQs-rF8b8
 > 	* Entire website
 > 	* Single pages
 > * Buttons for Facebook preview
+> * Add custom code via plugin settings page
 > * Configure all subsites on the network
 > * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
@@ -173,7 +178,15 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
-= V2.71 - 11.11.2021 =
+= V2.72 - 21.07.2022 =
+* Update : All functionality was updated for WordPress 6.0.
+* Update : BWS plugins section is updated.
+* Update : Some languages problems were resolved.
+* Update : Friend Faces function has been deleted as outdated.
+* NEW : App Secret field has been added.
+* PRO : Feed option has been added.
+
+= V2.71 - 05.07.2021 =
 * Update : All functionality was updated for WordPress 5.8.1
 * NEW : Video User Guide has been added.
 * PRO : The issue with fancytree has been fixed.
@@ -458,6 +471,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install BestWebSoft Like & Share icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.72 =
+* The compatibility with new WordPress version updated.
+* Plugin optimization completed.
+* Usability improved.
+* New features added.
 
 = V2.71 =
 * The compatibility with new WordPress version updated.

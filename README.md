@@ -43,12 +43,10 @@
 </li>
 </ul>
 </li>
-<li>Show/hide faces option</li>
 <li>Disable Meta Tags</li>
 <li>Compatible with <a href="https://bestwebsoft.com/products/wordpress/plugins/multilanguage/" rel="nofollow ugc">Multilanguage</a> (current website language detection)</li>
 <li>Choose Like button action &#8211; like or recommend</li>
 <li>Use a standard Follow button image or replace it with custom one</li>
-<li>Add custom code via plugin settings page</li>
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
 <li>Detailed step-by-step documentation and videos</li>
@@ -60,6 +58,18 @@
 <ul>
 <li>Display buttons for Facebooks for certain pages and/or post types</li>
 <li>Display the widget with the most liked posts</li>
+<li>Add buttons for Facebook such as:
+<ul>
+<li>Feed</li>
+</ul>
+</li>
+<li>Select tabs for Feed:
+<ul>
+<li>Timeline</li>
+<li>Events</li>
+<li>Messages</li>
+</ul>
+</li>
 <li>Сhange meta tags:
 <ul>
 <li>Image</li>
@@ -81,6 +91,7 @@
 </ul>
 </li>
 <li>Buttons for Facebook preview</li>
+<li>Add custom code via plugin settings page</li>
 <li>Configure all subsites on the network</li>
 <li>Get answer to your support question within one business day (<a href="https://bestwebsoft.com/support-policy/" rel="nofollow ugc">Support Policy</a>)</li>
 </ul>

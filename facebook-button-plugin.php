@@ -6,7 +6,7 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.71
+Version: 2.72
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -113,7 +113,93 @@ if ( ! function_exists( 'fcbkbttn_init' ) ) {
 			fcbkbttn_settings();
 
 			$fcbkbttn_lang_codes = array(
-				"af_ZA" => 'Afrikaans', "ar_AR" => 'العربية', "az_AZ" => 'Azərbaycan dili', "be_BY" => 'Беларуская', "bg_BG" => 'Български', "bn_IN" => 'বাংলা', "bs_BA" => 'Bosanski', "ca_ES" => 'Català', "cs_CZ" => 'Čeština', "cy_GB" => 'Cymraeg', "da_DK" => 'Dansk', "de_DE" => 'Deutsch', "el_GR" => 'Ελληνικά', "en_US" => 'English', "en_PI" => 'English (Pirate)', "eo_EO" => 'Esperanto', "es_CO" => 'Español (Colombia)', "es_ES" => 'Español (España)', "es_LA" => 'Español', "et_EE" => 'Eesti', "eu_ES" => 'Euskara', "fa_IR" => 'فارسی', "fb_LT" => 'Leet Speak', "fi_FI" => 'Suomi', "fo_FO" => 'Føroyskt', "fr_CA" => 'Français (Canada)', "fr_FR" => 'Français (France)', "fy_NL" => 'Frysk', "ga_IE" => 'Gaeilge', "gl_ES" => 'Galego', "gn_PY" => "Avañe'ẽ", "gu_IN" => 'ગુજરાતી', "he_IL" => 'עברית', "hi_IN" => 'हिन्दी', "hr_HR" => 'Hrvatski', "hu_HU" => 'Magyar', "hy_AM" => 'Հայերեն', "id_ID" => 'Bahasa Indonesia', "is_IS" => 'Íslenska', "it_IT" => 'Italiano', "ja_JP" => '日本語', "jv_ID" => 'Basa Jawa', "ka_GE" => 'ქართული', "kk_KZ" => 'Қазақша', "km_KH" => 'ភាសាខ្មែរ', "kn_IN" => 'ಕನ್ನಡ', "ko_KR" => '한국어', "ku_TR" => 'Kurdî', "la_VA" => 'lingua latina', "lt_LT" => 'Lietuvių', "lv_LV" => 'Latviešu', "mk_MK" => 'Македонски', "ml_IN" => 'മലയാളം', "mn_MN" => 'Монгол', "mr_IN" => 'मराठी', "ms_MY" => 'Bahasa Melayu', "nb_NO" => 'Norsk (bokmål)', "ne_NP" => 'नेपाली', "nl_BE" => 'Nederlands (België)', "nl_NL" => 'Nederlands', "nn_NO" => 'Norsk (nynorsk)', "pa_IN" => 'ਪੰਜਾਬੀ', "pl_PL" => 'Polski', "ps_AF" => 'پښتو', "pt_BR" => 'Português (Brasil)', "pt_PT" => 'Português (Portugal)', "ro_RO" => 'Română', "ru_RU" => 'Русский', "sk_SK" => 'Slovenčina', "sl_SI" => 'Slovenščina', "sq_AL" => 'Shqip', "sr_RS" => 'Српски', "sv_SE" => 'Svenska', "sw_KE" => 'Kiswahili', "ta_IN" => 'தமிழ்', "te_IN" => 'తెలుగు', "tg_TJ" => 'тоҷикӣ', "th_TH" => 'ภาษาไทย', "tl_PH" => 'Filipino', "tr_TR" => 'Türkçe', "uk_UA" => 'Українська', "ur_PK" => 'اردو', "uz_UZ" => "O'zbek", "vi_VN" => 'Tiếng Việt', "zh_CN" => '中文(简体)', "zh_HK" => '中文(香港)', "zh_TW" => '中文(台灣)'
+				"af_ZA" => 'Afrikaans', 
+				//"ar_AR" => 'العربية', 
+				"az_AZ" => 'Azərbaycan dili', 
+				//"be_BY" => 'Беларуская', 
+				"bg_BG" => 'Български', 
+				//"bn_IN" => 'বাংলা', 
+				//"bs_BA" => 'Bosanski', 
+				//"ca_ES" => 'Català',
+				"cs_CZ" => 'Čeština',
+				//"cy_GB" => 'Cymraeg',
+				//"da_DK" => 'Dansk',
+				//"de_DE" => 'Deutsch',
+				//"el_GR" => 'Ελληνικά',
+				"en_US" => 'English',
+				"en_PI" => 'English (Pirate)',
+				//"eo_EO" => 'Esperanto',
+				//"es_CO" => 'Español (Colombia)',
+				//"es_ES" => 'Español (España)',
+				"es_LA" => 'Español',
+				//"et_EE" => 'Eesti',
+				"eu_ES" => 'Euskara',
+				//"fa_IR" => 'فارسی',
+				//"fb_LT" => 'Leet Speak',
+				//"fi_FI" => 'Suomi',
+				//"fo_FO" => 'Føroyskt',
+				"fr_CA" => 'Français (Canada)',
+				"fr_FR" => 'Français (France)',
+				//"fy_NL" => 'Frysk',
+				//"ga_IE" => 'Gaeilge',
+				"gl_ES" => 'Galego',
+				//"gn_PY" => "Avañe'ẽ",
+				//"gu_IN" => 'ગુજરાતી',
+				//"he_IL" => 'עברית',
+				//"hi_IN" => 'हिन्दी',
+				"hr_HR" => 'Hrvatski',
+				"hu_HU" => 'Magyar',
+				//"hy_AM" => 'Հայերեն',
+				//"id_ID" => 'Bahasa Indonesia',
+				"is_IS" => 'Íslenska',
+				"it_IT" => 'Italiano',
+				//"ja_JP" => '日本語',
+				//"jv_ID" => 'Basa Jawa',
+				//"ka_GE" => 'ქართული',
+				//"kk_KZ" => 'Қазақша',
+				//"km_KH" => 'ភាសាខ្មែរ',
+				//"kn_IN" => 'ಕನ್ನಡ',
+				//"ko_KR" => '한국어',
+				//"ku_TR" => 'Kurdî',
+				//"la_VA" => 'lingua latina',
+				//"lt_LT" => 'Lietuvių',
+				//"lv_LV" => 'Latviešu',
+				//"mk_MK" => 'Македонски',
+				//"ml_IN" => 'മലയാളം',
+				//"mn_MN" => 'Монгол',
+				//"mr_IN" => 'मराठी',
+				//"ms_MY" => 'Bahasa Melayu',
+				//"nb_NO" => 'Norsk (bokmål)',
+				//"ne_NP" => 'नेपाली',
+				//"nl_BE" => 'Nederlands (België)',
+				//"nl_NL" => 'Nederlands',
+				//"nn_NO" => 'Norsk (nynorsk)',
+				//"pa_IN" => 'ਪੰਜਾਬੀ',
+				"pl_PL" => 'Polski',
+				//"ps_AF" => 'پښتو',
+				//"pt_BR" => 'Português (Brasil)',
+				//"pt_PT" => 'Português (Portugal)',
+				//"ro_RO" => 'Română',
+				"ru_RU" => 'Русский',
+				"sk_SK" => 'Slovenčina',
+				//"sl_SI" => 'Slovenščina',
+				//"sq_AL" => 'Shqip',
+				//"sr_RS" => 'Српски',
+				//"sv_SE" => 'Svenska',
+				//"sw_KE" => 'Kiswahili',
+				//"ta_IN" => 'தமிழ்',
+				//"te_IN" => 'తెలుగు',
+				//"tg_TJ" => 'тоҷикӣ',
+				//"th_TH" => 'ภาษาไทย',
+				//"tl_PH" => 'Filipino',
+				"tr_TR" => 'Türkçe',
+				"uk_UA" => 'Українська',
+				//"ur_PK" => 'اردو',
+				//"uz_UZ" => "O'zbek",
+				//"vi_VN" => 'Tiếng Việt',
+				//"zh_CN" => '中文(简体)',
+				//"zh_HK" => '中文(香港)',
+				"zh_TW" => '中文(台灣)'
 			);
 
 			if ( ! is_admin() ) {
@@ -511,7 +597,6 @@ if ( ! function_exists( 'fcbkbttn_get_options_default' ) ) {
 			'like_action'				=>	'like',
 			'color_scheme'				=>	'light',
 			'share'						=>	0,
-			'faces'						=>	0,
 			'width'						=>	225,
 			'size'						=>	'small',
 			'where'						=>	array( 'before' ),
@@ -523,7 +608,8 @@ if ( ! function_exists( 'fcbkbttn_get_options_default' ) ) {
 			'display_for_excerpt'		=>	0,
 			'display_for_open_graph'	=>	1,
 			'location'					=>	'left',
-			'id'						=>	1443946719181573
+			'id'						=>	1443946719181573,
+			'app_secret'				=>	'd0f86a5b6447a9eade31c0acb7ad4581',
 		);
 		return $options_default;
 	}
@@ -604,9 +690,9 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
 
         $location_share = ( 'right' == $fcbkbttn_options['location'] && "standard" == $fcbkbttn_options['layout_like_option'] ) ? 1 : 0;
 
-        if ( ! empty( $fcbkbttn_options['share'] ) && ! empty( $location_share ) ) {
-            $button .= '<div class="fb-share-button ' . $if_large . ' " data-href="' . $permalink_post . '" data-type="' . $fcbkbttn_options['layout_share_option'] . '" data-size="' . $fcbkbttn_options['size'] . '"></div>';
-        }
+        //if ( ! empty( $fcbkbttn_options['share'] ) && ! empty( $location_share ) ) {
+            //$button .= '<div class="fb-share-button ' . $if_large . ' " data-href="' . $permalink_post . '" data-type="' . $fcbkbttn_options['layout_share_option'] . '" data-size="' . $fcbkbttn_options['size'] . '"></div>';
+        //}
 
         if ( ! empty( $fcbkbttn_options['like'] ) ) {
             $button .= '<div class="fcbkbttn_like ' . $if_large . '">';
@@ -615,14 +701,12 @@ if ( ! function_exists( 'fcbkbttn_button' ) ) {
                 $button .= '<div class="fb-like fb-like-'. $fcbkbttn_options['layout_like_option'] .'" data-href="' . $permalink_post . '" data-colorscheme="' . $fcbkbttn_options['color_scheme'] . '" data-layout="' . $fcbkbttn_options['layout_like_option'] . '" data-action="' . $fcbkbttn_options['like_action'] . '" ';
                 if ( 'standard' == $fcbkbttn_options['layout_like_option'] ) {
                     $button .= ' data-width="' . $fcbkbttn_options['width'] . 'px"';
-                    $button .= ( ! empty( $fcbkbttn_options['faces'] ) ) ? " data-show-faces='true'" : " data-show-faces='false'";
                 }
                 $button .= ' data-size="' . $fcbkbttn_options['size'] . '"';
                 $button .= '></div></div>';
             } else {
                 $button .= '<fb:like href="' . $permalink_post . '" action="' . $fcbkbttn_options['like_action'] . '" colorscheme="' . $fcbkbttn_options['color_scheme'] . '" layout="' . $fcbkbttn_options['layout_like_option'] . '" ';
                 if ( 'standard' == $fcbkbttn_options['layout_like_option'] ) {
-                    $button .= ( ! empty( $fcbkbttn_options['faces'] ) ) ? "show-faces='true'" : "show-faces='false'";
                     $button .= ' width="' . $fcbkbttn_options['width'] . 'px"';
                 }
 
@@ -689,14 +773,12 @@ if ( ! function_exists( 'fcbkbttn_function_display_arhive' ) ) {
 					$button .= '<div class="fb-like fb-like-' . $fcbkbttn_options['layout_like_option'] . '" data-href="' . $permalink_page . '" data-colorscheme="' . $fcbkbttn_options['color_scheme'] . '" data-layout="' . $fcbkbttn_options['layout_like_option'] . '" data-action="' . $fcbkbttn_options['like_action'] . '" ';
 					if ( 'standard' == $fcbkbttn_options['layout_like_option'] ) {
 						$button .= ' data-width="' . $fcbkbttn_options['width'] . 'px"';
-						$button .= ( ! empty( $fcbkbttn_options['faces'] ) ) ? " data-show-faces='true'" : " data-show-faces='false'";
 					}
 					$button .= ' data-size="' . $fcbkbttn_options['size'] . '"';
 					$button .= '></div></div>';
 				} else {
 					$button .= '<fb:like href="' . $permalink_page . '" action="' . $fcbkbttn_options['like_action'] . '" colorscheme="' . $fcbkbttn_options['color_scheme'] . '" layout="' . $fcbkbttn_options['layout_like_option'] . '" ';
 					if ( 'standard' == $fcbkbttn_options['layout_like_option'] ) {
-						$button .= ( ! empty( $fcbkbttn_options['faces'] ) ) ? "show-faces='true'" : "show-faces='false'";
 						$button .= ' width="' . $fcbkbttn_options['width'] . 'px"';
 					}
 
@@ -865,12 +947,13 @@ if ( ! function_exists( 'fcbkbttn_footer_script' ) ) {
 		if ( isset( $fcbkbttn_shortcode_add_script ) ||
 			( ( ! empty( $fcbkbttn_options['like'] ) || ! empty( $fcbkbttn_options['share'] ) ) && ! empty( $fcbkbttn_options['where'] ) )
 			|| defined( 'BWS_ENQUEUE_ALL_SCRIPTS' ) ) { ?>
-            <div id="fb-root"></div>
-            <?php $locale = fcbkbttn_get_locale();
+			<div id="fb-root"></div>
+			<?php $locale = fcbkbttn_get_locale();
 			$app_id = $fcbkbttn_options['id'];
-			$fcbkbttn_sdk_script = "https://connect.facebook.net/{$locale}/sdk.js#xfbml=1&version=v6.0&appId={$app_id}&autoLogAppEvents=1";
-			wp_register_script( 'fcbkbttn_sdk_script', htmlspecialchars_decode( $fcbkbttn_sdk_script ) );
-			wp_enqueue_script( 'fcbkbttn_sdk_script' );
+			$fcbkbttn_sdk_script = "https://connect.facebook.net/{$locale}/sdk.js#xfbml=1&version=v14.0&appId={$app_id}&autoLogAppEvents=1";
+			echo '<script async defer crossorigin="anonymous" src="'.$fcbkbttn_sdk_script.'"></script>';
+			//wp_register_script( 'fcbkbttn_sdk_script', $fcbkbttn_sdk_script );
+			//wp_enqueue_script( 'fcbkbttn_sdk_script' );
 		}
 	}
 }
