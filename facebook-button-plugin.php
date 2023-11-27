@@ -6,7 +6,7 @@ Description: Add Facebook Like, Share and Profile buttons to WordPress posts, pa
 Author: BestWebSoft
 Text Domain: facebook-button-plugin
 Domain Path: /languages
-Version: 2.73
+Version: 2.74
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -856,7 +856,7 @@ if ( ! function_exists( 'fcbkbttn_shortcode_button_content' ) ) {
 if ( ! function_exists( 'fcbkbttn_meta' ) ) {
 	function fcbkbttn_meta() {
 		global $fcbkbttn_options, $post, $wp;
-		if ( ( ! empty( $fcbkbttn_options['like'] ) || ! empty( $fcbkbttn_options['share'] ) ) && 1 == $fcbkbttn_options['display_for_open_graph'] ) {
+		if ( ( ! empty( $fcbkbttn_options['like'] ) || ! empty( $fcbkbttn_options['share'] ) ) && 1 == $fcbkbttn_options['display_for_open_graph'] && ! post_password_required( get_the_ID() ) ) {
 			if ( is_singular() ) {
 				$image = '';
 				if ( has_post_thumbnail( get_the_ID() ) ) {

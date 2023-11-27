@@ -177,7 +177,7 @@ if ( ! class_exists( 'Fcbkbttn_Settings_Tabs' ) ) {
 			</div>
 			<div class="bws_info">
 				<?php printf( '%s <span>%s</span>',
-					esc_html__( 'Why are there no like and share buttons on the site?', 'facebook-button-plugin' ),
+					esc_html__( 'Why are there no like and share buttons on the site or they are not working?', 'facebook-button-plugin' ),
 					bws_add_help_box( '<div style="max-width: 450px;">' . esc_html__( 'Facebook will no longer support the \'Like\',  \'Share\' and  \' Feed \' Social Plugins for European Region users, unless they are both 1) Logged into their Facebook account, and 2) have provided consent to the “App and Website Cookies” control. If both of these requirements are met, the user will be able to see and interact with plugins such as the   \'Like\' and \'Share\' buttons and Facebook Feed. If either of the requirements above are not met, the user will not be able to see the plugins', 'facebook-button-plugin' ) . '.</div>', 'bws-hide-for-mobile bws-auto-width' ) ); ?>
 					
 				</div>
