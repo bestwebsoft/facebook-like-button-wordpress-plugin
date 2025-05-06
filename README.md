@@ -4,7 +4,7 @@
 <p>Like &amp; Share plugin is the best social media solution which adds Follow, Like, and Share buttons to your WordPress website posts, pages or widgets. This is a great way to receive positive feedback from your visitors, earn media exposure, and consumer validation for your brand.</p>
 <p>Customize the appearance, configure settings and enable other advanced options to get more social traffic to your website and keep your visitors involved!</p>
 <p><a href="https://bestwebsoft.com/demo-for-facebook-buttons/?ref=readme" rel="nofollow ugc">View Demo</a></p>
-<p><span class="embed-youtube" style="text-align:center; display: block;"></span></p>
+<p></p>
 <h4>Free Features</h4>
 <ul>
 <li>Add buttons for Facebook such as:
@@ -121,6 +121,10 @@
 <li>Spanish (es_ES) (thanks to <a href="mailto:&#x69;&#x6e;&#102;&#x6f;&#064;m&#x61;&#114;&#x6b;&#101;&#107;&#x69;&#109;i&#x6b;&#097;&#x2e;&#101;&#115;" rel="nofollow ugc">Africa Boleko</a> www.markekimika.es)</li>
 <li>Turkish (tr_TR) (thanks to <a href="mailto:&#119;&#x65;&#098;m&#x61;&#115;&#x74;&#x65;&#114;&#x40;&#099;&#097;&#x6e;&#097;t&#x61;&#115;&#x65;&#x76;&#101;&#x72;&#x2e;&#099;&#x6f;&#109;" rel="nofollow ugc">Can Atasever</a>)</li>
 <li>Ukrainian (uk)</li>
+<li>Japanese (ja)</li>
+<li>Brazilian Portuguese (pt_BR)</li>
+<li>German (de_DE)</li>
+<li>Spanish (es_ES)</li>
 </ul>
 <p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="https://codex.wordpress.org/Translating_WordPress" rel="nofollow ugc">the text of PO and MO files</a> to <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow ugc">BestWebSoft</a> and we&#8217;ll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="https://www.poedit.net/download.php" rel="nofollow ugc">files Poedit</a>.</p>
 <h4>Recommended Plugins</h4>

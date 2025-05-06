@@ -1,10 +1,10 @@
 ﻿=== BestWebSoft's Like & Share - Posts, Pages and Widget Social Extension plugin for WordPress ===
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
-Tags: facebook buttons, share, like, add share button, social buttons, facebook, facebook button icon, follow, follow button, like button, share button, facebook plugin
+Tags: facebook buttons, share, like, add share button, social buttons
 Requires at least: 5.6
-Tested up to: 6.4.
-Stable tag: 2.74
+Tested up to: 6.8
+Stable tag: 2.77
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,11 @@ Earn 20% commission by selling the premium WordPress plugins and themes by BestW
 * Spanish (es_ES) (thanks to [Africa Boleko](mailto:info@markekimika.es) www.markekimika.es)
 * Turkish (tr_TR) (thanks to [Can Atasever](mailto:webmaster@canatasever.com))
 * Ukrainian (uk)
+* Japanese (ja)
+* Brazilian Portuguese (pt_BR)
+* German (de_DE)
+* Spanish (es_ES)
+
 
 Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](https://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](https://www.poedit.net/download.php).
 
@@ -178,9 +183,22 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
+= V2.77 - 06.05.2025 =
+* Update : All functionality was updated for WordPress 6.8.
+* Bugfix : Fatal error fixed.
+
+= V2.76 - 03.03.2025 =
+* Update : All functionality was updated for WordPress 6.7.
+* Bugfix : Security fixes.
+
+= V2.75 - 05.01.2025 =
+* Update : All functionality was updated for WordPress 6.5.2.
+* Update : BWS plugins section is updated.
+* Bugfix : Bug with Profile URL Button has been fixed.
+
 = V2.74 - 24.11.2023 =
-* All functionality was updated for WordPress 6.4.
-* Bug with password protected pages has been fixed.
+* Update : All functionality was updated for WordPress 6.4.
+* Bugfix : Bug with password protected pages has been fixed.
 
 = V2.73 - 15.02.2022 =
 * Update : All functionality was updated for WordPress 6.1.1
@@ -480,6 +498,18 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Ability to install BestWebSoft Like & Share icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.76 =
+* Bugs fixed.
+* The compatibility with new WordPress version updated.
+
+= V2.76 =
+* Bugs fixed.
+
+= V2.75 =
+* The compatibility with new WordPress version updated.
+* Plugin optimization completed.
+* Bugs fixed.
 
 = V2.74 =
 * Usability improved.
